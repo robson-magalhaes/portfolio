@@ -4,6 +4,8 @@ import aurora from '../assets/image/aurora.jpg';
 import bgXP from '../assets/image/projeto/bg-exp.jpg';
 
 export const Container = styled.div`
+    width: 100%;
+    height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
     width: 100%;
     overflow-x: hidden;
