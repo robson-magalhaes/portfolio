@@ -18,7 +18,6 @@ import iconGithubs from '../assets/image/icons/github.png';
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
-import FlipSkill from '../components/FlipSkill/FlipSkill';
 export const SinglePage = () => {
 
   return (
@@ -51,7 +50,20 @@ export const SinglePage = () => {
           <C.InfoArea>
             <C.Titulo className='my-5' >Minhas Habilidades</C.Titulo>
             <C.Corpo>
-              <C.HabilitTech>
+              {/* <C.HabilitTech>
+                {
+                  Skills.map(x => (
+                    <>
+                      <C.ItemTech>
+                        <C.ImgItemTech src={x.image} alt='Html e Css' />
+                        <p>{x.nome}</p>
+                      </C.ItemTech>
+
+                    </>
+                  ))
+                }
+              </C.HabilitTech> */}
+               <C.HabilitTech>
                 {
                   Skills.map(x => (
                     <>
@@ -64,7 +76,6 @@ export const SinglePage = () => {
                   ))
                 }
               </C.HabilitTech>
-              <FlipSkill/>
             </C.Corpo>
           </C.InfoArea>
         </C.VideoArea>

@@ -138,6 +138,7 @@ export const Corpo = styled.div`
     display: flex;
     flex-direction: column;
     gap: 50px;
+    perspective: 700px;
 `;
 
 export const HabilitTech = styled.div`
@@ -146,6 +147,10 @@ export const HabilitTech = styled.div`
     gap: 50px 80px;
     height: auto;
     margin: auto;
+    
+    transform-style: preserve-3d;
+    transition: all ease-in-out 0.5s;
+    transform-origin: center;
 `;
 
 export const ItemTech = styled.div`
@@ -155,33 +160,31 @@ export const ItemTech = styled.div`
     align-items: center;
     text-align: center;
     gap: 10px;
-    transition: all ease 0.4s;
+    transition: all ease-in-out 1s;
 
     & p{
         position: absolute;
         border-radius: 7px;
-        background-color: #00000080;
-        font-size: 1rem;
-        font-weight:bold;
+        font-size: 1.1rem;
+        font-weight: bold;
         opacity: 0;
-        transition: all ease 0.4s;
-        padding: 5px 15px;
+        transition: all ease 1s;
+        padding: 7px 20px;
+        margin-top:-5px;
+        text-shadow: 1px 2px 5px black;
     }
     &:hover{
-        margin-top:-5px;
+        transform: rotateY(180deg);
         p{
-            backdrop-filter: blur(1px);
-            transform: translateY(15px);
+            backdrop-filter: blur(10px);
+            transform: translateY(15px) rotateY(180deg);
             opacity: 1;
         }
     }
 `;
-
 export const ImgItemTech = styled.img`
-align-self: center;
+    align-self: center;
     border-radius: 7px;
-    /* width: 60px;
-    height: 60px; */
     width: 100%;
     height: 100%;
     max-width: 60px;
