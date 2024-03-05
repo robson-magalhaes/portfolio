@@ -1,0 +1,78 @@
+.txt-digitando{
+    position: relative;
+}
+.txt-digitando::before{
+    content:"";
+    animation: palavras 15s infinite;
+}
+
+.txt-digitando::after{
+    content:"";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid blue;
+    right: -10px;
+    animation: cursor .8s infinite, digitando 15s steps(30) infinite;
+    width: calc(100%);
+    background-color: white;
+}
+@keyframes digitando {
+    /* 20%, 30%, 60%, 70%{
+        width: 0;
+    }
+
+    10%, 40%, 50%, 80%, 90%{
+        width: calc(100% + 10px);
+    } */
+
+    /* 0%, 14%, 36%, 40%, 45%, 50%, 78%, 85%, 90%{
+    width: 0;
+    }
+
+    15%, 20%, 25%, 30%, 35%, 56%, 60%, 65%, 70%{
+        width: calc(100% + 10px);
+    } */
+
+
+    0%, 5%, 35%, 45%, 80%,85%{
+        width: 0;
+    }
+
+    15%, 55%{
+        width: calc(100% + 10px);
+    }
+    
+
+    /* 0%, 10%, 30%, 40%, 45%, 50%, 78%, 85%, 90%{
+        width: 0;
+        }
+    
+    15%, 20%, 25%, 56%, 60%, 65%, 70%{
+        width: calc(100% + 10px);
+    } */
+}
+@keyframes cursor{
+    0%{
+        border-left: 2px solid rgba(0, 0, 255, 0);
+    }
+}
+@keyframes palavras {
+    0%, 15%{
+        content: "!!";
+    }
+    16%,56%{
+        content:", me chamo Robson Oliveira Magalhães."
+    }
+    57%,100%{
+        content:", sou Desenvolvedor de Sistemas - Full stack."
+    }
+
+
+
+    /* 0%, 49%{
+        content:", me chamo Robson Oliveira Magalhães."
+    }
+    50%,100%{
+        content:", sou Desenvolvedor de Sistemas - Full stack."
+    } */
+}

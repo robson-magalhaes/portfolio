@@ -1,0 +1,149 @@
+import React from 'react';
+import * as C from './styled';
+import { Link } from 'react-router-dom';
+
+//Components
+import TxtAnimado from '../components/TxTAnimado/txtAnimado';
+import { NavMenu } from '../components/NavMenu/navMenu';
+import Projetos from '../components/Projetos/Projetos';
+
+//Imagens
+import iconGithub from '../assets/image/icons/githubXP.png'
+import imgPerfil from '../assets/image/eu.png';
+import bgPlaneta from '../assets/video/planetaTerra.mp4';
+import iconWhatss from '../assets/image/icons/whatsapp.png';
+import iconLinkedin from '../assets/image/icons/linkedin.png';
+import iconGithubs from '../assets/image/icons/github.png';
+
+//Dados
+import { Skills, allSkills } from '../data/Skills';
+import { expProjetos } from '../data/ExpProfissional';
+import FlipSkill from '../components/FlipSkill/FlipSkill';
+export const SinglePage = () => {
+
+  return (
+    <C.Container>
+      <C.AreaHeader id="home">
+        <NavMenu />
+        <C.HeaderPerfil>
+          <C.BoxImg>
+            <C.ImgPerfil src={imgPerfil} />
+          </C.BoxImg>
+          <C.PerfilApresentacao>
+            <C.PerfilTitulo>
+              <div className="text-5xl pl-2"> Desenvolvedor</div>Full Stack
+              <p className='text-xl'>Robson Oliveira Magalhães</p>
+            </C.PerfilTitulo>
+            <C.PerfilDescricao>
+              <p>
+                Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
+              </p>
+            </C.PerfilDescricao>
+          </C.PerfilApresentacao>
+        </C.HeaderPerfil>
+        <TxtAnimado />
+      </C.AreaHeader >
+      <C.SessaoHabilidades id="sessaoHab">
+        <C.VideoArea  opacity={1} heigth={550}>
+          <video autoPlay loop muted>
+            <source src={bgPlaneta} type='video/mp4' />
+          </video>
+          <C.InfoArea>
+            <C.Titulo className='my-5' >Minhas Habilidades</C.Titulo>
+            <C.Corpo>
+              <C.HabilitTech>
+                {
+                  Skills.map(x => (
+                    <>
+                      <C.ItemTech>
+                        <C.ImgItemTech src={x.image} alt='Html e Css' />
+                        <p>{x.nome}</p>
+                      </C.ItemTech>
+
+                    </>
+                  ))
+                }
+              </C.HabilitTech>
+              <FlipSkill/>
+            </C.Corpo>
+          </C.InfoArea>
+        </C.VideoArea>
+
+        <C.InfoTech>
+          <C.Titulo style={{ width: '100%' }}>Competências e Especialidades</C.Titulo>
+          {
+            allSkills.map(x => (
+              <C.ExpSkill>
+                <C.ItemT>{x}</C.ItemT>
+              </C.ExpSkill>
+            ))
+          }
+        </C.InfoTech>
+      </C.SessaoHabilidades>
+
+      <C.SessaoExperiencia id='expProfissional'>
+        <C.Titulo className='my-5'>Experiência Profissional</C.Titulo>
+        <C.ContainerExperiencia>
+          <C.LeftExperiencia />
+          <C.RightExperiencia>
+            {
+              expProjetos.map(x => (
+                <C.BoxRight>
+                  <C.ExpData>{x.data}</C.ExpData>
+                  <C.ExpDescricao>
+                    {x.urlGithub &&
+                      <Link to={x.urlGithub} target="_blank">
+                        <C.IconGitHub src={iconGithub} />
+                      </Link>
+                    }
+                    <C.InfoTitulo>{x.nome}</C.InfoTitulo>
+                    <C.InfoSubTitulo>{x.cargo}</C.InfoSubTitulo>
+                    <p>{x.descricao}</p>
+                    <C.ExpSkill>
+                      {x.skills.map(i => (
+                        <C.ItemT>{i}</C.ItemT>
+                      ))}
+                    </C.ExpSkill>
+                  </C.ExpDescricao>
+                </C.BoxRight>
+              ))
+            }
+          </C.RightExperiencia>
+        </C.ContainerExperiencia>
+      </C.SessaoExperiencia>
+
+      <C.SessaoProjetos id="expProjetos">
+        <C.Titulo>Projetos</C.Titulo>
+        <Projetos />
+        {/* <C.ProjetoContainer>
+          {projetos.map(x => (
+            <Link to={x.url} target="_blank" className='w-full'>
+              <FlipCard imgF={x.imgF} imgB={x.imgB}/>
+            </Link>
+          ))}
+
+          <Link to={'https://github.com/robson-magalhaes?tab=repositories'} className='hover:scale-125'>
+            <div>
+              Visualizar todos projetos
+              <img src={linkGithub} alt="" className='w-5 m-2 inline' />
+            </div>
+          </Link>
+        </C.ProjetoContainer> */}
+      </C.SessaoProjetos>
+
+      <C.FooterContainer id="contato">
+        <C.Contato>
+          <p><i class="fa-solid fa-phone"></i> (28)999961628</p>
+          <p><i class="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
+          <C.RedeSociais>
+            <C.ImgIcon src={iconWhatss} />
+            <C.ImgIcon src={iconGithubs} />
+            <C.ImgIcon src={iconLinkedin} />
+          </C.RedeSociais>
+        </C.Contato>
+      </C.FooterContainer>
+    </C.Container>
+  );
+};
+
+export default SinglePage;

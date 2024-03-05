@@ -1,0 +1,86 @@
+.box_digitando {
+  width: 700px;
+  align-self: center;
+  display: flex;
+  align-items: end;
+  margin-bottom: 30px;
+
+  span:first-child {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.0em;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);
+    background-clip: text;
+    display: flex;
+    align-items: start;
+  }
+  
+
+  .txt_digitando {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    position: relative;
+    color: #3088cf;
+    margin-bottom: 4px;
+  }
+}
+
+.txt_digitando::before {
+  content: "";
+  animation: palavras 15s infinite;
+}
+
+.txt_digitando::after {
+  content: "";
+  position: absolute;
+  height: 35px;
+  border-left: 2px solid blue;
+  right: -10px;
+  animation: cursor .8s infinite, digitando 15s steps(30) infinite;
+  width: calc(100%);
+  /* background-color: #000000; */
+  backdrop-filter: blur(100px);
+}
+
+@keyframes digitando {
+
+  0%,
+  5%,
+  35%,
+  45%,
+  80%,
+  85% {
+    width: 0;
+  }
+
+  15%,
+  55% {
+    width: calc(100% + 10px);
+  }
+}
+
+@keyframes cursor {
+  0% {
+    border-left: 2px solid rgba(0, 0, 255, 0);
+  }
+}
+
+@keyframes palavras {
+
+  0%,
+  15% {
+    content: "!!";
+  }
+
+  16%,
+  56% {
+    content: ", me chamo Robson Oliveira Magalhães."
+  }
+
+  57%,
+  100% {
+    content: ", sou Desenvolvedor de Sistemas - Full stack."
+  }
+}
