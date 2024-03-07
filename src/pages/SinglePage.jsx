@@ -38,21 +38,21 @@ export const SinglePage = () => {
               <p>
                 Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
               </p>
+              <TxtAnimado />
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
-       <TxtAnimado />
       </C.AreaHeader >
-      
+
       <C.SessaoHabilidades id="sessaoHab">
-        <C.VideoArea  opacity={1} heigth={550}>
+        <C.VideoArea opacity={1} heigth={550}>
           <video autoPlay loop muted>
             <source src={bgPlaneta} type='video/mp4' />
           </video>
           <C.InfoArea>
             <C.Titulo className='my-5' >Minhas Habilidades</C.Titulo>
             <C.Corpo>
-               <C.HabilitTech>
+              <C.HabilitTech>
                 {
                   Skills.map(x => (
                     <>
@@ -122,9 +122,15 @@ export const SinglePage = () => {
           <p><i class="fa-solid fa-phone"></i> (28)999961628</p>
           <p><i class="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
-            <C.ImgIcon src={iconWhatss} />
-            <C.ImgIcon src={iconGithubs} />
-            <C.ImgIcon src={iconLinkedin} />
+            <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
+              <C.ImgIcon src={iconWhatss} />
+            </Link>
+            <Link to='https://github.com/robson-magalhaes' target="_blank">
+              <C.ImgIcon src={iconGithubs} />
+            </Link>
+            <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
+              <C.ImgIcon src={iconLinkedin} />
+            </Link>
           </C.RedeSociais>
         </C.Contato>
       </C.FooterContainer>

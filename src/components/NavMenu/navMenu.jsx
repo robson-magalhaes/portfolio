@@ -1,16 +1,25 @@
 import iconWhats from '../../assets/image/icons/whatsapp.png';
 import iconGitHub from '../../assets/image/icons/github.png';
 import iconLinkedin from '../../assets/image/icons/linkedin.png';
+import iconMenu from '../../assets/image/icons/barra-de-menu.png';
 import { HashLink as Link } from 'react-router-hash-link';
 import * as C from './styled';
+import { useState } from 'react';
 
 export const NavMenu = () => {
+  const [estaVisivel, setVisivel] = useState(false);
+
+  function handleClickMenu(){
+    setVisivel(!estaVisivel);
+  }
   return (
     <>
       <C.NavSessao>
-
+        <C.BtnMenu onClick={handleClickMenu}>
+          <img src={iconMenu} alt="" />
+          </C.BtnMenu>
         <C.NavMenuContainer>
-          <C.NavBar>
+          <C.NavBar id="navBar" visivel={estaVisivel}>
             <C.NavLink>
               <Link
                 to="/#home"

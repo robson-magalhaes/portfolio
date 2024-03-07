@@ -21,8 +21,10 @@ export const AreaHeader = styled.header`
     display: flex;
     flex-direction: column;
     gap: 40px 0;
-    @media (max-width:1180px){
+
+    @media (max-width: 1180px){
         padding: 0;
+        padding-top: 20px ;
         padding-bottom: 80px;
         margin: 0;
     }
@@ -38,6 +40,12 @@ export const PerfilApresentacao = styled.div`
     margin-top: 70px;
     @media (max-width: 768px) {
         padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        gap: 40px 0;
     }
 `;
 
@@ -45,11 +53,19 @@ export const PerfilDescricao = styled.div`
     animation: ${keyframes.screenToTop} 2s;
     font-size: 1rem;
     color: #FFFFFF;
-    width: 82%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    
+    & p{
+        align-self: center;
+        width: 82%;
+    }
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
-    height: 200px;
+    height: auto;
     font-size: 6rem;
     font-weight: bold;
     line-height: 60px;
@@ -80,7 +96,7 @@ export const BoxImg = styled.div`
     width: 100%;
     height: 100%;
 
-    @media (max-width:670px){
+    @media (max-width:780px){
         display: none;
         padding: 0;
         margin: 0;
@@ -246,6 +262,8 @@ export const ContainerExperiencia = styled.div`
     display: flex;
     margin-top: 50px;
     height: 100%;
+    perspective: 2000px;
+
     @media (max-width: 750px){
         height: 700px;
         flex-direction:column;
@@ -254,21 +272,32 @@ export const ContainerExperiencia = styled.div`
 
 export const LeftExperiencia = styled.div`
     flex:1;
-    height:auto;
+    height: auto;
     background-image: url(${bgXP});
     background-size: cover;
     background-position:center;
     box-shadow: 20px 0px 50px 30px black inset;
+    border-radius: 7px;
+    box-shadow: 15px 12px #111111 inset, 0px -12px #111111 inset;
+    transform: rotateY(40deg) translate(80px);
+    @media (max-width: 750px){
+    box-shadow: 7px 6px #111111 inset, 0px -6px #111111 inset;
+        transform: rotateY(0deg) translate(0px);
+    }
 `
 
 export const RightExperiencia = styled.div`
     flex:1 270px;
-    height:620px;
+    height:550px;
     overflow-y: scroll;
     scrollbar-width: none;
     transition: all ease-in-out 1s;
-    box-shadow: 0 -20px 30px 5px #22222290 inset;
+    box-shadow: 50px 0px 55px #000000 inset;
     border-radius: 0px 10px 10px 0px;
+    margin: 40px 0;
+    @media (max-width: 750px){
+        margin: 20px 0;
+    }
 `
 
 export const BoxRight = styled.div`
@@ -358,8 +387,8 @@ export const Contato = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+
     & p {
         font-size: 1rem;
     }

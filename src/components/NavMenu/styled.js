@@ -1,6 +1,20 @@
 import styled from 'styled-components';
 import * as keyframes from './../../helpers/animationScreen';
 
+export const BtnMenu = styled.div`
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 55px;
+    max-width: 50px;
+    width: 18%;
+    z-index: 99;
+    cursor: pointer;
+    @media (max-width:780px){
+        display: block;
+    }
+`
 
 export const NavSessao = styled.div`
     display: flex;
@@ -9,10 +23,20 @@ export const NavSessao = styled.div`
     background-color: transparent;
     height:auto;
     margin: 15px 0;
+
+    @media (max-width:780px){
+        justify-content: end;
+    }
+    
 `
 export const NavMenuContainer = styled.div`
     position: fixed;
     z-index: 2;
+    @media (max-width:780px){
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 `
 
 export const NavBar = styled.ul`
@@ -31,6 +55,18 @@ export const NavBar = styled.ul`
     border-left: solid 3px #2D81C580;
     border-bottom: solid 1px #2D81C580;
     box-shadow: 0 0 10px 1px #000000 inset;
+
+    @media (max-width:780px){
+        animation: ${keyframes.screenToTop} 0.4s;
+        display: ${(props)=>(props.visivel ? 'flex' : 'none')};
+        flex-direction: column;
+        width:100%;
+        & a{
+            width: 100%;
+            padding: 5px 10px;
+            font-size: 2rem;
+        }
+    }
 `
 
 export const NavLink = styled.li`

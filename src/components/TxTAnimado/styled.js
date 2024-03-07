@@ -63,7 +63,6 @@ export const BoxDigitando = styled.div`
   @media (max-width: 768px) {
     padding: 0;
     margin: 0;
-    margin-left: 20px;
     font-size: 14px;
   }
 `;
