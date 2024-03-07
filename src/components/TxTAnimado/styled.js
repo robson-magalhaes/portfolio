@@ -18,7 +18,7 @@ const digitandoAnimation = keyframes`
 
 const cursorAnimation = keyframes`
   from {
-    border-left: 2px solid rgba(0, 0, 255, 0);
+    border-left: 3px solid rgba(0, 0, 255, 0);
   }
 `;
 
@@ -35,7 +35,7 @@ const palavrasAnimation = keyframes`
 
   57%,
   100% {
-    content: " sou Desenvolvedor de Sistemas"
+    content: " sou Desenvolvedor de Sistemas."
   }
 `;
 
@@ -48,17 +48,18 @@ export const BoxDigitando = styled.div`
   margin: 50px 0 70px 0;
   padding-left: 20%;
   flex-wrap: wrap;
-  white-space: break-spaces;
 
   & span:first-child {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    font-style: oblique;
     color: transparent;
     background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);
     background-clip: text;
     align-self: start;
     margin-top: -7px;
+    padding-right: 5px;
   }
   
   @media (max-width: 768px) {
@@ -71,10 +72,13 @@ export const TxtDigitando = styled.span`
   align-self: flex-start;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 1.5rem;
+  letter-spacing: -1px;
   font-weight: normal;
+  font-style: oblique;
   position: relative;
   color: #3088cf;
   height: auto;
+  white-space: nowrap;
 
 
   &::before {
@@ -85,8 +89,8 @@ export const TxtDigitando = styled.span`
   &::after {
     content: "";
     position: absolute;
-    height: 35px;
-    border-left: 2px solid blue;
+    height: 100%;
+    border-left: 2px solid white;
     right: -10px;
     animation: ${cursorAnimation} .8s infinite, ${digitandoAnimation} 15s steps(30) infinite;
     width: calc(100%);
