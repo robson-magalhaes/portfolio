@@ -256,6 +256,13 @@ export const SessaoExperiencia = styled.section`
     padding: 50px 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
+    @media (max-width: 1200px){
+       padding-left: 0 !important;
+       padding-right: 20px;
+    }
+    @media (max-width: 800px){
+        padding: 0 !important;
+    }
 `
 
 export const ContainerExperiencia = styled.div`
@@ -280,8 +287,11 @@ export const LeftExperiencia = styled.div`
     border-radius: 7px;
     box-shadow: 15px 12px #111111 inset, 0px -12px #111111 inset;
     transform: rotateY(40deg) translate(80px);
-    @media (max-width: 750px){
-    box-shadow: 7px 6px #111111 inset, 0px -6px #111111 inset;
+    @media (max-width: 1200px){
+        transform: rotateY(35deg) translate(30px);
+    }
+    @media (max-width: 800px){
+    padding: 0;
         transform: rotateY(0deg) translate(0px);
     }
 `

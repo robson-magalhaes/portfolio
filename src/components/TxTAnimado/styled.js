@@ -25,55 +25,57 @@ const cursorAnimation = keyframes`
 const palavrasAnimation = keyframes`
   0%,
   15% {
-    content: "!!";
+    content: "";
   }
 
   16%,
   56% {
-    content: ', me chamo Robson Oliveira Magalhães.';
+    content: ' me chamo Robson Oliveira Magalhães.';
   }
 
   57%,
   100% {
-    content: ", sou Desenvolvedor de Sistemas"
+    content: " sou Desenvolvedor de Sistemas"
   }
 `;
 
 export const BoxDigitando = styled.div`
   width: 100%;
-  align-self: center;
+  height: 100px;
   display: flex;
-  align-items: end;
+  align-items: start;
+  justify-content: start;
   margin: 50px 0 70px 0;
   padding-left: 20%;
   flex-wrap: wrap;
   white-space: break-spaces;
 
-  & div {
+  & span:first-child {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.0rem;
     font-weight: bold;
     color: transparent;
     background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);
     background-clip: text;
-    display: flex;
-    align-items: start;
+    align-self: start;
+    margin-top: -7px;
   }
   
   @media (max-width: 768px) {
     padding: 0;
     margin: 0;
-    font-size: 14px;
   }
 `;
 
 export const TxtDigitando = styled.span`
+  align-self: flex-start;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: normal;
   position: relative;
   color: #3088cf;
-  margin-bottom: 4px;
+  height: auto;
+
 
   &::before {
     content: "";

@@ -82,7 +82,7 @@ export const SinglePage = () => {
       </C.SessaoHabilidades>
 
       <C.SessaoExperiencia id='expProfissional'>
-        <C.Titulo className='my-5'>Experiência Profissional</C.Titulo>
+        <C.Titulo>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia />
           <C.RightExperiencia>
