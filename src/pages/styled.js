@@ -18,9 +18,12 @@ export const AreaHeader = styled.header`
     padding: 50px 100px;
     height: auto;
     width: 100%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
     @media (max-width:1180px){
         padding: 0;
+        padding-bottom: 80px;
         margin: 0;
     }
 `;
