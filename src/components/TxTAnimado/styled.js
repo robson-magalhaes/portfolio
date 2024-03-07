@@ -30,12 +30,12 @@ const palavrasAnimation = keyframes`
 
   16%,
   56% {
-    content: ", me chamo Robson Oliveira Magalhães."
+    content: ', me chamo Robson Oliveira Magalhães.';
   }
 
   57%,
   100% {
-    content: ", sou Desenvolvedor de Sistemas - Full stack."
+    content: ", sou Desenvolvedor de Sistemas"
   }
 `;
 
@@ -46,10 +46,12 @@ export const BoxDigitando = styled.div`
   align-items: end;
   margin: 50px 0 70px 0;
   padding-left: 20%;
+  flex-wrap: wrap;
+  white-space: break-spaces;
 
-  & span:first-child {
+  & div {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.0em;
+    font-size: 2.0rem;
     font-weight: bold;
     color: transparent;
     background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);

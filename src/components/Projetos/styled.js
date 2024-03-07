@@ -1,14 +1,4 @@
 import styled from 'styled-components';
-import aurora from '../../assets/image/aurora.jpg';
-
-export const SessaoProjetos = styled.div`
-   /* display: flex;
-   width: 100%;
-   height: 100%;
-    background: url(${aurora}) center fixed;
-    background-size: cover;
-    background-position: center; */
-`
 
 export const LeftContainer = styled.div`
     flex:1;
@@ -25,6 +15,12 @@ export const RightContainer = styled.div`
     flex:1;
     padding: 20px;
     text-align: start;
+    @media(max-width:767px){
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
 `
 
 export const Descricao = styled.div`
@@ -36,4 +32,9 @@ export const Descricao = styled.div`
     height: 80%;
     background-color: #131314;
     box-shadow: 0 0 100px black inset;
+    @media(max-width:767px){
+        width: 80%;
+        height: 200px;
+    background-color: #13131470;
+    }
 `

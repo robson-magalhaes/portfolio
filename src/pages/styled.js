@@ -340,22 +340,8 @@ export const SessaoProjetos = styled.section`
     display: flex;
     flex-direction: column;
     gap: 40px 0;
+    background-color: red;
 `
-export const ProjetoContainer = styled.div`
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    text-align: center;
-    gap:0 50px;
-
-    & a{
-        width: 100%;
-        padding:0;
-        margin: 0;
-    }
-`;
-
 
 export const FooterContainer = styled.footer`
     padding: 10px 100px;

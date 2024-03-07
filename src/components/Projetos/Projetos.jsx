@@ -31,26 +31,24 @@ export const Projetos = () => {
                 modules={[Pagination, Navigation]}
                 className="mySwiper"
             >
-                <C.SessaoProjetos>
-                    {projetos.map(x => (
-                        <SwiperSlide>
-                            <C.LeftContainer urlImage={x.imgF} />
-                            <C.RightContainer>
-                                <P.InfoTitulo>{x.nome}</P.InfoTitulo>
-                                {x.imgB.map(x => (
-                                    <>
-                                        <C.Descricao>
-                                            {x.descricao}
-                                        </C.Descricao>
-                                        <P.ExpSkill>
-                                            {x.skills.map(x => (<P.ItemT>{x}</P.ItemT>))}
-                                        </P.ExpSkill>
-                                    </>
-                                ))}
-                            </C.RightContainer>
-                        </SwiperSlide>
-                    ))}
-                </C.SessaoProjetos>
+                {projetos.map(x => (
+                    <SwiperSlide>
+                        <C.LeftContainer urlImage={x.imgF} />
+                        <C.RightContainer>
+                            <P.InfoTitulo>{x.nome}</P.InfoTitulo>
+                            {x.imgB.map(x => (
+                                <>
+                                    <C.Descricao>
+                                        {x.descricao}
+                                    </C.Descricao>
+                                    <P.ExpSkill>
+                                        {x.skills.map(x => (<P.ItemT>{x}</P.ItemT>))}
+                                    </P.ExpSkill>
+                                </>
+                            ))}
+                        </C.RightContainer>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </>
     )

@@ -17,7 +17,8 @@ import iconGithubs from '../assets/image/icons/github.png';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
-import { expProjetos, projetos } from '../data/ExpProfissional';
+import { expProjetos } from '../data/ExpProfissional';
+
 export const SinglePage = () => {
 
   return (
@@ -42,8 +43,7 @@ export const SinglePage = () => {
         </C.HeaderPerfil>
        <TxtAnimado />
       </C.AreaHeader >
-
-
+      
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea  opacity={1} heigth={550}>
           <video autoPlay loop muted>
