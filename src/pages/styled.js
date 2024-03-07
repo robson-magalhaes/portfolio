@@ -31,15 +31,18 @@ export const HeaderPerfil = styled.div`
 `;
 
 export const PerfilApresentacao = styled.div`
-    margin: 20px;
+    padding: 20px;
     margin-top: 70px;
+    @media (max-width: 768px) {
+        padding: 0;
+    }
 `;
 
 export const PerfilDescricao = styled.div`
     animation: ${keyframes.screenToTop} 2s;
     font-size: 1rem;
     color: #FFFFFF;
-    width: 72%;
+    width: 82%;
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
