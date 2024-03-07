@@ -1,11 +1,11 @@
-import style from './TxtAnimado.module.css';
+import * as C from './styled';
 
 export const TxtAnimado = () => {
     return (
-        <div className={style.box_digitando}>
+        <C.BoxDigitando>
             <span>Ola Mundo</span>
-            <span className={style.txt_digitando}></span>
-        </div>
+            <C.TxtDigitando></C.TxtDigitando>
+        </C.BoxDigitando>
     );
 }
 

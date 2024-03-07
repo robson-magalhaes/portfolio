@@ -7,12 +7,10 @@ import * as C from './styled';
 export const NavMenu = () => {
   return (
     <>
-      <C.NavContainer>
+      <C.NavSessao>
 
         <C.NavMenuContainer>
-
           <C.NavBar>
-
             <C.NavLink>
               <Link
                 to="/#home"
@@ -54,22 +52,22 @@ export const NavMenu = () => {
               </Link>
             </C.NavLink>
           </C.NavBar>
-
         </C.NavMenuContainer>
-
-        <C.IconSocial>
+        <C.BoxSegundo>
+          <C.IconSocial>
+            <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
+              <C.ImgSocial src={iconWhats} />
+            </Link>
+            <Link to='https://github.com/robson-magalhaes' target="_blank">
+              <C.ImgSocial src={iconGitHub} />
+            </Link>
+            <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
+              <C.ImgSocial src={iconLinkedin} />
+            </Link>
+          </C.IconSocial>
           <C.Button>Download CV</C.Button>
-          <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
-            <C.ImgSocial src={iconWhats} />
-          </Link>
-          <Link to='https://github.com/robson-magalhaes' target="_blank">
-            <C.ImgSocial src={iconGitHub} />
-          </Link>
-          <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
-            <C.ImgSocial src={iconLinkedin} />
-          </Link>
-        </C.IconSocial>
-      </C.NavContainer>
+        </C.BoxSegundo>
+      </C.NavSessao>
     </>
   );
 }

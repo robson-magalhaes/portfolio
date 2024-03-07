@@ -2,33 +2,17 @@ import styled from 'styled-components';
 import * as keyframes from './../../helpers/animationScreen';
 
 
-export const NavContainer = styled.div`
-    background-color: transparent;
-    height:70px;
-    display:flex;
-`
-export const NavMenuContainer = styled.div`
+export const NavSessao = styled.div`
     display: flex;
-    position: fixed;
     align-items: center;
     justify-content: center;
-    width:100%;
-    padding:10px;
+    background-color: transparent;
+    height:auto;
+    margin: 15px 0;
+`
+export const NavMenuContainer = styled.div`
+    position: fixed;
     z-index: 2;
-    left: 50%;
-    transform: translate(-50%);
-    isolation: isolate;
-    overflow: hidden;
-
-    &::before{
-        position: absolute;
-        content: "";
-        width: 100px;
-        height: 1px;
-        top: 80px;
-        background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 50%,rgba(255,255,255,0) 100%);
-        transition: opacity .45s cubic-bezier(.6,.6,0,1);
-    }
 `
 
 export const NavBar = styled.ul`
@@ -39,11 +23,9 @@ export const NavBar = styled.ul`
     gap:10px;
     background: #00000080;
     backdrop-filter: blur(5px);
-    height: 45px;
+    height: auto;
     width: auto;
     padding: 5px 10px;
-    //border-radius: 100px;
-    //border-radius: 0px 100px;
     border-radius: 0px 100px;
     border: 1px solid rgba(226,232,255,.1);
     border-left: solid 3px #2D81C580;
@@ -52,14 +34,12 @@ export const NavBar = styled.ul`
 `
 
 export const NavLink = styled.li`
-    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#3E71C1;
     & a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color:#3E71C1;
         padding: 4px 20px;
-        border-radius: 100px;
         transition: all ease-in-out 0.3s;
     }
     & a:hover{
@@ -67,18 +47,34 @@ export const NavLink = styled.li`
         color: #FFFFFF;
     }
 `
-export const IconSocial = styled.div`
-    animation: ${keyframes.screenToLeft} 2s;
+export const BoxSegundo = styled.div`
     position: absolute;
-    align-items: center;
-    right:150px;
-    top:10px;
-    margin: 0 20px;
-    display:flex;
-    gap:10px;
-    width:auto;
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    right: 40px;
+    top: 20px;
+    gap: 20px;
 `
+
+export const IconSocial = styled.div`
+    /* animation: ${keyframes.screenToLeft} 2s;
+    position: absolute; */
+    //top: 0;
+    //right: 0px;
+    //float: right;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    gap:10px;
+    width: 100%;
+    height: auto;
+
+    @media (max-width:670px) {
+    }
+`
+
 export const ImgSocial = styled.img`
     width:23px;
     transform: scale(1);
@@ -89,9 +85,10 @@ export const ImgSocial = styled.img`
     }
 `
 export const Button = styled.button`
-    position: absolute;
+    /* position: absolute;
     top:50px;
-    translate: -30px;
+    right: 0;
+    float: right; */
     height: 45px;
     width: 150px;
     padding: 5px 10px;

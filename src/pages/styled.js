@@ -7,18 +7,22 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
-    width: 100%;
-    overflow-x: hidden;
+
+    @media (max-width:667px){
+        padding: 0;
+        margin: 0;
+    }
 `;
 
-export const AreaHeader = styled.div`
-    padding: 20px 100px;
+export const AreaHeader = styled.header`
+    padding: 50px 100px;
     height: auto;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 50px;
-    margin-bottom: 100px;
+    display: block;
+    @media (max-width:1180px){
+        padding: 0;
+        margin: 0;
+    }
 `;
 
 export const HeaderPerfil = styled.div`
@@ -28,7 +32,9 @@ export const HeaderPerfil = styled.div`
 
 export const PerfilApresentacao = styled.div`
     margin: 20px;
+    margin-top: 70px;
 `;
+
 export const PerfilDescricao = styled.div`
     animation: ${keyframes.screenToTop} 2s;
     font-size: 1rem;
@@ -37,12 +43,6 @@ export const PerfilDescricao = styled.div`
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
-    & p{
-        text-align: center;
-        margin-top:10px;
-        font-size: 30px;
-        font-weight: normal;
-    }
     height: 200px;
     font-size: 6rem;
     font-weight: bold;
@@ -51,7 +51,17 @@ export const PerfilTitulo = styled.div`
     color: transparent;
     background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
     background-clip: text;
-`
+    & div{
+        margin-left: 10px;
+        font-size: 3rem;
+    }
+    & p{
+        text-align: center;
+        margin-top: 10px;
+        font-size: 1.7rem;
+        font-weight: normal;
+    }
+`;
 
 export const BoxImg = styled.div`
     animation: ${keyframes.screenToRight} 2s;
@@ -59,10 +69,16 @@ export const BoxImg = styled.div`
     background: linear-gradient(to top, #3088cf 0, transparent 90%);
     border-radius:0px 273px;
     padding: 10px 10px 40px 40px;
-    max-width: 400px;
+    max-width: 400px !important;
     max-height: 400px;
     width: 100%;
     height: 100%;
+
+    @media (max-width:670px){
+        display: none;
+        padding: 0;
+        margin: 0;
+    }
 `;
 
 export const ImgPerfil = styled.img`
@@ -86,9 +102,12 @@ export const InfoTitulo = styled.h1`
     font-weight: bold;
     color: white;
 `
-export const InfoSubTitulo = styled.p``
+export const InfoSubTitulo = styled.p`
+
+`
 
 export const SessaoHabilidades = styled.section`
+    padding: 50px 100px;
     height:auto;
     color: white;
     display: flex;
@@ -104,16 +123,16 @@ export const VideoArea = styled.div`
     z-index: 1;
     background-color: black;
     width: 100%;
-    height: 100%;
 
     video {
-    padding: 20px 0;
-    opacity: ${(props) => (props.opacity = props.opacity)};
-    width: 100%;
-    height: 100%;
-    max-height: ${(props) => (props.heigth = props.heigth)}px;
-    object-fit: contain;
-    object-position: top;
+        padding: 20px 0;
+        opacity: ${(props) => (props.opacity = props.opacity)};
+        width: 100%;
+        height: 100%;
+        max-height: ${(props) => (props.heigth = props.heigth)}px;
+        min-height: ${(props) => (props.heigth = props.heigth)}px;
+        object-fit: contain;
+        object-position: center;
     }
 `;
 
@@ -128,7 +147,6 @@ export const InfoArea = styled.div`
     font-size: 2rem;
     color:white;
     gap: 40px;
-    margin-top: -200px;
     width: 100%;
 `;
 export const Corpo = styled.div`
@@ -151,6 +169,10 @@ export const HabilitTech = styled.div`
     transform-style: preserve-3d;
     transition: all ease-in-out 0.5s;
     transform-origin: center;
+    
+    @media (max-width:670px){
+    grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 export const ItemTech = styled.div`
@@ -163,6 +185,7 @@ export const ItemTech = styled.div`
     transition: all ease-in-out 1s;
 
     & p{
+        flex: 1;
         position: absolute;
         border-radius: 7px;
         font-size: 1.1rem;
@@ -173,6 +196,7 @@ export const ItemTech = styled.div`
         margin-top:-5px;
         text-shadow: 1px 2px 5px black;
     }
+
     &:hover{
         transform: rotateY(180deg);
         p{
@@ -185,14 +209,14 @@ export const ItemTech = styled.div`
 export const ImgItemTech = styled.img`
     align-self: center;
     border-radius: 7px;
-    width: 100%;
+    flex: 1;
     height: 100%;
-    max-width: 60px;
+    max-width: 60px !important;
     max-height: 60px;
 `;
 
-export const InfoTech = styled.div`
-    margin: 30px 100px;
+export const InfoTech = styled.section`
+    padding: 30px 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -215,6 +239,11 @@ export const SessaoExperiencia = styled.section`
 export const ContainerExperiencia = styled.div`
     display: flex;
     margin-top: 50px;
+    height: 100%;
+    @media (max-width: 750px){
+        height: 700px;
+        flex-direction:column;
+    }
 `
 
 export const LeftExperiencia = styled.div`
@@ -297,12 +326,14 @@ export const IconGitHub = styled.img`
 `;
 
 export const SessaoProjetos = styled.section`
-    //background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
-    padding: 50px 100px;
-    box-shadow: 0px 0px 70px 120px black inset;
+    padding: 70px 0;
+    box-shadow: 0px 100px 70px 120px black inset;
     background: url(${aurora}) center fixed;
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
 `
 export const ProjetoContainer = styled.div`
     width: 100%;

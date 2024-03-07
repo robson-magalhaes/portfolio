@@ -17,7 +17,7 @@ import iconGithubs from '../assets/image/icons/github.png';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
-import { expProjetos } from '../data/ExpProfissional';
+import { expProjetos, projetos } from '../data/ExpProfissional';
 export const SinglePage = () => {
 
   return (
@@ -30,8 +30,8 @@ export const SinglePage = () => {
           </C.BoxImg>
           <C.PerfilApresentacao>
             <C.PerfilTitulo>
-              <div className="text-5xl pl-2"> Desenvolvedor</div>Full Stack
-              <p className='text-xl'>Robson Oliveira Magalhães</p>
+              <div> Desenvolvedor</div>Full Stack
+              <p>Robson Oliveira Magalhães</p>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
               <p>
@@ -40,8 +40,10 @@ export const SinglePage = () => {
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
-        <TxtAnimado />
+       <TxtAnimado />
       </C.AreaHeader >
+
+
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea  opacity={1} heigth={550}>
           <video autoPlay loop muted>
@@ -50,19 +52,6 @@ export const SinglePage = () => {
           <C.InfoArea>
             <C.Titulo className='my-5' >Minhas Habilidades</C.Titulo>
             <C.Corpo>
-              {/* <C.HabilitTech>
-                {
-                  Skills.map(x => (
-                    <>
-                      <C.ItemTech>
-                        <C.ImgItemTech src={x.image} alt='Html e Css' />
-                        <p>{x.nome}</p>
-                      </C.ItemTech>
-
-                    </>
-                  ))
-                }
-              </C.HabilitTech> */}
                <C.HabilitTech>
                 {
                   Skills.map(x => (
@@ -126,20 +115,6 @@ export const SinglePage = () => {
       <C.SessaoProjetos id="expProjetos">
         <C.Titulo>Projetos</C.Titulo>
         <Projetos />
-        {/* <C.ProjetoContainer>
-          {projetos.map(x => (
-            <Link to={x.url} target="_blank" className='w-full'>
-              <FlipCard imgF={x.imgF} imgB={x.imgB}/>
-            </Link>
-          ))}
-
-          <Link to={'https://github.com/robson-magalhaes?tab=repositories'} className='hover:scale-125'>
-            <div>
-              Visualizar todos projetos
-              <img src={linkGithub} alt="" className='w-5 m-2 inline' />
-            </div>
-          </Link>
-        </C.ProjetoContainer> */}
       </C.SessaoProjetos>
 
       <C.FooterContainer id="contato">
