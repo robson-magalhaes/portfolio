@@ -36,22 +36,18 @@ export const screenToBottom = keyframes`
     transform: translateY(0px);
   }
 `;
-export const menufechar = keyframes`
+export const menufechado = keyframes`
   from {
-    opacity: 1;
   }
   to {
-    opacity: 0;
     transform:translateY(-70px) translateX(-100px) scale(0.2);
   }
 `;
-export const menuAbrir = keyframes`
+export const menuAberto = keyframes`
   from {
-    opacity: 0;
     transform:translateY(-70px) translateX(-100px) scale(0.2);
   }
   to {
-    opacity: 1;
     transform:translateY(0px) translateX(0px) scale(1);
   }
 `;
