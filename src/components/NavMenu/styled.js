@@ -125,17 +125,17 @@ export const ImgSocial = styled.img`
         transform: scale(1.5) !important;
     }
 `
-export const Button = styled.button`
-    /* position: absolute;
-    top:50px;
-    right: 0;
-    float: right; */
+export const BotaoCurriculo = styled.button`
     height: 45px;
     width: 150px;
     padding: 5px 10px;
     border-radius: 0;
     border-bottom: solid 2px #3E71C1;
     border-right: solid 2px #3E71C1;
+    -webkit-border-radius: 0;
+    -webkit-border-bottom: solid 2px #3E71C1;
+    -webkit-border-right: solid 2px #3E71C1;
+    background-color: #1D1E20;
     transition: all ease 0.5s;
     color: #3E71C1;
 

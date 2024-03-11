@@ -74,7 +74,7 @@ export const NavMenu = () => {
               <C.ImgSocial src={iconLinkedin} />
             </Link>
           </C.IconSocial>
-          <C.Button>Download CV</C.Button>
+          <C.BotaoCurriculo>Download CV</C.BotaoCurriculo>
         </C.BoxSegundo>
       </C.NavSessao>
     </>
