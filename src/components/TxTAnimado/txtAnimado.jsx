@@ -3,7 +3,7 @@ import * as C from './styled';
 export const TxtAnimado = () => {
     return (
         <C.BoxDigitando>
-            <span>Ola Mundo,</span>
+            <div>Ola Mundo,</div>
             <C.TxtDigitando></C.TxtDigitando>
         </C.BoxDigitando>
     );

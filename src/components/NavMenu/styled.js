@@ -4,8 +4,8 @@ import * as keyframes from './../../helpers/animationScreen';
 export const BtnMenu = styled.div`
     display: none;
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     height: 55px;
     max-width: 50px;
     width: 18%;
@@ -57,14 +57,19 @@ export const NavBar = styled.ul`
     box-shadow: 0 0 10px 1px #000000 inset;
 
     @media (max-width:780px){
-        animation: ${keyframes.screenToTop} 0.4s;
-        display: ${(props)=>(props.visivel ? 'flex' : 'none')};
+        animation: ${(props)=>(props.visivel ? keyframes.menufechar : keyframes.menuAbrir )} 0.4s;
+        opacity: ${(props)=>(props.visivel ? '0' : '1')};
         flex-direction: column;
         width:100%;
+        margin-top: 5px;
         & a{
             width: 100%;
             padding: 5px 10px;
             font-size: 2rem;
+            color: white;
+        }
+        & a:active{
+            color: #646CFF;
         }
     }
 `

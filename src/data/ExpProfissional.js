@@ -10,7 +10,7 @@ export const projetos = [
             {   
                 nome:'Criador de Encarte', 
                 descricao:'Desenvolvi este projeto para comercializar e praticar meus conhecimentos',
-                skills:['JavaScript','Html','CSS']
+                skills:['JavaScript','Html','CSS', 'Bootstrap']
             }
         ]
     },
@@ -96,7 +96,8 @@ export const expProjetos = [
         skills:[
             'JavaScript','HTML5','CSS3','Bootstrap'
         ]
-    },
+    }
+    ,
     {
         data:'out/2023',
         urlGithub: '',
@@ -118,17 +119,5 @@ export const expProjetos = [
         skills:[
             'PHP','JavaScript','HTML5','CSS3','jQuery'
         ]
-    },
-    {
-        data:'jsdfsdf23',
-        urlGithub: '',
-        page:'',
-        nome:'sdfsdf',
-        cargo:'Desenvoddddddlvedor',
-        descricao:'sdfçlskdflsdf364',
-        skills:[
-            'sei la','nada'
-        ]
-    },
-
+    }
 ]

@@ -49,7 +49,7 @@ export const BoxDigitando = styled.div`
   padding-left: 20%;
   flex-wrap: wrap;
 
-  & span:first-child {
+  & div {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -60,6 +60,8 @@ export const BoxDigitando = styled.div`
     align-self: start;
     margin-top: -7px;
     padding-right: 5px;
+    display: block;
+    width: 100%;
   }
   
   @media (max-width: 768px) {

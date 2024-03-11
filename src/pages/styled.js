@@ -73,6 +73,8 @@ export const PerfilTitulo = styled.div`
     color: transparent;
     background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
     background-clip: text;
+    -webkit-background-clip:text;
+    -ms-background-clip:text;
     & div{
         margin-left: 10px;
         font-size: 3rem;
@@ -250,6 +252,7 @@ export const ItemT = styled.div`
     width: auto;
     border: solid 1px #FFFFFF50;
     border-radius: 50px;
+    color: #FFFFFF;
 `
 
 export const SessaoExperiencia = styled.section`
@@ -342,8 +345,8 @@ export const ExpDescricao = styled.div`
     border-left : solid 1px white;
     padding: 10px 15px;
     flex: 3;
-    p{
-        color:#aaa;
+    & p{
+        color:#AAAAAA;
     }
 `
 
