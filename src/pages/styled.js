@@ -75,11 +75,11 @@ export const PerfilTitulo = styled.div`
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
-    & div{
+    & div:first-child{
         margin-left: 10px;
         font-size: 3rem;
     }
-    & p{
+    & div:last-child{
         text-align: center;
         margin-top: 10px;
         font-size: 1.7rem;
@@ -113,21 +113,20 @@ export const ImgPerfil = styled.img`
     filter: drop-shadow(-10px 0 15px #000000);
 `;
 
-export const Titulo = styled.p`
+export const Titulo = styled.div`
     text-align: center;
     font-size: ${(props) =>(props.tmFonte ? props.tmFonte : 2.3)}rem;
     color: transparent;
     background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
     background-clip: text;
+    -webkit-background-clip:text;
+    -ms-background-clip:text;
     margin: 20px 0;
 `;
 export const InfoTitulo = styled.h1`
     font-size: 1.3rem;
     font-weight: bold;
     color: white;
-`
-export const InfoSubTitulo = styled.p`
-
 `
 
 export const SessaoHabilidades = styled.section`
@@ -303,7 +302,9 @@ export const RightExperiencia = styled.div`
     flex:1 270px;
     height:550px;
     overflow-y: scroll;
-    scrollbar-width: none;
+    &::-webkit-scrollbar { 
+        display: none;
+    }
     transition: all ease-in-out 1s;
     box-shadow: 50px 0px 55px #000000 inset;
     border-radius: 0px 10px 10px 0px;
@@ -345,8 +346,12 @@ export const ExpDescricao = styled.div`
     border-left : solid 1px white;
     padding: 10px 15px;
     flex: 3;
+
     & p{
         color:#AAAAAA;
+    }
+    & h2{
+        color:#FFFFFF;
     }
 `
 

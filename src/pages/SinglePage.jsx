@@ -32,7 +32,7 @@ export const SinglePage = () => {
           <C.PerfilApresentacao>
             <C.PerfilTitulo>
               <div> Desenvolvedor</div>Full Stack
-              <p>Robson Oliveira Magalhães</p>
+              <div>Robson Oliveira Magalhães</div>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
               <p>
@@ -97,7 +97,7 @@ export const SinglePage = () => {
                       </Link>
                     }
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
-                    <C.InfoSubTitulo>{x.cargo}</C.InfoSubTitulo>
+                    <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
                     <C.ExpSkill>
                       {x.skills.map(i => (

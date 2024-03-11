@@ -57,6 +57,8 @@ export const BoxDigitando = styled.div`
     color: transparent;
     background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);
     background-clip: text;
+    -webkit-background-clip:text;
+    -ms-background-clip:text;
     align-self: start;
     margin-top: -7px;
     padding-right: 5px;
