@@ -32,9 +32,10 @@ export const Descricao = styled.div`
     height: 80%;
     background-color: #131314;
     box-shadow: 0 0 100px black inset;
+    color: #FFFFFF;
     @media(max-width:767px){
         width: 80%;
         height: 200px;
-    background-color: #13131470;
+        background-color: #13131470;
     }
 `

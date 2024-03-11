@@ -404,6 +404,7 @@ export const Contato = styled.div`
 
     & p {
         font-size: 1rem;
+        color: #FFFFFF;
     }
     & i{
         margin-right: 20px;
