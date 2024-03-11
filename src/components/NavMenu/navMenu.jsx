@@ -8,14 +8,13 @@ import { useState } from 'react';
 
 export const NavMenu = () => {
   const [estaVisivel, setVisivel] = useState(false);
-
-  function handleClickMenu(){
-    setVisivel(!estaVisivel);
+  function handleClickDownload(){
+    alert('Download Concluido!!');
   }
   return (
     <>
       <C.NavSessao>
-        <C.BtnMenu onClick={handleClickMenu}>
+        <C.BtnMenu onClick={()=>setVisivel(!estaVisivel)}>
           <img src={iconMenu} alt="" />
           </C.BtnMenu>
         <C.NavMenuContainer>
@@ -74,7 +73,10 @@ export const NavMenu = () => {
               <C.ImgSocial src={iconLinkedin} />
             </Link>
           </C.IconSocial>
-          <C.BotaoCurriculo>Download CV</C.BotaoCurriculo>
+          <C.BotaoCurriculo onClick={handleClickDownload}>
+            {/* <Link to={"src/data/curriculo.pdf"}> Download CV</Link> */}
+          <a href="src/data/curriculo.pdf" download="Curriculo Dev Software - ROBSON.pdf">Download</a>
+            </C.BotaoCurriculo>
         </C.BoxSegundo>
       </C.NavSessao>
     </>
