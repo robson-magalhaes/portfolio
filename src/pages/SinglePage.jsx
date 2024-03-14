@@ -46,7 +46,7 @@ export const SinglePage = () => {
 
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea opacity={1} heigth={550}>
-          <video autoPlay loop muted>
+          <video autoPlay loop muted allow="autoplay">
             <source src={bgPlaneta} type='video/mp4' />
           </video>
           <C.InfoArea>

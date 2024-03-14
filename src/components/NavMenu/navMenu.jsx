@@ -9,7 +9,8 @@ import { useState } from 'react';
 export const NavMenu = () => {
   const [estaVisivel, setVisivel] = useState(false);
   function handleClickDownload(){
-    const url = "src/data/curriculo.pdf";
+    const url = window.location+"src/data/curriculo.pdf";
+    console.log(url);
     var download = document.createElement('a');
     download.href = url;
     download.setAttribute('download', 'Curriculo Dev Software - ROBSON.pdf');
