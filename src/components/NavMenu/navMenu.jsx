@@ -5,23 +5,24 @@ import iconMenu from '../../assets/image/icons/barra-de-menu.png';
 import { HashLink as Link } from 'react-router-hash-link';
 import * as C from './styled';
 import { useState } from 'react';
+import meuCurriculo from '../../data/curriculo.pdf';
 
 export const NavMenu = () => {
   const [estaVisivel, setVisivel] = useState(false);
-  function handleClickDownload(){
-    const url = window.location+"src/data/curriculo.pdf";
-    console.log(url);
-    var download = document.createElement('a');
-    download.href = url;
-    download.setAttribute('download', 'Curriculo Dev Software - ROBSON.pdf');
-    download.click();
+  function handleClickDownload() {
+    var link = document.createElement('a');
+    link.href = meuCurriculo;
+    link.download = "Curriculo Dev Software - ROBSON.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   }
   return (
     <>
       <C.NavSessao>
-        <C.BtnMenu onClick={()=>setVisivel(!estaVisivel)}>
+        <C.BtnMenu onClick={() => setVisivel(!estaVisivel)}>
           <img src={iconMenu} alt="" />
-          </C.BtnMenu>
+        </C.BtnMenu>
         <C.NavMenuContainer>
           <C.NavBar id="navBar" visivel={estaVisivel}>
             <C.NavLink>
@@ -80,9 +81,7 @@ export const NavMenu = () => {
           </C.IconSocial>
           <C.BotaoCurriculo onClick={handleClickDownload}>
             Download CV
-            {/* <Link to={"src/data/curriculo.pdf"}> Download CV</Link> */}
-          {/* <a href="src/data/curriculo.pdf" download="Curriculo Dev Software - ROBSON.pdf">Download</a> */}
-            </C.BotaoCurriculo>
+          </C.BotaoCurriculo>
         </C.BoxSegundo>
       </C.NavSessao>
     </>

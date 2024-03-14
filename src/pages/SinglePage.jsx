@@ -57,7 +57,7 @@ export const SinglePage = () => {
                   Skills.map(x => (
                     <>
                       <C.ItemTech>
-                        <C.ImgItemTech src={x.image} alt='Html e Css' />
+                        <C.ImgItemTech src={x.image} alt={x.nome} />
                         <p>{x.nome}</p>
                       </C.ItemTech>
 
@@ -119,8 +119,8 @@ export const SinglePage = () => {
 
       <C.FooterContainer id="contato">
         <C.Contato>
-          <p><i class="fa-solid fa-phone"></i> (28)999961628</p>
-          <p><i class="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
+          <p><i className="fa-solid fa-phone"></i> (28)999961628</p>
+          <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
               <C.ImgIcon src={iconWhatss} />
