@@ -144,3 +144,15 @@ export const BotaoCurriculo = styled.button`
         box-shadow: 2px 2px #3E71C1, 10px 10px #1E1E20;
     }
 `
+export const Carregando = styled.div`
+    height: 100%;
+    width: 100%;
+    background: #00000080;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;

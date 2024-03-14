@@ -8,14 +8,19 @@ import { useState } from 'react';
 import meuCurriculo from '../../data/curriculo.pdf';
 
 export const NavMenu = () => {
+  const [loading, setLoading] = useState(false);
   const [estaVisivel, setVisivel] = useState(false);
   function handleClickDownload() {
+    setLoading(true);
     var link = document.createElement('a');
     link.href = meuCurriculo;
     link.download = "Curriculo Dev Software - ROBSON.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setInterval(() =>{
+      setLoading(false);
+    }, 1500);
   }
   return (
     <>
@@ -84,6 +89,13 @@ export const NavMenu = () => {
           </C.BotaoCurriculo>
         </C.BoxSegundo>
       </C.NavSessao>
+      {loading && 
+        <>
+          <C.Carregando>
+            <div className='p-8 rounded-full border-8 border-l-blue-700 animate-spin'></div>
+          </C.Carregando>
+        </>
+      }
     </>
   );
 }
