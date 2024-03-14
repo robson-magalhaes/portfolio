@@ -9,7 +9,11 @@ import { useState } from 'react';
 export const NavMenu = () => {
   const [estaVisivel, setVisivel] = useState(false);
   function handleClickDownload(){
-    alert('Download Concluido!!');
+    const url = "src/data/curriculo.pdf";
+    var download = document.createElement('a');
+    download.href = url;
+    download.setAttribute('download', 'Curriculo Dev Software - ROBSON.pdf');
+    download.click();
   }
   return (
     <>
@@ -74,8 +78,9 @@ export const NavMenu = () => {
             </Link>
           </C.IconSocial>
           <C.BotaoCurriculo onClick={handleClickDownload}>
+            Download CV
             {/* <Link to={"src/data/curriculo.pdf"}> Download CV</Link> */}
-          <a href="src/data/curriculo.pdf" download="Curriculo Dev Software - ROBSON.pdf">Download</a>
+          {/* <a href="src/data/curriculo.pdf" download="Curriculo Dev Software - ROBSON.pdf">Download</a> */}
             </C.BotaoCurriculo>
         </C.BoxSegundo>
       </C.NavSessao>
