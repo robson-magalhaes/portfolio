@@ -17,10 +17,11 @@ export const NavMenu = () => {
     link.download = "Curriculo Dev Software - ROBSON.pdf";
     document.body.appendChild(link);
     link.click();
-    document.body.removeChild(link);
-    setInterval(() =>{
+    
+    setTimeout(() => {
+      document.body.removeChild(link);
       setLoading(false);
-    }, 1500);
+    }, 1000);
   }
   return (
     <>
