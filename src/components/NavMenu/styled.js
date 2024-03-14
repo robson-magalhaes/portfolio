@@ -142,11 +142,7 @@ export const BotaoCurriculo = styled.button`
 
 background: linear-gradient(to left, #000000 0%, #555 35%, #555 65%, #000000 100%);
   color: white;
-  font-size: 8px;
   text-shadow: 0px 0px 2px black;
-  width: auto;
-  padding: 5px 20px;
-  border-radius:0;
   border: none;
   box-shadow: -2px -2px 5px #0000ff80 inset, 1px 1px 1px #0090ff, 2px 2px 5px #0000ff;
 
