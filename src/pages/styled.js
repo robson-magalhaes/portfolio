@@ -322,6 +322,9 @@ export const BoxRight = styled.div`
     border-radius: 10px;
     transition: all ease 0.4s;
 
+    background-color: #00000050;
+    box-shadow: 1px 1px 1px #000000, 1px 1px 1px #222222 inset;
+
     &:hover{
         & img{
             translate: 160px;
