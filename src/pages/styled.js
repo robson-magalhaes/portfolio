@@ -324,20 +324,8 @@ export const BoxRight = styled.div`
     
     background-color: #00000050;
 
-<<<<<<< HEAD
-    /* &:hover{
-=======
     background-color: #00000050;
-    box-shadow: 1px 1px 1px #000000, 1px 1px 1px #222222 inset;
-
-    &:hover{
->>>>>>> 36f20d28263c8c1d4e277b7274c990f0e418bfe5
-        & img{
-            translate: 160px;
-            opacity: 1;
-        }
-        background-color: #00000050;
-    } */
+    box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
 `
 
 export const ExpData = styled.p`

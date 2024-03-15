@@ -81,8 +81,9 @@ export const NavLink = styled.li`
     display: flex;
     align-items: center;
     justify-content: center;
-    color:#3E71C1;
+    
     & a{
+        color:#3E71C1;
         padding: 4px 20px;
         transition: all ease-in-out 0.3s;
     }
@@ -128,30 +129,17 @@ export const BotaoCurriculo = styled.button`
     width: 150px;
     padding: 5px 10px;
     border-radius: 0;
-    border-bottom: solid 2px #3E71C1;
-    border-right: solid 2px #3E71C1;
-    -webkit-border-radius: 0;
-    -webkit-border-bottom: solid 2px #3E71C1;
-    -webkit-border-right: solid 2px #3E71C1;
-    background-color: #1D1E20;
-    transition: all ease 0.5s;
+    -webkit-border-radius: 3px;
+    border: none;
     color: #3E71C1;
-
-
-
-
-background: linear-gradient(to left, #000000 0%, #333333 35%, #222222 65%, #000000 100%);
-  color: white;
-  text-shadow: 0px 0px 2px black;
-  border: none;
-  box-shadow: -2px -2px 5px #0000ff80 inset, 1px 1px 1px #0090ff, 2px 2px 5px #0000ff;
-
-
+    text-shadow: 1px 1px 5px #000000;
+    background: linear-gradient(17deg , black 0%, #32333f 100%);
+    box-shadow: 1px 1px 4px 1px #000000, 1px 1px 2px #00000050 inset;
+    transition: all ease-in-out 0.4s;
     &:hover{
         color: #FFFFFF;
-        opacity: 0.8;
-        transform: scale(1.2);
-        box-shadow: 2px 2px #3E71C1, 10px 10px #1E1E20;
+        transform: translateX(-7px) translateY(-7px) scale(1.2);
+        box-shadow: -2px -2px 5px #0000ff80 inset, 1px 1px 1px #0090ff, 2px 2px 5px #0000ff, 2px 2px #3E71C1, 10px 10px #1E1E20;
     }
 `
 export const Carregando = styled.div`

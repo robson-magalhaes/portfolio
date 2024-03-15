@@ -28,7 +28,7 @@ export const Projetos = () => {
                     clickable: true,
                 }}
                 autoplay={{
-                    delay: 5000,
+                    delay: 7000,
                     disableOnInteraction: false,
                 }}
                 navigation={true}
