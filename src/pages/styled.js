@@ -370,8 +370,12 @@ export const ExpDescricao = styled.div`
         & img{
             transition: all ease 1s;
             transform: rotateX(${({ expandido }) => (expandido ? '180deg':'0deg')});
-            width: 40px;
+            width: 50px;
             margin: auto;
+            &:hover{
+                scale: 1.2;
+                filter: drop-shadow(0 0 2px #FFFFFF);
+            }
         }
     }
     & h2 {
