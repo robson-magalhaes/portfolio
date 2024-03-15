@@ -108,6 +108,11 @@ export const IconProjeto = styled.img`
     &:hover{
         transform: translateX(-367px) scale(1.2);
     }
+    @media(max-width:767px){
+        &:hover{
+            transform: none;
+        }
+    }
 `;
 
 export const Balao = styled.div`
@@ -122,4 +127,7 @@ export const Balao = styled.div`
     transform: translateX(-55px) translateY(-25px);
     opacity: 0;
     background-color: white;
+    @media(max-width:767px){
+        display: none;
+    }
 `

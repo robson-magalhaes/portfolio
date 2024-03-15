@@ -7,7 +7,7 @@ export const projetos = [
         url: '',
         img: `${bgEncarte}`,
         descricao: 'Desenvolvimento de uma aplicação web que permite aos usuários criar encartes digitais personalizados para promover produtos, serviços ou eventos. A aplicação oferece uma interface intuitiva e fácil de usar. Os usuários podem personalizar o layout e o design do encarte sem a necessidade de habilidades técnicas avançadas.',
-        urlGithub: 'https://robson-magalhaes.github.io/CriarEncarte/',
+        urlGithub: 'https://github.com/robson-magalhaes/CriarEncarte',
         page: 'https://robson-magalhaes.github.io/CriarEncarte/',
         skills: ['JavaScript', 'Html', 'CSS', 'Bootstrap']
     },
@@ -18,7 +18,7 @@ export const projetos = [
         descricao: 'Ferramenta para controle de vendas para live.',
         urlGithub: '',
         page: '',
-        skills: ['JavaScript', 'Html', 'CSS']
+        skills: ['ReactJs','JavaScript','styled-components']
     },
     {
         nome: 'Calculadora IMC',
