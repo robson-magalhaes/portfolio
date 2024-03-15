@@ -129,7 +129,7 @@ export const Titulo = styled.div`
         justify-content: end;
         font-size: 1.2rem;
         font-weight: bold;
-        //content: 'Skills';
+        letter-spacing: 7px;
         content: '${({subTxt}) => (subTxt ? subTxt : '')}';
         
     }
@@ -262,7 +262,7 @@ export const InfoTech = styled.section`
         padding: 0 20px;
     }
 `
-export const ItemT = styled.div`
+export const ItemT = styled.h6`
     padding: 5px 10px;
     height: auto;
     width: auto;
@@ -271,7 +271,7 @@ export const ItemT = styled.div`
     -webkit-border: solid 1px #FFFFFF50;
     -webkit-border-radius: 50px;
     color: #FFFFFF;
-    
+    font-size: 0.9rem;
     @media (max-width: 750px){
         font-size: 0.7rem;
     }
