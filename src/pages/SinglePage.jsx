@@ -8,7 +8,6 @@ import { NavMenu } from '../components/NavMenu/navMenu';
 import Projetos from '../components/Projetos/Projetos';
 
 //Imagens
-import iconGithub from '../assets/image/icons/githubXP.png'
 import imgPerfil from '../assets/image/eu.png';
 import bgPlaneta from '../assets/video/planetaTerra.mp4';
 import iconWhatss from '../assets/image/icons/whatsapp.png';
@@ -50,7 +49,7 @@ export const SinglePage = () => {
             <source src={bgPlaneta} type='video/mp4' />
           </video>
           <C.InfoArea>
-            <C.Titulo className='my-5' >Minhas Habilidades</C.Titulo>
+            <C.Titulo className='my-5'>Minhas Habilidades</C.Titulo>
             <C.Corpo>
               <C.HabilitTech>
                 {
@@ -90,11 +89,6 @@ export const SinglePage = () => {
                 <C.BoxRight>
                   <C.ExpData>{x.data}</C.ExpData>
                   <C.ExpDescricao>
-                    {x.urlGithub &&
-                      <Link to={x.urlGithub} target="_blank">
-                        <C.IconGitHub src={iconGithub} />
-                      </Link>
-                    }
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>

@@ -16,17 +16,21 @@
     border-radius: 7px;
     cursor: grab;
 }
-.swiper-slide:active{
+
+.swiper-slide:active {
     cursor: grabbing;
 }
-.swiper-pagination-bullet{
+
+.swiper-pagination-bullet {
     background-color: white;
 }
-.swiper-button-prev{
+
+.swiper-button-prev {
     transform: translateX(-10px);
     z-index: 99;
 }
-.swiper-button-next{
+
+.swiper-button-next {
     margin-right: 10px;
 }
 
@@ -37,8 +41,15 @@
     object-fit: cover;
 }
 
-@media(max-width:767px){
-    .swiper-slide{
+.swiper-slide:hover {
+    & img {
+        translate: 360px;
+        opacity: 1;
+    }
+}
+
+@media(max-width:767px) {
+    .swiper-slide {
         flex-direction: column-reverse;
         height: 650px;
         padding-top: 0;

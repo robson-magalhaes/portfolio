@@ -115,7 +115,7 @@ export const ImgPerfil = styled.img`
 
 export const Titulo = styled.div`
     text-align: center;
-    font-size: ${(props) =>(props.tmFonte ? props.tmFonte : 2.3)}rem;
+    font-size: ${(props) => (props.tmFonte ? props.tmFonte : 2.3)}rem;
     color: transparent;
     background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
     background-clip: text;
@@ -321,14 +321,16 @@ export const BoxRight = styled.div`
     border: solid 1px transparent;
     border-radius: 10px;
     transition: all ease 0.4s;
+    
+    background-color: #00000050;
 
-    &:hover{
+    /* &:hover{
         & img{
             translate: 160px;
             opacity: 1;
         }
         background-color: #00000050;
-    }
+    } */
 `
 
 export const ExpData = styled.p`
@@ -360,22 +362,6 @@ export const ExpSkill = styled.div`
     gap: 10px;
     margin: 10px;
     flex-wrap: wrap;
-`;
-
-export const IconGitHub = styled.img`
-    float: right;
-    width: 40px;
-    height: 40px;
-    margin: 15px;
-    cursor: pointer;
-    opacity: 0;
-    transform: translateX(-150px) translateY(-21px);
-    transition: all ease 0.4s;
-
-    &:hover{
-        transform: translateX(-127px) translateY(-21px);
-        scale: calc(1.2);
-    }
 `;
 
 export const SessaoProjetos = styled.section`
