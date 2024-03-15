@@ -134,7 +134,7 @@ export const BotaoCurriculo = styled.button`
     color: #3E71C1;
     text-shadow: 1px 1px 5px #000000;
     background: linear-gradient(17deg , black 0%, #32333f 100%);
-    box-shadow: 1px 1px 4px 1px #000000, 1px 1px 2px #00000050 inset;
+    box-shadow: 2px 2px 3px 0px #000000, 1px 1px 2px #00000050 inset;
     transition: all ease-in-out 0.4s;
     &:hover{
         color: #FFFFFF;

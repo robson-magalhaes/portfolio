@@ -37,30 +37,33 @@ export const Projetos = () => {
             >
                 {projetos.map(x => (
                     <SwiperSlide>
-                        <C.LeftContainer urlImage={x.imgF} />
+                        <C.LeftContainer urlImage={x.img} />
                         <C.RightContainer>
                             <P.InfoTitulo>
                                 {x.nome}
                             </P.InfoTitulo>
-                            {x.imgB.map(x => (
-                                <>
-                                    <C.Descricao>
-                                        <p>{x.descricao}</p>
-                                        <C.LinkIcons>
-                                            <Link to={x.urlGithub} target="_blank">
-                                                page
-                                                <C.IconGitHub src={iconLink}  icon='link'/>
-                                            </Link>
-                                            <Link to={x.urlGithub} target="_blank">
-                                                <C.IconGitHub src={iconGithub} icon="github"/>
-                                            </Link>
-                                        </C.LinkIcons>
-                                    </C.Descricao>
-                                    <P.ExpSkill>
-                                        {x.skills.map(x => (<P.ItemT>{x}</P.ItemT>))}
-                                    </P.ExpSkill>
-                                </>
-                            ))}
+                            <C.Descricao>
+                                <p>{x.descricao}</p>
+                                <C.LinkIcons>
+                                    {
+                                        x.urlGithub &&
+                                        <Link to={x.urlGithub} target="_blank">
+                                            <C.Balao>GitHub</C.Balao>
+                                            <C.IconProjeto src={iconGithub} icon="github" />
+                                        </Link>
+                                    }
+                                    {
+                                        x.page &&
+                                        <Link to={x.page} target="_blank">
+                                            <C.Balao>Pagina</C.Balao>
+                                            <C.IconProjeto src={iconLink} icon='link' />
+                                        </Link>
+                                    }
+                                </C.LinkIcons>
+                            </C.Descricao>
+                            <P.ExpSkill>
+                                {x.skills.map(x => (<P.ItemT>{x}</P.ItemT>))}
+                            </P.ExpSkill>
                         </C.RightContainer>
                     </SwiperSlide>
                 ))}

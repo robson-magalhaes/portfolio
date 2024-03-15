@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import * as C from './styled';
 import { Link } from 'react-router-dom';
 
@@ -13,13 +13,18 @@ import bgPlaneta from '../assets/video/planetaTerra.mp4';
 import iconWhatss from '../assets/image/icons/whatsapp.png';
 import iconLinkedin from '../assets/image/icons/linkedin.png';
 import iconGithubs from '../assets/image/icons/github.png';
+import iconDropdown from '../assets/image/icons/down.png';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
 
 export const SinglePage = () => {
-
+  const [expandido, setExpandido] = useState(null);
+  function handleToggle(index) {
+    setExpandido(index == expandido ? null : index);
+    console.log(expandido);
+  }
   return (
     <C.Container>
       <C.AreaHeader id="home">
@@ -85,13 +90,16 @@ export const SinglePage = () => {
           <C.LeftExperiencia />
           <C.RightExperiencia>
             {
-              expProjetos.map(x => (
-                <C.BoxRight>
+              expProjetos.map((x, key) => (
+                <C.BoxRight >
                   <C.ExpData>{x.data}</C.ExpData>
-                  <C.ExpDescricao>
+                  <C.ExpDescricao expandido={expandido === key}>
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
+                    <div onClick={()=>handleToggle(key)} className='dropdown'>
+                      <img src={iconDropdown} alt="dropdown" />
+                    </div>
                     <C.ExpSkill>
                       {x.skills.map(i => (
                         <C.ItemT>{i}</C.ItemT>
@@ -101,6 +109,7 @@ export const SinglePage = () => {
                 </C.BoxRight>
               ))
             }
+
           </C.RightExperiencia>
         </C.ContainerExperiencia>
       </C.SessaoExperiencia>

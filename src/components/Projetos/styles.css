@@ -42,16 +42,21 @@
 }
 
 .swiper-slide:hover {
-    & img {
+    & img{
         translate: 360px;
         opacity: 1;
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:767px){
     .swiper-slide {
         flex-direction: column-reverse;
         height: 650px;
         padding-top: 0;
+    }
+    .swiper-slide:hover {
+        & img{
+            translate: none;
+        }
     }
 }

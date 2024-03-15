@@ -340,15 +340,37 @@ export const ExpData = styled.p`
 `
 
 export const ExpDescricao = styled.div`
-    border-left : solid 1px white;
+    border-left: solid 1px white;
     padding: 10px 15px;
     flex: 3;
-
-    & p{
-        color:#AAAAAA;
+    & p {
+        color: #AAAAAA;
+        margin: 0;
+        max-height: ${({ expandido }) => (expandido ? '1000px' : '80px')};
+        overflow: hidden;
+        text-overflow:ellipsis;
+        transition: ease-in-out 0.7s;
     }
-    & h2{
-        color:#FFFFFF;
+    & .dropdown{
+        cursor: pointer;
+        width: 100%;
+        & img{
+            transition: all ease 1s;
+            transform: rotateX(${({ expandido }) => (expandido ? '180deg':'0deg')});
+            width: 40px;
+            margin: auto;
+        }
+    }
+    & h2 {
+        color: #FFFFFF;
+    }
+    @media (max-width: 750px){
+        & div{
+            margin: 0;
+        }
+        & div:last-child div{
+            font-size: 0.7rem;
+        }
     }
 `
 
@@ -370,6 +392,7 @@ export const SessaoProjetos = styled.section`
     gap: 40px 0;
     background-color: red;
 `
+
 
 export const FooterContainer = styled.footer`
     padding: 10px 100px;
