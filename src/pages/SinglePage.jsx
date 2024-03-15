@@ -54,7 +54,7 @@ export const SinglePage = () => {
             <source src={bgPlaneta} type='video/mp4' />
           </video>
           <C.InfoArea>
-            <C.Titulo className='my-5'>Minhas Habilidades</C.Titulo>
+            <C.Titulo className='my-5' subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
             <C.Corpo>
               <C.HabilitTech>
                 {
@@ -85,7 +85,7 @@ export const SinglePage = () => {
       </C.SessaoHabilidades>
 
       <C.SessaoExperiencia id='expProfissional'>
-        <C.Titulo>Experiência Profissional</C.Titulo>
+        <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia />
           <C.RightExperiencia>
@@ -121,7 +121,7 @@ export const SinglePage = () => {
 
       <C.FooterContainer id="contato">
         <C.Contato>
-          <p><i className="fa-solid fa-phone"></i> (28)999961628</p>
+          <p><i className="fa-solid fa-phone"></i> (28) 9 9996-1628</p>
           <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">

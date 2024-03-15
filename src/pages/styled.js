@@ -122,6 +122,17 @@ export const Titulo = styled.div`
     -webkit-background-clip:text;
     -ms-background-clip:text;
     margin: 20px 0;
+    width: auto;
+
+    &::after{
+        display: flex;
+        justify-content: end;
+        font-size: 1.2rem;
+        font-weight: bold;
+        //content: 'Skills';
+        content: '${({subTxt}) => (subTxt ? subTxt : '')}';
+        
+    }
 `;
 export const InfoTitulo = styled.h1`
     font-size: 1.3rem;
@@ -267,6 +278,10 @@ export const ItemT = styled.div`
 `
 
 export const SessaoExperiencia = styled.section`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     padding: 50px 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
@@ -276,7 +291,7 @@ export const SessaoExperiencia = styled.section`
     }
     @media (max-width: 800px){
         padding: 0 !important;
-        background: linear-gradient(27deg , #000000 0%, #32333f 100%);
+        background: linear-gradient(27deg , #000000 0%, #32333f 60%);
     }
 `
 
