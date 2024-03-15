@@ -241,9 +241,15 @@ export const ImgItemTech = styled.img`
 export const InfoTech = styled.section`
     padding: 30px 100px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+    & div{
+        justify-content: center;
+    }
+    & div:last-child{
+        padding: 0 20px;
+    }
 `
 export const ItemT = styled.div`
     padding: 5px 10px;
@@ -251,7 +257,13 @@ export const ItemT = styled.div`
     width: auto;
     border: solid 1px #FFFFFF50;
     border-radius: 50px;
+    -webkit-border: solid 1px #FFFFFF50;
+    -webkit-border-radius: 50px;
     color: #FFFFFF;
+    
+    @media (max-width: 750px){
+        font-size: 0.7rem;
+    }
 `
 
 export const SessaoExperiencia = styled.section`
@@ -264,6 +276,7 @@ export const SessaoExperiencia = styled.section`
     }
     @media (max-width: 800px){
         padding: 0 !important;
+        background: linear-gradient(27deg , #000000 0%, #32333f 100%);
     }
 `
 
@@ -364,20 +377,11 @@ export const ExpDescricao = styled.div`
     & h2 {
         color: #FFFFFF;
     }
-    @media (max-width: 750px){
-        & div{
-            margin: 0;
-        }
-        & div:last-child div{
-            font-size: 0.7rem;
-        }
-    }
 `
 
 export const ExpSkill = styled.div`
     display: flex;
     gap: 10px;
-    margin: 10px;
     flex-wrap: wrap;
 `;
 

@@ -78,12 +78,13 @@ export const LinkIcons = styled.div`
     @media(max-width:767px){
         position: absolute;
         display: flex;
-        justify-content: space-around;
+        justify-content: start;
         flex-direction: column;
         height: 100px;
         width: auto;
         left: 30px;
         top: 50px;
+        gap: 10px;
 
         & a img{
             transform: none;

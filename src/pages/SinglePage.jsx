@@ -73,14 +73,14 @@ export const SinglePage = () => {
         </C.VideoArea>
 
         <C.InfoTech>
-          <C.Titulo style={{ width: '100%' }}>Competências e Especialidades</C.Titulo>
-          {
-            allSkills.map(x => (
-              <C.ExpSkill>
+          <C.Titulo>Competências e Especialidades</C.Titulo>
+          <C.ExpSkill>
+            {
+              allSkills.map(x => (
                 <C.ItemT>{x}</C.ItemT>
-              </C.ExpSkill>
-            ))
-          }
+              ))
+            }
+          </C.ExpSkill>
         </C.InfoTech>
       </C.SessaoHabilidades>
 
@@ -97,7 +97,7 @@ export const SinglePage = () => {
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
-                    <div onClick={()=>handleToggle(key)} className='dropdown'>
+                    <div onClick={() => handleToggle(key)} className='dropdown'>
                       <img src={iconDropdown} alt="dropdown" />
                     </div>
                     <C.ExpSkill>
