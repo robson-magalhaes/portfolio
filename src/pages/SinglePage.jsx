@@ -3,12 +3,9 @@ import * as C from './styled';
 import { Link } from 'react-router-dom';
 
 //Components
-import TxtAnimado from '../components/TxTAnimado/txtAnimado';
-import { NavMenu } from '../components/NavMenu/navMenu';
 import Projetos from '../components/Projetos/Projetos';
 
 //Imagens
-import imgPerfil from '../assets/image/eu.png';
 import bgPlaneta from '../assets/video/planetaTerra.mp4';
 import iconWhatss from '../assets/image/icons/whatsapp.png';
 import iconLinkedin from '../assets/image/icons/linkedin.png';
@@ -18,36 +15,15 @@ import iconDropdown from '../assets/image/icons/down.png';
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
+import Header from '../components/Partials/Header';
 
 export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
-  function handleToggle(index) {
-    setExpandido(index == expandido ? null : index);
-    console.log(expandido);
-  }
+  const [flip, setFlip] = useState(null);
+  
   return (
     <C.Container>
-      <C.AreaHeader id="home">
-        <NavMenu />
-        <C.HeaderPerfil>
-          <C.BoxImg>
-            <C.ImgPerfil src={imgPerfil} />
-          </C.BoxImg>
-          <C.PerfilApresentacao>
-            <C.PerfilTitulo>
-              <div> Desenvolvedor</div>Full Stack
-              <div>Robson Oliveira Magalhães</div>
-            </C.PerfilTitulo>
-            <C.PerfilDescricao>
-              <p>
-                Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
-              </p>
-              <TxtAnimado />
-            </C.PerfilDescricao>
-          </C.PerfilApresentacao>
-        </C.HeaderPerfil>
-      </C.AreaHeader >
-
+      <Header/>
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea opacity={1} heigth={550}>
           <video autoPlay loop muted playsinline allow="autoplay">
@@ -58,12 +34,14 @@ export const SinglePage = () => {
             <C.Corpo>
               <C.HabilitTech>
                 {
-                  Skills.map(x => (
+                  Skills.map((x, key) => (
                     <>
-                      <C.ItemTech>
-                        <C.ImgItemTech src={x.image} alt={x.nome} />
+                    <C.FlipCard onMouseEnter={()=>setFlip(key == flip ? null : key)}>
+                     <C.ItemTech  flipped={flip === key}>
+                        <C.ImgItemTech id={'flip'+key} src={x.image} alt={x.nome} />
                         <p>{x.nome}</p>
                       </C.ItemTech>
+                    </C.FlipCard>
                     </>
                   ))
                 }
@@ -97,7 +75,7 @@ export const SinglePage = () => {
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
-                    <div onClick={() => handleToggle(key)} className='dropdown'>
+                    <div onClick={() => setExpandido(key === expandido ? null : key)} className='dropdown'>
                       <img src={iconDropdown} alt="dropdown" />
                     </div>
                     <C.ExpSkill>

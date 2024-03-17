@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as keyframes from '../../helpers/animationScreen';
 
 export const LeftContainer = styled.div`
     flex:1;
@@ -42,11 +43,9 @@ export const Descricao = styled.div`
     display: flex;
     flex-direction: column;
     align-items: space-between;
-
     & p {
         height: 100%;
     }
-
     @media(max-width:767px){
         width: 90%;
         height: 300px;

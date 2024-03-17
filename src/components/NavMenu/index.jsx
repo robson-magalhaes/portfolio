@@ -7,7 +7,7 @@ import * as C from './styled';
 import { useState } from 'react';
 import meuCurriculo from '../../data/curriculo.pdf';
 
-export const NavMenu = () => {
+const NavMenu = () => {
   const [loading, setLoading] = useState(false);
   const [estaVisivel, setVisivel] = useState(false);
   function handleClickDownload() {
@@ -100,3 +100,4 @@ export const NavMenu = () => {
     </>
   );
 }
+export default NavMenu;

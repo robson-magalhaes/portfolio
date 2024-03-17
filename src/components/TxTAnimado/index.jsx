@@ -1,6 +1,6 @@
 import * as C from './styled';
 
-export const TxtAnimado = () => {
+const TxtAnimado = () => {
     return (
         <C.BoxDigitando>
             <div>Ola Mundo,</div>
