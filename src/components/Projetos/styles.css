@@ -21,19 +21,15 @@
     cursor: grabbing;
 }
 
-.swiper-slide-active div:first-child {
-    animation: screenRight 1s;
-}
-
-.swiper-slide-active div:last-child {
+.swiper-wrapper .swiper-slide.swiper-slide-active div:last-child {
     animation: screenRight 1.5s;
 }
 
-.swiper-slide-active h1 {
+.swiper-wrapper .swiper-slide.swiper-slide-active h1 {
     animation: screenRight 1s;
 }
 
-.swiper-slide-active p {
+.swiper-wrapper .swiper-slide.swiper-slide-active p:first-child {
     animation: screenRight 2s;
     text-shadow: 2px 2px 2px black;
 }
@@ -64,15 +60,7 @@
         opacity: 1;
     }
 }
-@keyframes screenUp{
-    from{
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    to{
-        opacity: 1;
-    }
-}
+
 @keyframes screenRight{
     from{
         opacity: 0;
