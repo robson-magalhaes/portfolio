@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './styles.css';
 import { Pagination, Navigation } from 'swiper/modules';
-import { register } from 'swiper/element/bundle';
 
 import { projetos } from '../../data/ExpProfissional';
 
@@ -17,10 +16,11 @@ import iconGithub from '../../assets/image/icons/githubXP.png';
 import iconLink from '../../assets/image/icons/link.png';
 
 export const Projetos = () => {
-    register();
+    
     return (
         <>
             <Swiper
+                cssMode={true}
                 slidesPerView={1}
                 spaceBetween={30}
                 loop={true}
@@ -33,11 +33,14 @@ export const Projetos = () => {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
+                onSlideChange={(e) => {
+                    e.animating;
+                }}
                 className="mySwiper"
             >
                 {projetos.map(x => (
                     <SwiperSlide>
-                        <C.LeftContainer urlImage={x.img} />
+                        <C.LeftContainer urlimage={x.img} />
                         <C.RightContainer>
                             <P.InfoTitulo>
                                 {x.nome}

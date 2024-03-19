@@ -4,7 +4,7 @@ import * as keyframes from '../../helpers/animationScreen';
 export const LeftContainer = styled.div`
     flex:1;
     height: 340px;
-    background: ${(props) => (props.urlImage ? `url(${props.urlImage})` : 'blue')};
+    background: ${(props) => (props.urlimage ? `url(${props.urlimage})` : 'blue')};
     background-size: cover;
     background-repeat: space;
     background-position: right;

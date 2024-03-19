@@ -33,6 +33,12 @@
     animation: screenRight 2s;
     text-shadow: 2px 2px 2px black;
 }
+.swiper-ativado{
+    background-color: red;
+    scale: 1.2;
+    color: red;
+}
+
 
 .swiper-pagination-bullet {
     background-color: white;
