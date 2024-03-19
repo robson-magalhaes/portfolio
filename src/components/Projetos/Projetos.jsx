@@ -4,10 +4,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './styles.css';
+
 import { Pagination, Navigation } from 'swiper/modules';
 
 import { projetos } from '../../data/ExpProfissional';
@@ -16,7 +18,7 @@ import iconGithub from '../../assets/image/icons/githubXP.png';
 import iconLink from '../../assets/image/icons/link.png';
 
 export const Projetos = () => {
-    
+   
     return (
         <>
             <Swiper
@@ -33,9 +35,6 @@ export const Projetos = () => {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                onSlideChange={(e) => {
-                    e.animating;
-                }}
                 className="mySwiper"
             >
                 {projetos.map(x => (

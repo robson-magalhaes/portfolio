@@ -21,24 +21,31 @@
     cursor: grabbing;
 }
 
-.swiper-wrapper .swiper-slide.swiper-slide-active div:last-child {
+.swiper-slide-active div:last-child {
     animation: screenRight 1.5s;
 }
 
-.swiper-wrapper .swiper-slide.swiper-slide-active h1 {
+.swiper-slide-active h1 {
     animation: screenRight 1s;
 }
 
-.swiper-wrapper .swiper-slide.swiper-slide-active p:first-child {
+.swiper-slide-active p:first-child {
     animation: screenRight 2s;
     text-shadow: 2px 2px 2px black;
 }
-.swiper-ativado{
-    background-color: red;
-    scale: 1.2;
-    color: red;
+
+.swiper-slide-prev div:last-child {
+    animation: screenRight 1.5s;
 }
 
+.swiper-slide-prev h1 {
+    animation: screenRight 1s;
+}
+
+.swiper-slide-prev p:first-child {
+    animation: screenRight 2s;
+    text-shadow: 2px 2px 2px black;
+}
 
 .swiper-pagination-bullet {
     background-color: white;
