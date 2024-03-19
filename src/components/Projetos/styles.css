@@ -23,10 +23,10 @@
 
 .swiper-slide-active{
     & div:first-child{
-        animation: screenUp 1s;
+        animation: screenRight 1s;
     }
     & div:last-child{
-        animation: screenRight 1s;
+        animation: screenRight 1.5s;
 
     }
     & h1 {
