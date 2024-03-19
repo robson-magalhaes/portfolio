@@ -21,23 +21,23 @@
     cursor: grabbing;
 }
 
-.swiper-slide-active{
-    & div:first-child{
-        animation: screenRight 1s;
-    }
-    & div:last-child{
-        animation: screenRight 1.5s;
-
-    }
-    & h1 {
-        animation: screenRight 1s;
-
-    }
-    & p{
-        animation: screenRight 2s;
-        text-shadow: 2px 2px 2px black;
-    }
+.swiper-slide-active div:first-child {
+    animation: screenRight 1s;
 }
+
+.swiper-slide-active div:last-child {
+    animation: screenRight 1.5s;
+}
+
+.swiper-slide-active h1 {
+    animation: screenRight 1s;
+}
+
+.swiper-slide-active p {
+    animation: screenRight 2s;
+    text-shadow: 2px 2px 2px black;
+}
+
 .swiper-pagination-bullet {
     background-color: white;
 }
