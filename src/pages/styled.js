@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import aurora from '../assets/image/aurora.jpg';
 import bgXP from '../assets/image/projeto/bg-exp.jpg';
+import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
-
+    .sessaoVisivel{
+        animation: ${keyframes.screenToBottom} 1s forwards;
+    }
     @media (max-width:667px){
         padding: 0;
         margin: 0;
@@ -161,11 +164,12 @@ export const ImgItemTech = styled.img`
 `;
 
 export const InfoTech = styled.section`
-    padding: 30px 100px;
+    padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
     & div{
         justify-content: center;
     }
@@ -260,7 +264,7 @@ export const BoxRight = styled.div`
     border: solid 1px transparent;
     border-radius: 10px;
     transition: all ease 0.4s;
-    
+    opacity: 0;
     background-color: #00000050;
 
     background-color: #00000050;
