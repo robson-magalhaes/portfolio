@@ -14,7 +14,13 @@ import iconDropdown from '../assets/image/icons/down.png';
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
-import Header from '../components/partials/Header';
+// import Header from '../components/partials/Header';
+
+
+import TextoAnimado from '../components/TextoAnimado';
+import NavMenu from '../components/NavMenu';
+import imgPerfil from '../assets/image/eu.png';
+
 
 export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
@@ -61,7 +67,26 @@ export const SinglePage = () => {
   }, []);
   return (
     <C.Container>
-      <Header />
+      <C.AreaHeader id="home">
+        <NavMenu />
+        <C.HeaderPerfil>
+          <C.BoxImg>
+            <C.ImgPerfil src={imgPerfil} />
+          </C.BoxImg>
+          <C.PerfilApresentacao>
+            <C.PerfilTitulo>
+              <div> Desenvolvedor</div>Full Stack
+              <div>Robson Oliveira Magalhães</div>
+            </C.PerfilTitulo>
+            <C.PerfilDescricao>
+              <p>
+                Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
+              </p>
+            </C.PerfilDescricao>
+            <TextoAnimado/>
+          </C.PerfilApresentacao>
+        </C.HeaderPerfil>
+      </C.AreaHeader >
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea opacity={1} heigth={550}>
           <video autoPlay loop muted playsinline allow="autoplay">
