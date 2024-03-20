@@ -244,6 +244,7 @@ export const LeftExperiencia = styled.div`
 export const RightExperiencia = styled.div`
     flex:1 270px;
     height:550px;
+    padding-bottom: 100px;
     overflow-y: scroll;
     &::-webkit-scrollbar { 
         display: none;
