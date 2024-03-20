@@ -1,6 +1,6 @@
 import * as C from './styled';
 
-const TxtAnimado = () => {
+const TextoAnimado = () => {
     return (
         <C.BoxDigitando>
             <div>Ola Mundo,</div>
@@ -9,4 +9,4 @@ const TxtAnimado = () => {
     );
 }
 
-export default TxtAnimado;
+export default TextoAnimado;

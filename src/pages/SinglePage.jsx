@@ -14,7 +14,7 @@ import iconDropdown from '../assets/image/icons/down.png';
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
-import Header from '../components/Partials/Header';
+import Header from '../components/partials/Header';
 
 export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
