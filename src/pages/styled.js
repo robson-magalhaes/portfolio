@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import aurora from '../assets/image/aurora.jpg';
-import bgXP from '../assets/image/projeto/bg-exp.jpg';
 import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
@@ -14,7 +13,7 @@ export const Container = styled.div`
         animation: ${keyframes.screenToCenter} 1s forwards;
     }
     & .abrirLivroXP{
-        animation: ${keyframes.abrirLivro} 1s forwards;
+        animation: ${keyframes.abrirLivro} 2s forwards;
     }
     @media (max-width:667px){
         padding: 0;
@@ -344,13 +343,12 @@ export const LeftExperiencia = styled.div`
     transform-style: preserve-3d;
     background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
     z-index: 2;
-    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 1;
+    transition: all ease-in-out 2s;
     position: relative;
     
-    @media (max-width: 1200px){
+    /* @media (max-width: 1200px){
         transform: rotateY(35deg) translate(30px);
-    }
+    } */
     @media (max-width: 780px){
         padding: 0;
         display: none;

@@ -50,18 +50,16 @@ export const abrirLivro = keyframes`
     transform: rotateY(145deg);
     transform-origin: right;
     transform-style: preserve-3d;
-    z-index: 2;
     transition: all ease-in-out 1s;
-    opacity: 1;
     position: relative;
   }
   to{
     transform: rotateY(45deg);
-    transition: all ease-in-out 1s;
     background-image: url(${bgXP});
     background-size: cover;
     background-position:center;
     backface-visibility: hidden;
+    transition: all ease-in-out 1s;
   }
         
 `
