@@ -28,16 +28,30 @@ export const SinglePage = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sessoes = document.querySelectorAll('.sessaoScroll');
-      sessoes.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        var viewport = window.innerHeight + 200;
-        if (rect.top >= 0 && rect.bottom <= viewport) {
-          element.classList.add('sessaoVisivel');
+      const item = document.querySelectorAll('.sessaoScroll');
+      for (let i = 0; i < item.length; i++) {
+        const rec = item[i].getBoundingClientRect();
+        var totalDiv = window.innerHeight + 200;
+        if (rec.top >= 0 && rec.bottom <= totalDiv) {
+          switch (i) {
+            case 0:
+            case 1:
+            case 3:
+              item[i].classList.add('sessaoBottomFromTop');
+              break;
+            case 2:
+              item[i].classList.add('sessaoTransition');
+              document.getElementById('screenAbrir').classList.add('abrirLivroXP');
+              break;
+            default:
+              item[i].style.opacity = 0;
+              break;
+
+          }
         } else {
-          element.style.opacity = 0;
+          item[i].style.opacity = 0;
         }
-      });
+      }
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -51,15 +65,23 @@ export const SinglePage = () => {
       const item = document.querySelectorAll('.boxScroll');
       item.forEach((e) => {
         const rec = e.getBoundingClientRect();
-        var totalDiv = divXP.clientHeight + 100;
+        var totalDiv = divXP.clientHeight + 300;
         if (rec.top >= 0 && rec.bottom <= totalDiv) {
-          e.classList.add('sessaoVisivel')
+          e.style.opacity = 1;
         } else {
-          e.style.opacity = 0;
+          e.style.opacity = 0.2;
         }
       })
+        ((e) => {
+          const rec = e.getBoundingClientRect();
+          var totalDiv = divXP.clientHeight + 300;
+          if (rec.top >= 0 && rec.bottom <= totalDiv) {
+            e.style.opacity = 1;
+          } else {
+            e.style.opacity = 0.2;
+          }
+        })
     }
-
     divXP.addEventListener('scroll', handleBoxXP);
     return () => {
       divXP.removeEventListener('scroll', handleBoxXP);
@@ -83,7 +105,7 @@ export const SinglePage = () => {
                 Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
               </p>
             </C.PerfilDescricao>
-            <TextoAnimado/>
+            <TextoAnimado />
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
       </C.AreaHeader >
@@ -128,7 +150,7 @@ export const SinglePage = () => {
       <C.SessaoExperiencia id='expProfissional'>
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
-          <C.LeftExperiencia />
+          <C.LeftExperiencia id="screenAbrir"/>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {
               expProjetos.map((x, key) => (

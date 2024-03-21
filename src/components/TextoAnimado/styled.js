@@ -55,14 +55,12 @@ export const BoxDigitando = styled.div`
     font-weight: bold;
     font-style: oblique;
     color: transparent;
-    background: linear-gradient(to bottom, #3088cf 40%, purple 85%, #FFFFFF 90%);
+    background: linear-gradient(to right bottom, #3088cf 10%, purple 45%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
+    text-align: start;
     align-self: start;
-    margin-top: -7px;
-    padding-right: 5px;
-    display: block;
     width: 100%;
   }
   

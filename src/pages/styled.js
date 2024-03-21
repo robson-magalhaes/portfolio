@@ -7,8 +7,14 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
-    .sessaoVisivel{
+    & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 1s forwards;
+    }
+    & .sessaoTransition{
+        animation: ${keyframes.screenToCenter} 1s forwards;
+    }
+    & .abrirLivroXP{
+        animation: ${keyframes.abrirLivro} 1s forwards;
     }
     @media (max-width:667px){
         padding: 0;
@@ -16,9 +22,7 @@ export const Container = styled.div`
     }
 `;
 
-
-
-
+//INICIO HEADER
 export const AreaHeader = styled.header`
     padding: 50px 100px;
     height: auto;
@@ -117,15 +121,7 @@ export const ImgPerfil = styled.img`
     height: 100%;
     filter: drop-shadow(-10px 0 15px #000000);
 `;
-
-
-
-
-
-
-
-
-
+// FINAL HEADER
 
 
 export const Titulo = styled.div`
@@ -310,8 +306,12 @@ export const SessaoExperiencia = styled.section`
     justify-content: center;
     flex-direction: column;
     padding: 50px 100px;
+    margin-bottom: 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
+    height:1000px;
+    overflow-y: hidden;
+
     @media (max-width: 1200px){
        padding-left: 0 !important;
        padding-right: 20px;
@@ -325,7 +325,7 @@ export const SessaoExperiencia = styled.section`
 export const ContainerExperiencia = styled.div`
     display: flex;
     margin-top: 50px;
-    height: 100%;
+    height: auto;
     perspective: 2000px;
 
     @media (max-width: 750px){
@@ -337,36 +337,23 @@ export const ContainerExperiencia = styled.div`
 export const LeftExperiencia = styled.div`
     flex:1;
     height: auto;
-    background-image: url(${bgXP});
-    background-size: cover;
-    background-position:center;
-    box-shadow: 20px 0px 50px 30px black inset;
+    box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #FFFFFF70;
     border-radius: 7px;
-    box-shadow: 15px 12px #111111 inset, 0px -12px #111111 inset;
-    transform: rotateY(40deg) translate(80px);
+    transform: rotateY(145deg);
+    transform-origin: right;
+    transform-style: preserve-3d;
+    background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
+    z-index: 2;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 1;
+    position: relative;
+    
     @media (max-width: 1200px){
         transform: rotateY(35deg) translate(30px);
     }
-    @media (max-width: 800px){
-    padding: 0;
-        transform: rotateY(0deg) translate(0px);
-    }
-`
-
-export const RightExperiencia = styled.div`
-    flex:1 270px;
-    height:550px;
-    padding-bottom: 100px;
-    overflow-y: scroll;
-    &::-webkit-scrollbar { 
+    @media (max-width: 780px){
+        padding: 0;
         display: none;
-    }
-    transition: all ease-in-out 1s;
-    box-shadow: 50px 0px 55px #000000 inset;
-    border-radius: 0px 10px 10px 0px;
-    margin: 40px 0;
-    @media (max-width: 750px){
-        margin: 20px 0;
     }
 `
 
@@ -377,11 +364,29 @@ export const BoxRight = styled.div`
     border: solid 1px transparent;
     border-radius: 10px;
     transition: all ease 0.4s;
-    opacity: 0;
+    opacity: 0.2;
     background-color: #00000050;
-
     background-color: #00000050;
     box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
+`
+
+export const RightExperiencia = styled.div`
+    flex:1 270px;
+    height:550px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar { 
+        display: none;
+    }
+    transition: all ease-in-out 1s;
+    box-shadow: 50px 0px 55px #000000 inset;
+    border-radius: 0px 10px 10px 0px;
+
+    @media (max-width: 750px){
+        margin: 20px 0;
+    }
+    & div:first-child{
+        opacity: 1;
+    }
 `
 
 export const ExpData = styled.p`
