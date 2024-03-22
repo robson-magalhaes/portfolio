@@ -1,5 +1,7 @@
 import { keyframes } from "styled-components";
 import bgXP from '../assets/image/projeto/bg-exp.jpg';
+import moldura from '../assets/image/moldura.png';
+
 
 export const screenToRight = keyframes`
   from {
@@ -46,33 +48,21 @@ export const screenToCenter = keyframes`
   }
 `
 
-export const abrirLivro = keyframes`
-  from {
-    transform: rotateY(145deg);
-  }
-  to{
-    transform: rotateY(45deg);
-    background-image: url(${bgXP});
-    background-size: cover;
-    background-position:center;
-  } 
-`
-
-// export const abrirLivro = keyframes`
-//   0% {
-//     background-color: red;
-//   }
-//   30%{
-//     background-color: red;
-//   }
-//   45% {
-//     background-color: blue;
-//   }
-//   100% {
-//     transform: rotateY(45deg);
-//     background-color: blue;
-//   }
-//`
+ export const abrirLivro = keyframes`
+   0%, 30% {
+      background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
+      background-size: cover;
+      background-position:center;
+   }
+   45% {
+     background-image: url(${bgXP});
+   }
+   100% {
+     transform: rotateY(45deg);
+     background-image: url(${bgXP});
+     backface-visibility: hidden;
+   }
+` 
 
 export const menufechado = keyframes`
   from {

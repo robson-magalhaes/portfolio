@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import aurora from '../assets/image/aurora.jpg';
+import moldura from '../assets/image/moldura.png';
 import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
+    
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
     }
@@ -334,7 +336,7 @@ export const ContainerExperiencia = styled.div`
 export const LeftExperiencia = styled.div`
     flex: 1;
     height: auto;
-    box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #FFFFFF70;
+    box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #787878;
     border-radius: 7px;
     position: relative;
     transform-style: preserve-3d;
@@ -343,17 +345,18 @@ export const LeftExperiencia = styled.div`
     z-index: 2;
     transition: all ease-in-out 2s;
     background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
-
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background-size: cover;
+    background-position:center;
+    overflow: hidden;
     & img{
         opacity: 0.5;
-        height: 70px;
-        width: 70px;
-        border-radius: 100%;
-        z-index: 1;
+        height: 100%;
+        width: 100%;
+        box-shadow: -2px 0px 0px 2px #777 inset;
     }
 
     @media (max-width: 780px){

@@ -10,7 +10,7 @@ import iconWhatss from '../assets/image/icons/whatsapp.png';
 import iconLinkedin from '../assets/image/icons/linkedin.png';
 import iconGithubs from '../assets/image/icons/github.png';
 import iconDropdown from '../assets/image/icons/down.png';
-import iconSimbol from '../assets/image/simbol.jpg';
+import moldura from '../assets/image/moldura.png';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
@@ -46,7 +46,7 @@ export const SinglePage = () => {
           if (key === 2) {
             e.classList.add('sessaoTransition');
             document.getElementById('screenAbrir').classList.add('abrirLivroXP');
-            setTimeout(() => { setAnimacaofinal(true) }, 500);
+            setTimeout(() => { setAnimacaofinal(true) }, 700);
             return;
           }
         } else {
@@ -152,7 +152,7 @@ export const SinglePage = () => {
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia id="screenAbrir">
-            <img src={iconSimbol} alt="simbulo" className={animacaofinal ? 'hidden ' : ''} />
+            <img src={moldura} alt="simbulo" className={animacaofinal ? 'hidden ' : ''} />
           </C.LeftExperiencia>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {
