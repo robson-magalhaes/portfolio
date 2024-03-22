@@ -45,24 +45,34 @@ export const screenToCenter = keyframes`
     opacity: 1;
   }
 `
+
 export const abrirLivro = keyframes`
   from {
     transform: rotateY(145deg);
-    transform-origin: right;
-    transform-style: preserve-3d;
-    transition: all ease-in-out 1s;
-    position: relative;
   }
   to{
     transform: rotateY(45deg);
     background-image: url(${bgXP});
     background-size: cover;
     background-position:center;
-    backface-visibility: hidden;
-    transition: all ease-in-out 1s;
-  }
-        
+  } 
 `
+
+// export const abrirLivro = keyframes`
+//   0% {
+//     background-color: red;
+//   }
+//   30%{
+//     background-color: red;
+//   }
+//   45% {
+//     background-color: blue;
+//   }
+//   100% {
+//     transform: rotateY(45deg);
+//     background-color: blue;
+//   }
+//`
 
 export const menufechado = keyframes`
   from {

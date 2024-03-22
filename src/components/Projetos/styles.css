@@ -21,7 +21,7 @@
     cursor: grabbing;
 }
 
-.swiper-slide-active div:last-child {
+.swiper-slide-active div:last-child p{
     animation: screenRight 1.5s;
 }
 

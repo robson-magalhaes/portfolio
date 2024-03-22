@@ -7,7 +7,7 @@ export const Container = styled.div`
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
     & .sessaoBottomFromTop{
-        animation: ${keyframes.screenToBottom} 1s forwards;
+        animation: ${keyframes.screenToBottom} 2s forwards;
     }
     & .sessaoTransition{
         animation: ${keyframes.screenToCenter} 1s forwards;
@@ -31,9 +31,7 @@ export const AreaHeader = styled.header`
     gap: 40px 0;
 
     @media (max-width: 1180px){
-        padding: 0;
-        padding-top: 20px ;
-        padding-bottom: 80px;
+        padding: 20px 0 80px 0;
         margin: 0;
     }
 `;
@@ -158,6 +156,7 @@ export const SessaoHabilidades = styled.section`
     flex-direction: column;
     align-items: center;
     background: transparent;
+    gap: 100px 0;
 `;
 
 export const VideoArea = styled.div`
@@ -271,7 +270,7 @@ export const ImgItemTech = styled.img`
 `;
 
 export const InfoTech = styled.section`
-    padding: 100px;
+    //padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -305,7 +304,6 @@ export const SessaoExperiencia = styled.section`
     justify-content: center;
     flex-direction: column;
     padding: 50px 100px;
-    margin-bottom: 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
     height:1000px;
@@ -334,21 +332,30 @@ export const ContainerExperiencia = styled.div`
 `
 
 export const LeftExperiencia = styled.div`
-    flex:1;
+    flex: 1;
     height: auto;
     box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #FFFFFF70;
     border-radius: 7px;
-    transform: rotateY(145deg);
-    transform-origin: right;
+    position: relative;
     transform-style: preserve-3d;
-    background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
+    transform-origin: right;
+    transform: rotateY(145deg);
     z-index: 2;
     transition: all ease-in-out 2s;
-    position: relative;
+    background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-    /* @media (max-width: 1200px){
-        transform: rotateY(35deg) translate(30px);
-    } */
+    & img{
+        opacity: 0.5;
+        height: 70px;
+        width: 70px;
+        border-radius: 100%;
+        z-index: 1;
+    }
+
     @media (max-width: 780px){
         padding: 0;
         display: none;

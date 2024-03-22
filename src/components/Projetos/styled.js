@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as keyframes from '../../helpers/animationScreen';
 
 export const LeftContainer = styled.div`
     flex:1;

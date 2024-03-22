@@ -10,6 +10,7 @@ import iconWhatss from '../assets/image/icons/whatsapp.png';
 import iconLinkedin from '../assets/image/icons/linkedin.png';
 import iconGithubs from '../assets/image/icons/github.png';
 import iconDropdown from '../assets/image/icons/down.png';
+import iconSimbol from '../assets/image/simbol.jpg';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
@@ -25,33 +26,33 @@ import imgPerfil from '../assets/image/eu.png';
 export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
   const [flip, setFlip] = useState(null);
+  const [animacaofinal, setAnimacaofinal] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const item = document.querySelectorAll('.sessaoScroll');
-      for (let i = 0; i < item.length; i++) {
-        const rec = item[i].getBoundingClientRect();
-        var totalDiv = window.innerHeight + 200;
+      item.forEach((e, key) => {
+        const rec = e.getBoundingClientRect();
+        var totalDiv = window.innerHeight + 400;
         if (rec.top >= 0 && rec.bottom <= totalDiv) {
-          switch (i) {
-            case 0:
-            case 1:
-            case 3:
-              item[i].classList.add('sessaoBottomFromTop');
-              break;
-            case 2:
-              item[i].classList.add('sessaoTransition');
-              document.getElementById('screenAbrir').classList.add('abrirLivroXP');
-              break;
-            default:
-              item[i].style.opacity = 0;
-              break;
-
+          if (key === 0 || key === 3) {
+            e.classList.add('sessaoBottomFromTop');
+            return;
+          }
+          if (key === 1) {
+            setTimeout(() => { e.classList.add('sessaoBottomFromTop'); }, 1000);
+            return;
+          }
+          if (key === 2) {
+            e.classList.add('sessaoTransition');
+            document.getElementById('screenAbrir').classList.add('abrirLivroXP');
+            setTimeout(() => { setAnimacaofinal(true) }, 500);
+            return;
           }
         } else {
-          item[i].style.opacity = 0;
+          e.style.opacity = 0;
         }
-      }
+      });
     };
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -150,7 +151,9 @@ export const SinglePage = () => {
       <C.SessaoExperiencia id='expProfissional'>
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
-          <C.LeftExperiencia id="screenAbrir"/>
+          <C.LeftExperiencia id="screenAbrir">
+            <img src={iconSimbol} alt="simbulo" className={animacaofinal ? 'hidden ' : ''} />
+          </C.LeftExperiencia>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {
               expProjetos.map((x, key) => (
