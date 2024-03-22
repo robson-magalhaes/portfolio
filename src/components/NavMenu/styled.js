@@ -69,7 +69,7 @@ export const NavBar = styled.ul`
             width: 100%;
             padding: 5px 10px;
             font-size: 2rem;
-            color: white;
+            color: #FFFFFF;
         }
         & a:active{
             color: #646CFF;
@@ -83,7 +83,7 @@ export const NavLink = styled.li`
     justify-content: center;
     
     & a{
-        color:#3E71C1;
+        color: var(--cor-primaria);
         padding: 4px 20px;
         transition: all ease-in-out 0.3s;
     }
@@ -131,7 +131,7 @@ export const BotaoCurriculo = styled.button`
     border-radius: 0;
     -webkit-border-radius: 3px;
     border: none;
-    color: #3E71C1;
+    color:var(--cor-primaria);
     text-shadow: 1px 1px 5px #000000;
     background: linear-gradient(17deg , black 0%, #32333f 100%);
     box-shadow: 2px 2px 3px 0px #000000, 1px 1px 2px #00000050 inset;

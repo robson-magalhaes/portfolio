@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import aurora from '../assets/image/aurora.jpg';
-import moldura from '../assets/image/moldura.png';
 import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
-    
+
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
     }
@@ -79,7 +78,7 @@ export const PerfilTitulo = styled.div`
     line-height: 60px;
     letter-spacing: normal;
     color: transparent;
-    background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
+    background: linear-gradient(27deg, var(--cor-primaria) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
@@ -127,7 +126,8 @@ export const Titulo = styled.div`
     text-align: center;
     font-size: ${(props) => (props.tmFonte ? props.tmFonte : 2.3)}rem;
     color: transparent;
-    background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
+    //background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
+    background: linear-gradient(27deg, var(--cor-terceira) 0%, var(--cor-primaria) 65%, #FFFFFF 100%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
@@ -147,13 +147,13 @@ export const Titulo = styled.div`
 export const InfoTitulo = styled.h1`
     font-size: 1.3rem;
     font-weight: bold;
-    color: white;
+    color: #FFFFFF;
 `
 
 export const SessaoHabilidades = styled.section`
     padding: 50px 100px;
     height:auto;
-    color: white;
+    color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,7 +166,6 @@ export const VideoArea = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1;
-    background-color: black;
     width: 100%;
 
     video {
@@ -190,7 +189,7 @@ export const InfoArea = styled.div`
     z-index:1;
     height: auto;
     font-size: 2rem;
-    color:white;
+    color:#FFFFFF;
     gap: 40px;
     width: 100%;
 `;
@@ -374,7 +373,6 @@ export const BoxRight = styled.div`
     transition: all ease 0.4s;
     opacity: 0.2;
     background-color: #00000050;
-    background-color: #00000050;
     box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
 `
 
@@ -454,7 +452,6 @@ export const SessaoProjetos = styled.section`
     display: flex;
     flex-direction: column;
     gap: 40px 0;
-    background-color: red;
 `
 
 

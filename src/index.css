@@ -15,8 +15,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --cor-primaria:#000000;
-  --cor-secundaria: #blue;
+
+  --cor-primaria:#2C7ABA;
+  --cor-secundaria: #171616;
+  --cor-terceira:#7D0382;
+  --cor-quarta:#FFFFFF;
 }
 *{
   box-sizing: border-box;
