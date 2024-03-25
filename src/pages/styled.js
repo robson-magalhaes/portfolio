@@ -307,9 +307,9 @@ export const SessaoExperiencia = styled.section`
     padding: 50px 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
-    height:1000px;
+    height: 110vh;
     overflow-y: hidden;
-
+    
     @media (max-width: 1200px){
        padding-left: 0 !important;
        padding-right: 20px;
@@ -323,7 +323,6 @@ export const SessaoExperiencia = styled.section`
 export const ContainerExperiencia = styled.div`
     display: flex;
     margin-top: 50px;
-    height: auto;
     perspective: 2000px;
 
     @media (max-width: 750px){
@@ -335,26 +334,36 @@ export const ContainerExperiencia = styled.div`
 export const LeftExperiencia = styled.div`
     flex: 1;
     height: auto;
+    overflow: hidden;
+    z-index: 2;
     box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #787878;
     border-radius: 7px;
     position: relative;
     transform-style: preserve-3d;
     transform-origin: right;
     transform: rotateY(145deg);
-    z-index: 2;
-    transition: all ease-in-out 2s;
+    transition: all ease-in-out 1s;
     background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
+    background-size: cover;
+    background-position:center;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-position:center;
-    overflow: hidden;
+
+    .visivel{
+        opacity: 1;
+    }
+    .escondido{
+        opacity: 0;
+    }
+
     & img{
         opacity: 0.5;
+        transition: all ease-in-out 900ms;
+        max-height: 550px;
         height: 100%;
-        width: 100%;
+        flex:1;
         box-shadow: -2px 0px 0px 2px #777 inset;
     }
 

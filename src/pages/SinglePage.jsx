@@ -46,7 +46,7 @@ export const SinglePage = () => {
           if (key === 2) {
             e.classList.add('sessaoTransition');
             document.getElementById('screenAbrir').classList.add('abrirLivroXP');
-            setTimeout(() => { setAnimacaofinal(true) }, 700);
+            setAnimacaofinal(true);
             return;
           }
         } else {
@@ -152,7 +152,7 @@ export const SinglePage = () => {
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia id="screenAbrir">
-            <img src={moldura} alt="simbulo" className={animacaofinal ? 'hidden ' : ''} />
+            <img src={moldura} alt="simbulo" className={animacaofinal ? 'escondido' : 'visivel'}/>
           </C.LeftExperiencia>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {

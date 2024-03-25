@@ -48,21 +48,18 @@ export const screenToCenter = keyframes`
   }
 `
 
- export const abrirLivro = keyframes`
-   0%, 30% {
+export const abrirLivro = keyframes`
+   from {
       background: linear-gradient(27deg, black 0%, #111111 50%, #333333 100%);
       background-size: cover;
       background-position:center;
    }
-   45% {
-     background-image: url(${bgXP});
-   }
-   100% {
+   to {
      transform: rotateY(45deg);
      background-image: url(${bgXP});
      backface-visibility: hidden;
    }
-` 
+`
 
 export const menufechado = keyframes`
   from {
