@@ -58,6 +58,7 @@ export const NavBar = styled.ul`
 
     @media (max-width:780px){
         position: inherit;
+        border-radius: 0px;
         transition: all ease-in-out 0.4s;
         animation: ${(props)=>(props.visivel ? keyframes.menuAberto : keyframes.menufechado )} 0.4s;
         opacity: ${(props)=>(props.visivel ? '1' : '0')};
@@ -65,11 +66,19 @@ export const NavBar = styled.ul`
         flex-direction: column;
         width:100%;
         margin-top: 5px;
+        padding: 100px 0;
+        gap: 30px;
         & a{
+            text-align: center;
+            border-width: 4px;
+            border-image: linear-gradient(27deg, var(--cor-primaria) 30%, var(--cor-terceira) 65%, var(--cor-quarta) 72%);
+            border-image-slice: 1;
+            width: 300px !important;
+            border-radius: 0;
             width: 100%;
             padding: 5px 10px;
             font-size: 2rem;
-            color: #FFFFFF;
+            color: #FFFFFF !important;
         }
         & a:active{
             color: #646CFF;

@@ -2,6 +2,8 @@ import iconWhats from '../../assets/image/icons/whatsapp.png';
 import iconGitHub from '../../assets/image/icons/github.png';
 import iconLinkedin from '../../assets/image/icons/linkedin.png';
 import iconMenu from '../../assets/image/icons/barra-de-menu.png';
+import iconX from '../../assets/image/icons/x.png';
+
 import { HashLink as Link } from 'react-router-hash-link';
 import * as C from './styled';
 import { useState } from 'react';
@@ -10,6 +12,7 @@ import meuCurriculo from '../../data/curriculo.pdf';
 const NavMenu = () => {
   const [loading, setLoading] = useState(false);
   const [estaVisivel, setVisivel] = useState(false);
+  const [iconAtivado, setIconAtivado] = useState(false);
   function handleClickDownload() {
     setLoading(true);
     var link = document.createElement('a');
@@ -27,7 +30,7 @@ const NavMenu = () => {
     <>
       <C.NavSessao>
         <C.BtnMenu onClick={() => setVisivel(!estaVisivel)}>
-          <img src={iconMenu} alt="" />
+          {!estaVisivel ? <img src={iconMenu} alt="menu" /> : <img src={iconX} alt="X" className='p-2' />}
         </C.BtnMenu>
         <C.NavMenuContainer>
           <C.NavBar id="navBar" visivel={estaVisivel}>
