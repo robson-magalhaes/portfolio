@@ -12,7 +12,7 @@ import meuCurriculo from '../../data/curriculo.pdf';
 const NavMenu = () => {
   const [loading, setLoading] = useState(false);
   const [estaVisivel, setVisivel] = useState(false);
-  const [iconAtivado, setIconAtivado] = useState(false);
+  
   function handleClickDownload() {
     setLoading(true);
     var link = document.createElement('a');
