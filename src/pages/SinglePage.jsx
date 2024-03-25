@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import * as C from './styled';
 import { Link } from 'react-router-dom';
+
 //Components
 import Projetos from '../components/Projetos/Projetos';
 

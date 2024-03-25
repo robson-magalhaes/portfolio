@@ -6,7 +6,7 @@ export const Container = styled.div`
     width: 100%;
     height: auto;
     background: linear-gradient(17deg , black 80%, #32333f 100%);
-
+    
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
     }
@@ -126,7 +126,6 @@ export const Titulo = styled.div`
     text-align: center;
     font-size: ${(props) => (props.tmFonte ? props.tmFonte : 2.3)}rem;
     color: transparent;
-    //background: linear-gradient(27deg, #3088cf 10%, purple 45%, white 60%);
     background: linear-gradient(27deg, var(--cor-terceira) 0%, var(--cor-primaria) 65%, #FFFFFF 100%);
     background-clip: text;
     -webkit-background-clip:text;
@@ -169,14 +168,14 @@ export const VideoArea = styled.div`
     width: 100%;
 
     video {
-        padding: 20px 0;
+        padding: 110px 0 0 0;
         opacity: ${(props) => (props.opacity = props.opacity)};
         width: 100%;
         height: 100%;
         max-height: ${(props) => (props.heigth = props.heigth)}px;
         min-height: ${(props) => (props.heigth = props.heigth)}px;
         object-fit: contain;
-        object-position: center;
+        object-position: bottom;
     }
 `;
 
@@ -311,7 +310,7 @@ export const SessaoExperiencia = styled.section`
     overflow-y: hidden;
     height: auto;
     height: calc(height + 200px);
-    
+
     @media (max-width: 1200px){
        padding-left: 0 !important;
        padding-right: 20px;
