@@ -309,6 +309,8 @@ export const SessaoExperiencia = styled.section`
     box-shadow: 100px 0px 100px 100px black inset;
     height: 110vh;
     overflow-y: hidden;
+    height: auto;
+    height: calc(height + 200px);
     
     @media (max-width: 1200px){
        padding-left: 0 !important;
@@ -324,7 +326,6 @@ export const ContainerExperiencia = styled.div`
     display: flex;
     margin-top: 50px;
     perspective: 2000px;
-
     @media (max-width: 750px){
         height: 700px;
         flex-direction:column;
@@ -335,7 +336,7 @@ export const LeftExperiencia = styled.div`
     flex: 1;
     height: auto;
     overflow: hidden;
-    z-index: 2;
+    z-index: 3;
     box-shadow: 20px 0px 50px 20px black inset, -5px 0px 1px 1px #787878;
     border-radius: 7px;
     position: relative;

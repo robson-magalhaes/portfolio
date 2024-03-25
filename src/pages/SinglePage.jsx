@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as C from './styled';
 import { Link } from 'react-router-dom';
 //Components
@@ -27,67 +27,68 @@ export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
   const [flip, setFlip] = useState(null);
   const [animacaofinal, setAnimacaofinal] = useState(false);
+  const primeiroRender = useRef(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const item = document.querySelectorAll('.sessaoScroll');
+      const divXP = document.querySelector('.viewXP');
+
       item.forEach((e, key) => {
         const rec = e.getBoundingClientRect();
         var totalDiv = window.innerHeight + 400;
+
         if (rec.top >= 0 && rec.bottom <= totalDiv) {
           if (key === 0 || key === 3) {
             e.classList.add('sessaoBottomFromTop');
-            return;
-          }
-          if (key === 1) {
+          } else if (key === 1) {
             setTimeout(() => { e.classList.add('sessaoBottomFromTop'); }, 1000);
-            return;
-          }
-          if (key === 2) {
+          } else if (key === 2) {
             e.classList.add('sessaoTransition');
             document.getElementById('screenAbrir').classList.add('abrirLivroXP');
             setAnimacaofinal(true);
-            return;
           }
         } else {
           e.style.opacity = 0;
         }
       });
+
+      const handleBoxXP = () => {
+        const boxItems = document.querySelectorAll('.boxScroll');
+        boxItems.forEach((e) => {
+          const rec = e.getBoundingClientRect();
+          var totalDiv = divXP.clientHeight + 300;
+
+          if (rec.top >= 0 && rec.bottom <= totalDiv) {
+            e.style.opacity = 1;
+          } else {
+            e.style.opacity = 0.2;
+          }
+        });
+      };
+
+      divXP.addEventListener('scroll', handleBoxXP);
+
+      return () => {
+        divXP.removeEventListener('scroll', handleBoxXP);
+      };
     };
+
     window.addEventListener('scroll', handleScroll);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
   useEffect(() => {
-    const divXP = document.querySelector('.viewXP');
-    const handleBoxXP = () => {
-      const item = document.querySelectorAll('.boxScroll');
-      item.forEach((e) => {
-        const rec = e.getBoundingClientRect();
-        var totalDiv = divXP.clientHeight + 300;
-        if (rec.top >= 0 && rec.bottom <= totalDiv) {
-          e.style.opacity = 1;
-        } else {
-          e.style.opacity = 0.2;
-        }
-      })
-        ((e) => {
-          const rec = e.getBoundingClientRect();
-          var totalDiv = divXP.clientHeight + 300;
-          if (rec.top >= 0 && rec.bottom <= totalDiv) {
-            e.style.opacity = 1;
-          } else {
-            e.style.opacity = 0.2;
-          }
-        })
+    if (primeiroRender.current) {
+      primeiroRender.current = false;
+      let alturaXP = document.getElementById('expProfissional');
+      alturaXP.style.height = (alturaXP.clientHeight + 200) + 'px';
     }
-    divXP.addEventListener('scroll', handleBoxXP);
-    return () => {
-      divXP.removeEventListener('scroll', handleBoxXP);
-    };
   }, []);
+
   return (
     <C.Container>
       <C.AreaHeader id="home">
@@ -152,7 +153,7 @@ export const SinglePage = () => {
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia id="screenAbrir">
-            <img src={moldura} alt="simbulo" className={animacaofinal ? 'escondido' : 'visivel'}/>
+            <img src={moldura} alt="simbulo" className={animacaofinal ? 'escondido' : 'visivel'} />
           </C.LeftExperiencia>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {
