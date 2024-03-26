@@ -1,4 +1,5 @@
 import bgEncarte from '../assets/image/projeto/Criador-de-encarte.png';
+import bgCalcIMC from '../assets/image/projeto/imgCalc.png';
 import imgDefault from '../assets/image/bgScript.png';
 
 export const projetos = [
@@ -23,12 +24,12 @@ export const projetos = [
     {
         nome: 'Calculadora IMC',
         url: '',
-        img: `${imgDefault}`,
+        img: `${bgCalcIMC}`,
         nome: 'Calculadora IMC',
         descricao: 'Desenvolvi essa aplicação de calculadora de IMC utilizando a biblioteca React. A calculadora permite que os usuários insiram seu peso e altura, e é calculado automaticamente o IMC com base nesses valores. O projeto foi desenvolvido como parte de um curso de React e demonstra minhas habilidades em desenvolvimento front-end utilizando esta tecnologia.',
         urlGithub: 'https://github.com/robson-magalhaes/react-calculadora-imc',
-        page: '',
-        skills: ['ReactJs', 'NextJs', 'TypeScript', 'Tailwind']
+        page: 'https://calculadora-imc1.netlify.app/',
+        skills: ['ReactJs', 'NextJs', 'TypeScript', 'module.css']
     },
     {
         nome: 'Venda de polpas',
