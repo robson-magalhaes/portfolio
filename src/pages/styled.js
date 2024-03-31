@@ -209,8 +209,6 @@ export const Corpo = styled.div`
     width: 100%;
     padding: 10px;
     display: flex;
-    flex-direction: column;
-    gap: 50px;
 `;
 
 export const HabilitTech = styled.div`
@@ -222,10 +220,7 @@ export const HabilitTech = styled.div`
     perspective: 700px;
     
     @media (max-width:670px){
-        grid-template-columns: repeat(2, 1fr);
-        & img{
-            //max-width: 50px !important;
-        }
+        grid-template-columns: repeat(2, 100px);
     }
 `;
 export const FlipCard = styled.div`
