@@ -158,6 +158,11 @@ export const SessaoHabilidades = styled.section`
     align-items: center;
     background: transparent;
     gap: 100px 0;
+    @media(max-width: 768px) {
+        height: auto;
+        gap: 250px;
+        margin: 100px 0;
+    }
 `;
 
 export const VideoArea = styled.div`
@@ -176,6 +181,13 @@ export const VideoArea = styled.div`
         min-height: ${(props) => (props.heigth = props.heigth)}px;
         object-fit: contain;
         object-position: bottom;
+    }
+    @media (max-width:670px){
+        & video{
+            object-position: -130px 50px;
+            min-height: 700px !important;
+            object-fit: cover;
+        }
     }
 `;
 
@@ -210,7 +222,10 @@ export const HabilitTech = styled.div`
     perspective: 700px;
     
     @media (max-width:670px){
-    grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        & img{
+            //max-width: 50px !important;
+        }
     }
 `;
 export const FlipCard = styled.div`
@@ -250,27 +265,19 @@ export const ItemTech = styled.div`
             opacity: 1;
         }
     ` : '')}
-    
-    /* &:hover{
-        transform: rotateY(180deg);
-        p{
-            backdrop-filter: blur(10px);
-            transform: translateY(15px) rotateY(180deg);
-            opacity: 1;
-        }
-    } */
 `;
 export const ImgItemTech = styled.img`
     align-self: center;
-    border-radius: 7px;
     flex: 1;
     height: 100%;
     max-width: 60px !important;
     max-height: 60px;
+    @media (max-width:670px){
+        //max-width: 40px !important;
+    }
 `;
 
 export const InfoTech = styled.section`
-    //padding: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
