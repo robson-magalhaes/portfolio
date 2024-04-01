@@ -386,12 +386,14 @@ export const BoxRight = styled.div`
     opacity: 0.2;
     background-color: #00000050;
     box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
+    transition: all ease-in-out 0.5s;
 `
 
 export const RightExperiencia = styled.div`
     flex:1 270px;
     height:550px;
     overflow-y: scroll;
+
     &::-webkit-scrollbar { 
         display: none;
     }
