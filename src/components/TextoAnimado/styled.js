@@ -95,7 +95,8 @@ export const TxtDigitando = styled.span`
     border-left: 2px solid white;
     right: -10px;
     animation: ${cursorAnimation} .8s infinite, ${digitandoAnimation} 15s steps(30) infinite;
-    width: calc(100%);
+    width: 100%;
     backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
   }
 `;
