@@ -22,6 +22,7 @@ import { expProjetos } from '../data/ExpProfissional';
 import TextoAnimado from '../components/TextoAnimado';
 import NavMenu from '../components/NavMenu';
 import imgPerfil from '../assets/image/eu.png';
+import MouseLuz from '../components/MouseLuz';
 
 
 export const SinglePage = () => {
@@ -92,6 +93,7 @@ export const SinglePage = () => {
 
   return (
     <C.Container>
+      <MouseLuz/>
       <C.AreaHeader id="home">
         <NavMenu />
         <C.HeaderPerfil>
@@ -117,6 +119,7 @@ export const SinglePage = () => {
           <video autoPlay loop muted playsinline allow="autoplay">
             <source src={bgPlaneta} type='video/mp4' />
           </video>
+        </C.VideoArea>
           <C.InfoArea>
             <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
             <C.Corpo>
@@ -136,7 +139,6 @@ export const SinglePage = () => {
               </C.HabilitTech>
             </C.Corpo>
           </C.InfoArea>
-        </C.VideoArea>
 
         <C.InfoTech>
           <C.Titulo>Competências e Especialidades</C.Titulo>

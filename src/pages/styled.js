@@ -16,6 +16,7 @@ export const Container = styled.div`
     & .abrirLivroXP{
         animation: ${keyframes.abrirLivro} 2s forwards;
     }
+    
     @media (max-width:667px){
         padding: 0;
         margin: 0;
@@ -156,8 +157,8 @@ export const SessaoHabilidades = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: transparent;
     gap: 100px 0;
+
     @media(max-width: 768px) {
         height: auto;
         gap: 250px;
@@ -169,10 +170,13 @@ export const VideoArea = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1;
+    position: relative;
+    z-index: 0;
     width: 100%;
 
-    video {
+    & video {
+        position: relative;
+        z-index: 0;
         padding: 110px 0 0 0;
         opacity: ${(props) => (props.opacity = props.opacity)};
         width: 100%;
@@ -197,12 +201,12 @@ export const InfoArea = styled.div`
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    z-index:1;
     height: auto;
     font-size: 2rem;
     color:#FFFFFF;
     gap: 40px;
     width: 100%;
+    z-index: 999;
 `;
 export const Corpo = styled.div`
     height: auto;
@@ -267,9 +271,6 @@ export const ImgItemTech = styled.img`
     height: 100%;
     max-width: 60px !important;
     max-height: 60px;
-    @media (max-width:670px){
-        //max-width: 40px !important;
-    }
 `;
 
 export const InfoTech = styled.section`
