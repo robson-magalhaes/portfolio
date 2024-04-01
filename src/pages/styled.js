@@ -206,7 +206,7 @@ export const InfoArea = styled.div`
     color:#FFFFFF;
     gap: 40px;
     width: 100%;
-    z-index: 999;
+    z-index: 1;
 `;
 export const Corpo = styled.div`
     height: auto;

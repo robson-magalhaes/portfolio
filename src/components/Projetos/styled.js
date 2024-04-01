@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LeftContainer = styled.div`
+export const LeftContainer = styled.a`
     flex:1;
     height: 340px;
     background: ${(props) => (props.urlimage ? `url(${props.urlimage})` : 'blue')};

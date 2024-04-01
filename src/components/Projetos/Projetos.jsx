@@ -18,7 +18,7 @@ import './styles.css';
 
 
 export const Projetos = () => {
-   
+
     return (
         <>
             <Swiper
@@ -38,7 +38,7 @@ export const Projetos = () => {
             >
                 {projetos.map(x => (
                     <SwiperSlide>
-                        <C.LeftContainer urlimage={x.img} />
+                        <C.LeftContainer urlimage={x.img} href={x.page !== '' ? x.page : '/#expProjetos'} />
                         <C.RightContainer>
                             <P.InfoTitulo>
                                 {x.nome}

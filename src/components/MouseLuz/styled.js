@@ -9,4 +9,7 @@ export const Luz = styled.div`
     border-radius: 100%;
     box-shadow: 0px 0px 200px 200px #A5A5A505, 0px 0px 200px 200px #A5A5A505;
     transition: none !important;
+    @media(max-width: 780px){
+        display: none;
+    }
 `

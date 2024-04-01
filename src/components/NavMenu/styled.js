@@ -10,6 +10,7 @@ export const BtnMenu = styled.div`
     max-width: 50px;
     width: 18%;
     z-index: 99;
+    filter: drop-shadow(1px 1px 2px #000000);
     cursor: pointer;
     @media (max-width:780px){
         display: block;
