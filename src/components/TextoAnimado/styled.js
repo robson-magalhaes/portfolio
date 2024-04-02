@@ -98,5 +98,8 @@ export const TxtDigitando = styled.span`
     width: 100%;
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
+    &::-webkit-backdrop-filter{
+            backdrop-filter: blur(100px);
+        }
   }
 `;
