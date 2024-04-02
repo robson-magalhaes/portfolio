@@ -462,8 +462,6 @@ export const SessaoProjetos = styled.section`
     box-shadow: 0px 100px 70px 120px black inset;
     background: url('${aurora}') no-repeat center center fixed;
     -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     display: flex;
     flex-direction: column;
