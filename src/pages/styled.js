@@ -465,13 +465,10 @@ export const SessaoProjetos = styled.section`
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
 
-    &::-webkit-background-size{
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+    &::-webkit-background-attachment{
         background-attachment: fixed;
     }
     
