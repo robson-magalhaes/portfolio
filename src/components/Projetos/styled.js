@@ -73,7 +73,7 @@ export const LinkIcons = styled.div`
             }
         }
         
-    @media(max-width:767px){
+    /* @media(max-width:767px){
         position: absolute;
         display: flex;
         justify-content: start;
@@ -84,6 +84,23 @@ export const LinkIcons = styled.div`
         top: 50px;
         gap: 10px;
 
+        & a img{
+            transform: none;
+            opacity: 1;
+            width: 40px;
+        }
+    } */
+    @media(max-width:767px){
+        position: absolute;
+        display: flex;
+        justify-content: end;
+        flex-direction:column;
+        height: 100px;
+        width: auto;
+        left: 5px;
+        bottom: 50px;
+        gap: 10px;
+        filter: drop-shadow(2px 2px 1px black);
         & a img{
             transform: none;
             opacity: 1;
