@@ -460,8 +460,21 @@ export const ExpSkill = styled.div`
 export const SessaoProjetos = styled.section`
     padding: 70px 0;
     box-shadow: 0px 100px 70px 120px black inset;
-    background: url('${aurora}') no-repeat center center fixed;
+    background: url(${aurora});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     -webkit-background-size: cover;
+
+    &::-webkit-background-size{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    
     background-size: cover;
     display: flex;
     flex-direction: column;

@@ -66,6 +66,7 @@ export const BoxDigitando = styled.div`
   
   @media (max-width: 768px) {
     padding: 0;
+    padding-left:20px;
     margin: 0;
   }
 `;
@@ -96,9 +97,9 @@ export const TxtDigitando = styled.span`
     right: -10px;
     animation: ${cursorAnimation} .8s infinite, ${digitandoAnimation} 15s steps(30) infinite;
     width: 100%;
-    backdrop-filter: blur(100px);
-    -webkit-backdrop-filter: blur(100px);
-    
+    //backdrop-filter: blur(100px);
+    //-webkit-backdrop-filter: blur(100px);
+    background-color: #000000;
     &::-webkit-backdrop-filter{
             backdrop-filter: blur(100px);
         }

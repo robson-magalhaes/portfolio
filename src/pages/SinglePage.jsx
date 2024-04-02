@@ -110,10 +110,10 @@ export const SinglePage = () => {
                 Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
               </p>
             </C.PerfilDescricao>
-            <TextoAnimado />
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
       </C.AreaHeader >
+            <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea opacity={1} heigth={550}>
           <video autoPlay loop muted playsinline allow="autoplay">
@@ -191,7 +191,7 @@ export const SinglePage = () => {
 
       <C.FooterContainer id="contato">
         <C.Contato>
-          <p><i className="fa-solid fa-phone"></i> (28) 99996-1628</p>
+          <p><i className="fa-solid fa-phone"></i> (28) 9 9996-1628</p>
           <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
