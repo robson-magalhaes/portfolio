@@ -115,10 +115,13 @@ export const SinglePage = () => {
       </C.AreaHeader >
             <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
-        <C.VideoArea opacity={1} heigth={550}>
+        {/* <C.VideoArea opacity={1} heigth={550}>
           <video autoPlay loop muted playsinline allow="autoplay">
             <source src={bgPlaneta} type='video/mp4' />
           </video>
+        </C.VideoArea> */}
+        <C.VideoArea altura={550} autoPlay loop muted playsinline allow="autoplay">
+            <source src={bgPlaneta} type='video/mp4' />
         </C.VideoArea>
           <C.InfoArea>
             <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>

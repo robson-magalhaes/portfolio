@@ -166,32 +166,20 @@ export const SessaoHabilidades = styled.section`
     }
 `;
 
-export const VideoArea = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
+export const VideoArea = styled.video`
     position: relative;
-    z-index: 0;
     width: 100%;
-
-    & video {
-        position: relative;
-        z-index: 0;
-        padding: 110px 0 0 0;
-        opacity: ${(props) => (props.opacity = props.opacity)};
-        width: 100%;
-        height: 100%;
-        max-height: ${(props) => (props.heigth = props.heigth)}px;
-        min-height: ${(props) => (props.heigth = props.heigth)}px;
-        object-fit: contain;
-        object-position: bottom;
-    }
+    height: 100%;
+    padding: 110px 0 0 0;
+    max-height: ${(props) => (props.altura = props.altura)}px;
+    min-height: ${(props) => (props.altura = props.altura)}px;
+    object-fit: contain;
+    object-position: bottom;
+    
     @media (max-width:670px){
-        & video{
-            object-position: -130px 50px;
-            min-height: 700px !important;
-            object-fit: cover;
-        }
+        object-position: -130px 50px;
+        min-height: 700px !important;
+        object-fit: cover;
     }
 `;
 
