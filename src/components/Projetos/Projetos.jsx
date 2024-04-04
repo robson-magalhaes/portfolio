@@ -38,7 +38,7 @@ export const Projetos = () => {
             >
                 {projetos.map(x => (
                     <SwiperSlide>
-                        <C.LeftContainer urlimage={x.img} href={x.page !== '' ? x.page : '/#expProjetos'} />
+                        <C.LeftContainer urlimage={x.img} href={x.page !== '' ? x.page : '/#expProjetos'} target="_blank" alt={x.nome}/>
                         <C.RightContainer>
                             <P.InfoTitulo>
                                 {x.nome}
@@ -50,14 +50,14 @@ export const Projetos = () => {
                                         x.urlGithub &&
                                         <Link to={x.urlGithub} target="_blank">
                                             <C.Balao>GitHub</C.Balao>
-                                            <C.IconProjeto src={iconGithub} icon="github" />
+                                            <C.IconProjeto src={iconGithub} icon="github" alt='GitHub' />
                                         </Link>
                                     }
                                     {
                                         x.page &&
                                         <Link to={x.page} target="_blank">
                                             <C.Balao>Pagina</C.Balao>
-                                            <C.IconProjeto src={iconLink} icon='link' />
+                                            <C.IconProjeto src={iconLink} icon='link' alt='Pagina' />
                                         </Link>
                                     }
                                 </C.LinkIcons>

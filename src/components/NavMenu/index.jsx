@@ -79,13 +79,13 @@ const NavMenu = () => {
         <C.BoxSegundo>
           <C.IconSocial>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
-              <C.ImgSocial src={iconWhats} />
+              <C.ImgSocial src={iconWhats} alt='WhatsApp'/>
             </Link>
             <Link to='https://github.com/robson-magalhaes' target="_blank">
-              <C.ImgSocial src={iconGitHub} />
+              <C.ImgSocial src={iconGitHub} alt='GitHub'/>
             </Link>
             <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
-              <C.ImgSocial src={iconLinkedin} />
+              <C.ImgSocial src={iconLinkedin} alt='Linkedin'/>
             </Link>
           </C.IconSocial>
           <C.BotaoCurriculo onClick={handleClickDownload}>

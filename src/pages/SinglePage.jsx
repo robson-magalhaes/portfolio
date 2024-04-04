@@ -98,7 +98,7 @@ export const SinglePage = () => {
         <NavMenu />
         <C.HeaderPerfil>
           <C.BoxImg>
-            <C.ImgPerfil src={imgPerfil} />
+            <C.ImgPerfil src={imgPerfil} alt='Foto de perfil'/>
           </C.BoxImg>
           <C.PerfilApresentacao>
             <C.PerfilTitulo>
@@ -115,13 +115,8 @@ export const SinglePage = () => {
       </C.AreaHeader >
             <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
-        {/* <C.VideoArea opacity={1} heigth={550}>
-          <video autoPlay loop muted playsinline allow="autoplay">
-            <source src={bgPlaneta} type='video/mp4' />
-          </video>
-        </C.VideoArea> */}
         <C.VideoArea altura={550} autoPlay loop muted playsinline allow="autoplay">
-            <source src={bgPlaneta} type='video/mp4' />
+            <source src={bgPlaneta} type='video/mp4'/>
         </C.VideoArea>
           <C.InfoArea>
             <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
@@ -132,7 +127,7 @@ export const SinglePage = () => {
                     <>
                       <C.FlipCard onMouseEnter={() => setFlip(key == flip ? null : key)}>
                         <C.ItemTech flipped={flip === key}>
-                          <C.ImgItemTech id={'flip' + key} src={x.image} alt={x.nome} />
+                          <C.ImgItemTech src={x.image} alt={x.nome} />
                           <p>{x.nome}</p>
                         </C.ItemTech>
                       </C.FlipCard>
@@ -159,7 +154,7 @@ export const SinglePage = () => {
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
           <C.LeftExperiencia id="screenAbrir">
-            <img src={moldura} alt="simbulo" className={animacaofinal ? 'escondido' : 'visivel'} />
+            <img src={moldura} alt="moldura" className={animacaofinal ? 'escondido' : 'visivel'} />
           </C.LeftExperiencia>
           <C.RightExperiencia className='sessaoScroll viewXP' >
             {
@@ -171,7 +166,7 @@ export const SinglePage = () => {
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
                     <div onClick={() => setExpandido(key === expandido ? null : key)} className='dropdown'>
-                      <img src={iconDropdown} alt="dropdown" />
+                      <img src={iconDropdown} alt="icone de dropdown"/>
                     </div>
                     <C.ExpSkill>
                       {x.skills.map(i => (
@@ -198,13 +193,13 @@ export const SinglePage = () => {
           <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
-              <C.ImgIcon src={iconWhatss} />
+              <C.ImgIcon src={iconWhatss} alt='whatsApp'/>
             </Link>
             <Link to='https://github.com/robson-magalhaes' target="_blank">
-              <C.ImgIcon src={iconGithubs} />
+              <C.ImgIcon src={iconGithubs} alt='GitHub'/>
             </Link>
             <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
-              <C.ImgIcon src={iconLinkedin} />
+              <C.ImgIcon src={iconLinkedin} alt='Linkedin'/>
             </Link>
           </C.RedeSociais>
         </C.Contato>
