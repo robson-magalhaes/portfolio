@@ -1,7 +1,5 @@
 import { keyframes } from "styled-components";
 import bgXP from '../assets/image/projeto/bg-exp.jpg';
-import moldura from '../assets/image/moldura.png';
-
 
 export const screenToRight = keyframes`
   from {

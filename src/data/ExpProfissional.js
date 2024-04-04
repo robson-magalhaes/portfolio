@@ -1,6 +1,6 @@
 import bgEncarte from '../assets/image/projeto/Criador-de-encarte.png';
 import bgCalcIMC from '../assets/image/projeto/imgCalc.png';
-import imgDefault from '../assets/image/bgScript.png';
+import imgDefault from '../assets/image/bgScript.webp';
 
 export const projetos = [
     {

@@ -11,7 +11,7 @@ import iconWhatss from '../assets/image/icons/whatsapp.png';
 import iconLinkedin from '../assets/image/icons/linkedin.png';
 import iconGithubs from '../assets/image/icons/github.png';
 import iconDropdown from '../assets/image/icons/down.png';
-import moldura from '../assets/image/moldura.png';
+import moldura from '../assets/image/moldura.webp';
 
 //Dados
 import { Skills, allSkills } from '../data/Skills';
@@ -21,7 +21,7 @@ import { expProjetos } from '../data/ExpProfissional';
 
 import TextoAnimado from '../components/TextoAnimado';
 import NavMenu from '../components/NavMenu';
-import imgPerfil from '../assets/image/eu.png';
+import imgPerfil from '../assets/image/eu.webp';
 import MouseLuz from '../components/MouseLuz';
 
 

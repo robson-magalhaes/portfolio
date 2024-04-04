@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import aurora from '../assets/image/aurora.jpg';
+import aurora from '../assets/image/aurora.webp';
 import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
