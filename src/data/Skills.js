@@ -1,15 +1,15 @@
-import iconHtmlCss from '../assets/image/icons/html5-e-css3.jpg';
-import iconJs from '../assets/image/icons/javascript.jpg';
-import iconLaravel from '../assets/image/icons/laravel.jpg';
-import iconPhp from '../assets/image/icons/php.jpg';
-import iconReact from '../assets/image/icons/reactjs.jpg';
-import iconTailwind from '../assets/image/icons/tailwindcss.jpg';
-import iconTypescript from '../assets/image/icons/typescript.jpg';
-import iconGit from '../assets/image/icons/git.jpg';
-import iconBootstrap from '../assets/image/icons/bootstrap.png';
-import iconCsharp from '../assets/image/icons/c-sharp.png';
-import iconDataBase from '../assets/image/icons/database.png';
-import iconNextJs from '../assets/image/icons/nextjs.jpg';
+import iconHtmlCss from '../assets/image/icons/html5-e-css3.webp';
+import iconJs from '../assets/image/icons/javascript.webp';
+import iconLaravel from '../assets/image/icons/laravel.webp';
+import iconPhp from '../assets/image/icons/php.webp';
+import iconReact from '../assets/image/icons/reactjs.webp';
+import iconTailwind from '../assets/image/icons/tailwindcss.webp';
+import iconTypescript from '../assets/image/icons/typescript.webp';
+import iconGit from '../assets/image/icons/git.webp';
+import iconBootstrap from '../assets/image/icons/bootstrap.webp';
+import iconCsharp from '../assets/image/icons/c-sharp.webp';
+import iconDataBase from '../assets/image/icons/database.webp';
+import iconNextJs from '../assets/image/icons/nextjs.webp';
 
 export const Skills = [
     {nome:'HTML5 e CSS3', image:`${iconHtmlCss}`},

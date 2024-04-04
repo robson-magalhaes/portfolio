@@ -57,11 +57,11 @@ export const NavBar = styled.ul`
     box-shadow: 0 0 10px 1px #000000 inset;
 
     @media (max-width:780px){
-        position: inherit;
         border-radius: 0px;
         transition: all ease-in-out 0.4s;
         animation: ${(props)=>(props.visivel ? keyframes.menuAberto : keyframes.menufechado )} 0.4s;
         opacity: ${(props)=>(props.visivel ? '1' : '0')};
+        display: ${(props)=>(props.visivel ? 'flex' : 'none')};
         background: #00000099;
         flex-direction: column;
         width:100%;

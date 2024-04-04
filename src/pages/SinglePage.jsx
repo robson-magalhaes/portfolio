@@ -7,10 +7,10 @@ import Projetos from '../components/Projetos/Projetos';
 
 //Imagens
 import bgPlaneta from '../assets/video/planetaTerra.mp4';
-import iconWhatss from '../assets/image/icons/whatsapp.png';
-import iconLinkedin from '../assets/image/icons/linkedin.png';
-import iconGithubs from '../assets/image/icons/github.png';
-import iconDropdown from '../assets/image/icons/down.png';
+import iconWhatss from '../assets/image/icons/whatsapp.webp';
+import iconLinkedin from '../assets/image/icons/linkedin.webp';
+import iconGithubs from '../assets/image/icons/github.webp';
+import iconDropdown from '../assets/image/icons/down.webp';
 import moldura from '../assets/image/moldura.webp';
 
 //Dados

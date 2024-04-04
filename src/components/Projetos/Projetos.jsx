@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 
 import { projetos } from '../../data/ExpProfissional';
 
-import iconGithub from '../../assets/image/icons/githubXP.png';
-import iconLink from '../../assets/image/icons/link.png';
+import iconGithub from '../../assets/image/icons/githubXP.webp';
+import iconLink from '../../assets/image/icons/link.webp';
 
 
 import { Swiper, SwiperSlide } from 'swiper/react';

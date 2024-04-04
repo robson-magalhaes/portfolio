@@ -1,8 +1,8 @@
-import iconWhats from '../../assets/image/icons/whatsapp.png';
-import iconGitHub from '../../assets/image/icons/github.png';
-import iconLinkedin from '../../assets/image/icons/linkedin.png';
-import iconMenu from '../../assets/image/icons/barra-de-menu.png';
-import iconX from '../../assets/image/icons/x.png';
+import iconWhats from '../../assets/image/icons/whatsapp.webp';
+import iconGitHub from '../../assets/image/icons/github.webp';
+import iconLinkedin from '../../assets/image/icons/linkedin.webp';
+import iconMenu from '../../assets/image/icons/barra-de-menu.webp';
+import iconX from '../../assets/image/icons/x.webp';
 
 import { HashLink as Link } from 'react-router-hash-link';
 import * as C from './styled';

@@ -1,5 +1,5 @@
 import { keyframes } from "styled-components";
-import bgXP from '../assets/image/projeto/bg-exp.jpg';
+import bgXP from '../assets/image/projeto/bg-exp.webp';
 
 export const screenToRight = keyframes`
   from {
