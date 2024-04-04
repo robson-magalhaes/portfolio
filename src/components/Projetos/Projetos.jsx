@@ -38,7 +38,7 @@ export const Projetos = () => {
             >
                 {projetos.map(x => (
                     <SwiperSlide>
-                        <C.LeftContainer urlimage={x.img} href={x.page !== '' ? x.page : '/#expProjetos'} target="_blank" alt={x.nome}/>
+                        <C.LeftContainer urlimage={x.img} href={x.page !== '' ? x.page : '/#expProjetos'} target="_blank" alt={x.nome} />
                         <C.RightContainer>
                             <P.InfoTitulo>
                                 {x.nome}

@@ -1,10 +1,8 @@
-import { Router } from './Router'
+import SinglePage from './pages/SinglePage'
 
 function App() {
   return (
-    <>
-    <Router/>
-    </>
+    <SinglePage/>
   )
 }
 
