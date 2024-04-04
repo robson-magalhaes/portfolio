@@ -102,11 +102,12 @@ export const SinglePage = () => {
           </C.BoxImg>
           <C.PerfilApresentacao>
             <C.PerfilTitulo>
-              <div> Desenvolvedor</div>Full Stack
-              <div>Robson Oliveira Magalhães</div>
+              <h2> Desenvolvedor</h2>
+              <h1>Full Stack</h1>
+              <h5>Robson Oliveira Magalhães</h5>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
-              {/* Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa. */}
+              Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>

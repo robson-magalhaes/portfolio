@@ -62,32 +62,55 @@ export const PerfilDescricao = styled.p`
     color: var(--cor-quarta);
     align-self: center;
     width: 80%;
-    height: auto;
+    height: 100%;
 `
+// export const PerfilTitulo = styled.div`
+//     translate: 0px;
+//     height: auto;
+//     font-size: 6rem;
+//     font-weight: bold;
+//     line-height: 60px;
+//     letter-spacing: normal;
+//     color: transparent;
+//     background: linear-gradient(27deg, var(--cor-primeira) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
+//     background-clip: text;
+//     -webkit-background-clip:text;
+//     -ms-background-clip:text;
+//     & div:first-child{
+//         margin-left: 10px;
+//         font-size: 3rem;
+//     }
+//     & div:last-child{
+//         text-align: center;
+//         margin-top: 10px;
+//         font-size: 1.7rem;
+//         font-weight: normal;
+//     }
+// `;
 export const PerfilTitulo = styled.div`
-    translate: 0px;
     height: auto;
-    font-size: 6rem;
     font-weight: bold;
-    line-height: 60px;
-    letter-spacing: normal;
     color: transparent;
     background: linear-gradient(27deg, var(--cor-primeira) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
-    & div:first-child{
+    
+    & h1{
+        font-size: 6rem;
+        line-height: 60px;
+    }
+    & h2{
         margin-left: 10px;
         font-size: 3rem;
     }
-    & div:last-child{
+    & h5{
         text-align: center;
         margin-top: 10px;
         font-size: 1.7rem;
         font-weight: normal;
     }
 `;
-
 export const BoxImg = styled.div`
     animation: ${keyframes.screenToRight} 2s;
     margin-top:10px;
@@ -111,6 +134,8 @@ export const ImgPerfil = styled.img`
     border-radius:100%;
     width: 100%;
     height: 100%;
+    max-height: 343px;
+    max-width: 350px;
     filter: drop-shadow(-10px 0 15px #000000);
 `;
 // FINAL HEADER
