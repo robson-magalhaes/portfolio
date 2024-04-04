@@ -506,4 +506,8 @@ export const RedeSociais = styled.div`
 export const ImgIcon = styled.img`
     width: 30px;
     height: 30px;
+    transition: all ease-in-out 0.2s;
+    &:hover{
+        scale: 1.2;
+    }
 `

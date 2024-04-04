@@ -65,12 +65,12 @@ export const menufechado = keyframes`
   from {
   }
   to {
-    transform:translateY(-70px) translateX(-100px) scale(0.2);
+    transform:translateY(-250px) translateX(-150px) scale(0.2);
   }
 `;
 export const menuAberto = keyframes`
   from {
-    transform:translateY(-70px) translateX(-100px) scale(0.2);
+    transform:translateY(-250px) translateX(-150px) scale(0.2);
   }
   to {
     transform:translateY(0px) translateX(0px) scale(1);

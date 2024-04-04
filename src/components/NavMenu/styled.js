@@ -62,12 +62,13 @@ export const NavBar = styled.ul`
         transition: all ease-in-out 0.4s;
         animation: ${(props)=>(props.visivel ? keyframes.menuAberto : keyframes.menufechado )} 0.4s;
         opacity: ${(props)=>(props.visivel ? '1' : '0')};
-        display: ${(props)=>(props.visivel ? 'inhreit' : 'none')};
+        background: #00000099;
         flex-direction: column;
         width:100%;
         margin-top: 5px;
         padding: 100px 0;
         gap: 30px;
+        
         & a{
             text-align: center;
             border-width: 4px;
