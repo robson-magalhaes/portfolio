@@ -46,7 +46,8 @@ export const HeaderPerfil = styled.div`
 export const PerfilApresentacao = styled.div`
     padding: 20px;
     margin-top: 70px;
-
+    width: 100%;
+    height: 100%;
     @media (max-width: 768px) {
         padding: 0;
         display: flex;
@@ -61,6 +62,7 @@ export const PerfilDescricao = styled.p`
     color: var(--cor-quarta);
     align-self: center;
     width: 80%;
+    height: auto;
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
