@@ -16,12 +16,10 @@ import moldura from '../assets/image/moldura.webp';
 //Dados
 import { Skills, allSkills } from '../data/Skills';
 import { expProjetos } from '../data/ExpProfissional';
-// import Header from '../components/partials/Header';
 
 
 import TextoAnimado from '../components/TextoAnimado';
 import NavMenu from '../components/NavMenu';
-import imgPerfil from '../assets/image/eu.webp';
 import MouseLuz from '../components/MouseLuz';
 import { Perfil } from '../components/Perfil';
 
@@ -97,22 +95,7 @@ export const SinglePage = () => {
       <MouseLuz />
       <C.AreaHeader id="home">
         <NavMenu />
-        <Perfil/>
-        {/* <C.HeaderPerfil>
-          <C.BoxImg>
-            <C.ImgPerfil src={imgPerfil} alt='Foto de perfil - Robson Oliveira Magalhães' />
-          </C.BoxImg>
-          <C.PerfilApresentacao>
-            <C.PerfilTitulo>
-              <h2>Desenvolvedor</h2>
-              <h1>Full Stack</h1>
-              <h5>Robson Oliveira Magalhães</h5>
-            </C.PerfilTitulo>
-            <C.PerfilDescricao>
-              Sou um desenvolvedor dedicado em transformar ideias em realidade digital. Com habilidades sólidas em front-end e back-end, estou pronto para enfrentar qualquer desafio. Com um olhar atento aos detalhes e uma abordagem centrada no usuário, estou comprometido em entregar soluções de alta qualidade que atendam às necessidades do cliente.
-            </C.PerfilDescricao>
-          </C.PerfilApresentacao>
-        </C.HeaderPerfil> */}
+        <Perfil />
       </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
