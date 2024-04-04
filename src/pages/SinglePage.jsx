@@ -23,6 +23,7 @@ import TextoAnimado from '../components/TextoAnimado';
 import NavMenu from '../components/NavMenu';
 import imgPerfil from '../assets/image/eu.webp';
 import MouseLuz from '../components/MouseLuz';
+import { Perfil } from '../components/Perfil';
 
 
 export const SinglePage = () => {
@@ -96,7 +97,8 @@ export const SinglePage = () => {
       <MouseLuz />
       <C.AreaHeader id="home">
         <NavMenu />
-        <C.HeaderPerfil>
+        <Perfil/>
+        {/* <C.HeaderPerfil>
           <C.BoxImg>
             <C.ImgPerfil src={imgPerfil} alt='Foto de perfil - Robson Oliveira Magalhães' />
           </C.BoxImg>
@@ -110,7 +112,7 @@ export const SinglePage = () => {
               Sou um desenvolvedor dedicado em transformar ideias em realidade digital. Com habilidades sólidas em front-end e back-end, estou pronto para enfrentar qualquer desafio. Com um olhar atento aos detalhes e uma abordagem centrada no usuário, estou comprometido em entregar soluções de alta qualidade que atendam às necessidades do cliente.
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
-        </C.HeaderPerfil>
+        </C.HeaderPerfil> */}
       </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
@@ -186,7 +188,7 @@ export const SinglePage = () => {
 
       <C.FooterContainer id="contato">
         <C.Contato>
-          <p><i className="fa-solid fa-phone"></i> (28) 9 9996-1628</p>
+          <p><i className="fa-solid fa-phone"></i> (28) 99996-1628</p>
           <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
