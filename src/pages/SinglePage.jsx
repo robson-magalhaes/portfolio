@@ -93,47 +93,47 @@ export const SinglePage = () => {
 
   return (
     <C.Container>
-      <MouseLuz/>
+      <MouseLuz />
       <C.AreaHeader id="home">
         <NavMenu />
         <C.HeaderPerfil>
           <C.BoxImg>
-            <C.ImgPerfil src={imgPerfil} alt='Foto de perfil'/>
+            <C.ImgPerfil src={imgPerfil} alt='Foto de perfil - Robson Oliveira Magalhães' />
           </C.BoxImg>
           <C.PerfilApresentacao>
             <C.PerfilTitulo>
-              <h2> Desenvolvedor</h2>
+              <h2>Desenvolvedor</h2>
               <h1>Full Stack</h1>
               <h5>Robson Oliveira Magalhães</h5>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
-              Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
+              Sou um desenvolvedor dedicado em transformar ideias em realidade digital. Com habilidades sólidas em front-end e back-end, estou pronto para enfrentar qualquer desafio. Com um olhar atento aos detalhes e uma abordagem centrada no usuário, estou comprometido em entregar soluções de alta qualidade que atendam às necessidades do cliente.
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
       </C.AreaHeader >
-            <TextoAnimado />
+      <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
         <C.VideoArea altura={550} autoPlay loop muted playsinline allow="autoplay">
-            <source src={bgPlaneta} type='video/mp4'/>
+          <source src={bgPlaneta} type='video/mp4' />
         </C.VideoArea>
-          <C.InfoArea>
-            <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
-            <C.Corpo>
-              <C.HabilitTech className='sessaoScroll'>
-                {
-                  Skills.map((x, key) => (
-                      <C.FlipCard onMouseEnter={() => setFlip(key == flip ? null : key)}>
-                        <C.ItemTech flipped={flip === key}>
-                          <C.ImgItemTech src={x.image} alt={x.nome} />
-                          <p>{x.nome}</p>
-                        </C.ItemTech>
-                      </C.FlipCard>
-                  ))
-                }
-              </C.HabilitTech>
-            </C.Corpo>
-          </C.InfoArea>
+        <C.InfoArea>
+          <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
+          <C.Corpo>
+            <C.HabilitTech className='sessaoScroll'>
+              {
+                Skills.map((x, key) => (
+                  <C.FlipCard onMouseEnter={() => setFlip(key == flip ? null : key)}>
+                    <C.ItemTech flipped={flip === key}>
+                      <C.ImgItemTech src={x.image} alt={x.nome} />
+                      <p>{x.nome}</p>
+                    </C.ItemTech>
+                  </C.FlipCard>
+                ))
+              }
+            </C.HabilitTech>
+          </C.Corpo>
+        </C.InfoArea>
 
         <C.InfoTech>
           <C.Titulo>Competências e Especialidades</C.Titulo>
@@ -163,7 +163,7 @@ export const SinglePage = () => {
                     <h2>{x.cargo}</h2>
                     <p>{x.descricao}</p>
                     <div onClick={() => setExpandido(key === expandido ? null : key)} className='dropdown'>
-                      <img src={iconDropdown} alt="icone de dropdown"/>
+                      <img src={iconDropdown} alt="icone de dropdown" />
                     </div>
                     <C.ExpSkill>
                       {x.skills.map(i => (
@@ -190,13 +190,13 @@ export const SinglePage = () => {
           <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
-              <C.ImgIcon src={iconWhatss} alt='whatsApp'/>
+              <C.ImgIcon src={iconWhatss} alt='whatsApp' />
             </Link>
             <Link to='https://github.com/robson-magalhaes' target="_blank">
-              <C.ImgIcon src={iconGithubs} alt='GitHub'/>
+              <C.ImgIcon src={iconGithubs} alt='GitHub' />
             </Link>
             <Link to='https://www.linkedin.com/in/robson-o-magalhaes/' target="_blank">
-              <C.ImgIcon src={iconLinkedin} alt='Linkedin'/>
+              <C.ImgIcon src={iconLinkedin} alt='Linkedin' />
             </Link>
           </C.RedeSociais>
         </C.Contato>

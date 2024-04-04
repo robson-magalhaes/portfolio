@@ -48,6 +48,9 @@ export const PerfilApresentacao = styled.div`
     margin-top: 70px;
     width: 100%;
     height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px 0;
     @media (max-width: 768px) {
         padding: 0;
         display: flex;
@@ -64,29 +67,7 @@ export const PerfilDescricao = styled.p`
     width: 80%;
     height: 100%;
 `
-// export const PerfilTitulo = styled.div`
-//     translate: 0px;
-//     height: auto;
-//     font-size: 6rem;
-//     font-weight: bold;
-//     line-height: 60px;
-//     letter-spacing: normal;
-//     color: transparent;
-//     background: linear-gradient(27deg, var(--cor-primeira) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
-//     background-clip: text;
-//     -webkit-background-clip:text;
-//     -ms-background-clip:text;
-//     & div:first-child{
-//         margin-left: 10px;
-//         font-size: 3rem;
-//     }
-//     & div:last-child{
-//         text-align: center;
-//         margin-top: 10px;
-//         font-size: 1.7rem;
-//         font-weight: normal;
-//     }
-// `;
+
 export const PerfilTitulo = styled.div`
     height: auto;
     font-weight: bold;
@@ -100,6 +81,7 @@ export const PerfilTitulo = styled.div`
         font-size: 6rem;
         line-height: 60px;
     }
+    
     & h2{
         margin-left: 10px;
         font-size: 3rem;
@@ -111,6 +93,7 @@ export const PerfilTitulo = styled.div`
         font-weight: normal;
     }
 `;
+
 export const BoxImg = styled.div`
     animation: ${keyframes.screenToRight} 2s;
     margin-top:10px;
