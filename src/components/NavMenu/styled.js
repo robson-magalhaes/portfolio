@@ -1,14 +1,13 @@
 import styled from 'styled-components';
 import * as keyframes from './../../helpers/animationScreen';
 
-export const BtnMenu = styled.div`
+export const BtnMenu = styled.img`
     display: none;
     position: fixed;
     top: 30px;
     left: 30px;
-    height: 55px;
-    max-width: 50px;
-    width: 18%;
+    height: 50px;
+    width: 50px;
     z-index: 99;
     filter: drop-shadow(1px 1px 2px #000000);
     cursor: pointer;

@@ -414,10 +414,12 @@ export const ExpDescricao = styled.div`
     & .dropdown{
         cursor: pointer;
         width: 100%;
+        transition: all ease 1s;
+
         & img{
-            transition: all ease 1s;
             transform: rotateX(${({ expandido }) => (expandido ? '180deg' : '0deg')});
             width: 50px;
+            height: 50px;
             margin: auto;
             &:hover{
                 scale: 1.2;
@@ -493,5 +495,5 @@ export const RedeSociais = styled.div`
 `
 export const ImgIcon = styled.img`
     width: 30px;
-    height: auto;
+    height: 30px;
 `

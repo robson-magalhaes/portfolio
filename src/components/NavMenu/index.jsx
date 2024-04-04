@@ -29,9 +29,7 @@ const NavMenu = () => {
   return (
     <>
       <C.NavSessao>
-        <C.BtnMenu onClick={() => setVisivel(!estaVisivel)}>
-          {!estaVisivel ? <img src={iconMenu} alt="menu" /> : <img src={iconX} alt="X" className='p-2' />}
-        </C.BtnMenu>
+        <C.BtnMenu onClick={() => setVisivel(!estaVisivel)} src={!estaVisivel ? iconMenu : iconX} alt='botao menu'/>
         <C.NavMenuContainer>
           <C.NavBar id="navBar" visivel={estaVisivel}>
             <C.NavLink>
