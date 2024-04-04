@@ -106,7 +106,7 @@ export const SinglePage = () => {
               <div>Robson Oliveira Magalhães</div>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
-                Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
+              Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
@@ -122,14 +122,12 @@ export const SinglePage = () => {
               <C.HabilitTech className='sessaoScroll'>
                 {
                   Skills.map((x, key) => (
-                    <>
                       <C.FlipCard onMouseEnter={() => setFlip(key == flip ? null : key)}>
                         <C.ItemTech flipped={flip === key}>
                           <C.ImgItemTech src={x.image} alt={x.nome} />
                           <p>{x.nome}</p>
                         </C.ItemTech>
                       </C.FlipCard>
-                    </>
                   ))
                 }
               </C.HabilitTech>

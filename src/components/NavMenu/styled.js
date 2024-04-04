@@ -71,7 +71,7 @@ export const NavBar = styled.ul`
         & a{
             text-align: center;
             border-width: 4px;
-            border-image: linear-gradient(27deg, var(--cor-primaria) 30%, var(--cor-terceira) 65%, var(--cor-quarta) 72%);
+            border-image: linear-gradient(27deg, var(--cor-primeira) 30%, var(--cor-terceira) 65%, var(--cor-quarta) 72%);
             border-image-slice: 1;
             width: 300px !important;
             border-radius: 0;
@@ -92,7 +92,7 @@ export const NavLink = styled.li`
     justify-content: center;
     
     & a{
-        color: var(--cor-primaria);
+        color: var(--cor-primeira);
         padding: 4px 20px;
         transition: all ease-in-out 0.3s;
     }
@@ -134,7 +134,7 @@ export const BotaoCurriculo = styled.button`
     border-radius: 0;
     -webkit-border-radius: 3px;
     border: none;
-    color:var(--cor-primaria);
+    color:var(--cor-primeira);
     text-shadow: 1px 1px 5px #000000;
     background: linear-gradient(17deg , black 0%, #32333f 100%);
     box-shadow: 2px 2px 3px 0px #000000, 1px 1px 2px #00000050 inset;

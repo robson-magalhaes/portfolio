@@ -46,13 +46,11 @@ export const HeaderPerfil = styled.div`
 export const PerfilApresentacao = styled.div`
     padding: 20px;
     margin-top: 70px;
+
     @media (max-width: 768px) {
         padding: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        align-self: center;
         gap: 40px 0;
     }
 `;
@@ -63,7 +61,6 @@ export const PerfilDescricao = styled.p`
     color: var(--cor-quarta);
     align-self: center;
     width: 80%;
-    //margin-left: 10px;
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
@@ -73,7 +70,7 @@ export const PerfilTitulo = styled.div`
     line-height: 60px;
     letter-spacing: normal;
     color: transparent;
-    background: linear-gradient(27deg, var(--cor-primaria) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
+    background: linear-gradient(27deg, var(--cor-primeira) 10%, var(--cor-terceira) 45%, var(--cor-quarta) 60%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
@@ -121,7 +118,7 @@ export const Titulo = styled.div`
     text-align: center;
     font-size: ${(props) => (props.tmFonte ? props.tmFonte : 2.3)}rem;
     color: transparent;
-    background: linear-gradient(27deg, var(--cor-terceira) 0%, var(--cor-primaria) 65%, #FFFFFF 100%);
+    background: linear-gradient(27deg, var(--cor-terceira) 0%, var(--cor-primeira) 65%, #FFFFFF 100%);
     background-clip: text;
     -webkit-background-clip:text;
     -ms-background-clip:text;
@@ -225,7 +222,8 @@ export const ItemTech = styled.div`
     transition: all ease-in-out 1s;
 
     & p{
-        flex: 1;
+        width: auto;
+        height: auto;
         position: absolute;
         border-radius: 7px;
         font-size: 1.1rem;
@@ -233,16 +231,16 @@ export const ItemTech = styled.div`
         opacity: 0;
         transition: all ease 1s;
         padding: 7px 20px;
-        margin-top:-5px;
+        margin-top:10px;
         text-shadow: 1px 2px 5px black;
     }
 
     ${(props) => (props.flipped ? `
-    transition: all ease-in-out 1s;
+        transition: all ease-in-out 1s;
         transform: rotateY(180deg);
         p{
             backdrop-filter: blur(10px);
-            transform: translateY(15px) rotateY(180deg);
+            transform: rotateY(180deg);
             opacity: 1;
         }
     ` : '')}
@@ -250,6 +248,8 @@ export const ItemTech = styled.div`
 export const ImgItemTech = styled.img`
     width: 60px;
     height: 60px;
+    max-width: 60px;
+    max-height: 60px;
 `;
 
 export const InfoTech = styled.section`
