@@ -115,21 +115,15 @@ export const BoxSegundo = styled.div`
 
 export const IconSocial = styled.div`
     display: flex;
-    align-items: end;
-    justify-content: end;
     gap:10px;
-    width: 100%;
-    height: auto;
-
-    @media (max-width:670px) {
-    }
 `
 
 export const ImgSocial = styled.img`
     width:23px;
-    transform: scale(1);
+    height: 23px;
     transition: all ease 0.3s;
     cursor: pointer;
+
     &:hover{
         transform: scale(1.5) !important;
     }

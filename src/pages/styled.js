@@ -57,19 +57,13 @@ export const PerfilApresentacao = styled.div`
     }
 `;
 
-export const PerfilDescricao = styled.div`
+export const PerfilDescricao = styled.p`
     animation: ${keyframes.screenToTop} 2s;
     font-size: 1rem;
-    color: #FFFFFF;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px 0;
-    
-    & p{
-        align-self: center;
-        width: 82%;
-    }
+    color: var(--cor-quarta);
+    align-self: center;
+    width: 80%;
+    //margin-left: 10px;
 `
 export const PerfilTitulo = styled.div`
     translate: 0px;
@@ -254,11 +248,8 @@ export const ItemTech = styled.div`
     ` : '')}
 `;
 export const ImgItemTech = styled.img`
-    align-self: center;
-    flex: 1;
-    height: 100%;
-    max-width: 60px !important;
-    max-height: 60px;
+    width: 60px;
+    height: 60px;
 `;
 
 export const InfoTech = styled.section`

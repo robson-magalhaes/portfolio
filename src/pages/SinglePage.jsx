@@ -106,9 +106,7 @@ export const SinglePage = () => {
               <div>Robson Oliveira Magalhães</div>
             </C.PerfilTitulo>
             <C.PerfilDescricao>
-              <p>
                 Se você procura um desenvolvedor de Software, dedicado e entusiasmado, para se juntar à sua equipe, estou disponível para discutir como posso contribuir para seus projetos e objetivos de negócios. Estou animado para decolar com minha carreira e crescer como profissional, enquanto ajuda a sua empresa.
-              </p>
             </C.PerfilDescricao>
           </C.PerfilApresentacao>
         </C.HeaderPerfil>
