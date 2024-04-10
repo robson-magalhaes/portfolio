@@ -1,4 +1,5 @@
-import styled,{keyframes} from 'styled-components';
+import styled from 'styled-components';
+import * as keyframes from '../../helpers/animationScreen';
 
 export const HeaderPerfil = styled.div`
     display: flex;
