@@ -13,6 +13,7 @@ const digitandoAnimation = keyframes`
   15%,
   55% {
     width: calc(100% + 10px);
+    overflow: hidden;
   }
 `;
 
@@ -41,15 +42,16 @@ const palavrasAnimation = keyframes`
 
 export const BoxDigitando = styled.div`
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: flex;
   align-items: start;
   justify-content: start;
-  margin: 50px 0 70px 0;
-  padding-left: 20%;
+  padding: 50px 0 50px 20%;
   flex-wrap: wrap;
-
+  background-color: #1D1E20;
+  
   & div {
+    height: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 2.5rem;
     font-weight: bold;
@@ -65,8 +67,7 @@ export const BoxDigitando = styled.div`
   }
   
   @media (max-width: 768px) {
-    padding: 0;
-    padding-left:20px;
+    padding: 50px 0 50px 20px;
     margin: 0;
   }
 `;
@@ -97,9 +98,7 @@ export const TxtDigitando = styled.span`
     right: -10px;
     animation: ${cursorAnimation} .8s infinite, ${digitandoAnimation} 15s steps(30) infinite;
     width: 100%;
-    //backdrop-filter: blur(100px);
-    //-webkit-backdrop-filter: blur(100px);
-    background-color: #000000;
+    background-color: #1D1E20;
     &::-webkit-backdrop-filter{
             backdrop-filter: blur(100px);
         }

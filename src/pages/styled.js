@@ -5,7 +5,7 @@ import * as keyframes from '../helpers/animationScreen';
 export const Container = styled.div`
     width: 100%;
     height: auto;
-    background: linear-gradient(17deg , black 80%, #32333f 100%);
+    background: linear-gradient(17deg , #00000099 80%, #32333f 100%);
     
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
@@ -65,13 +65,11 @@ export const InfoTitulo = styled.h1`
 `
 
 export const SessaoHabilidades = styled.section`
-    padding: 50px 100px;
     height:auto;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px 0;
 
     @media(max-width: 768px) {
         height: auto;
@@ -79,15 +77,15 @@ export const SessaoHabilidades = styled.section`
         margin: 100px 0;
     }
 `;
-
 export const VideoArea = styled.video`
+    background-color: #000;
     position: relative;
     width: 100%;
     height: 100%;
     padding: 110px 0 0 0;
     max-height: ${(props) => (props.altura = props.altura)}px;
     min-height: ${(props) => (props.altura = props.altura)}px;
-    object-fit: contain;
+    object-fit: 100% 100%;
     object-position: bottom;
     
     @media (max-width:670px){
@@ -181,11 +179,15 @@ export const InfoTech = styled.section`
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background-color: #1D1E20;
+    height: auto;
+    gap: 30px;
     & div{
         justify-content: center;
     }
     & div:last-child{
-        padding: 0 20px;
+        padding: 40px 20px;
+        margin-bottom: 40px;
     }
 `
 export const ItemT = styled.h6`
@@ -285,7 +287,6 @@ export const BoxRight = styled.div`
     border: solid 1px transparent;
     border-radius: 10px;
     transition: all ease 0.4s;
-    opacity: 0.2;
     background-color: #00000050;
     box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
     transition: all ease-in-out 0.5s;

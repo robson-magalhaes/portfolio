@@ -20,9 +20,8 @@ import { expProjetos } from '../data/ExpProfissional';
 
 import TextoAnimado from '../components/TextoAnimado';
 import NavMenu from '../components/NavMenu';
-import MouseLuz from '../components/MouseLuz';
 import { Perfil } from '../components/Perfil';
-
+import MouseLuz from '../components/MouseLuz';
 
 export const SinglePage = () => {
   const [expandido, setExpandido] = useState(null);
@@ -33,7 +32,6 @@ export const SinglePage = () => {
   useEffect(() => {
     const handleScroll = () => {
       const item = document.querySelectorAll('.sessaoScroll');
-      const divXP = document.querySelector('.viewXP');
 
       item.forEach((e, key) => {
         const rec = e.getBoundingClientRect();
@@ -53,26 +51,6 @@ export const SinglePage = () => {
           e.style.opacity = 0;
         }
       });
-
-      const handleBoxXP = () => {
-        const boxItems = document.querySelectorAll('.boxScroll');
-        boxItems.forEach((e) => {
-          const rec = e.getBoundingClientRect();
-          var totalDiv = divXP.clientHeight + 300;
-
-          if (rec.top >= 0 && rec.bottom <= totalDiv) {
-            e.style.opacity = 1;
-          } else {
-            e.style.opacity = 0.2;
-          }
-        });
-      };
-
-      divXP.addEventListener('scroll', handleBoxXP);
-
-      return () => {
-        divXP.removeEventListener('scroll', handleBoxXP);
-      };
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -92,14 +70,14 @@ export const SinglePage = () => {
 
   return (
     <C.Container>
-      <MouseLuz />
+      <MouseLuz/>
       <C.AreaHeader id="home">
         <NavMenu />
         <Perfil />
       </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
-        <C.VideoArea type='video/mp4' src={bgPlaneta} altura={550} autoPlay loop muted playsinline controls={false}/>
+          <C.VideoArea type='video/mp4' src={bgPlaneta} altura={550} autoPlay loop muted playsinline controls={false} />
         <C.InfoArea>
           <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
           <C.Corpo>
@@ -136,10 +114,10 @@ export const SinglePage = () => {
           <C.LeftExperiencia id="screenAbrir">
             <img src={moldura} alt="moldura" className={animacaofinal ? 'escondido' : 'visivel'} />
           </C.LeftExperiencia>
-          <C.RightExperiencia className='sessaoScroll viewXP' >
+          <C.RightExperiencia className='sessaoScroll viewXP'>
             {
               expProjetos.map((x, key) => (
-                <C.BoxRight className='boxScroll'>
+                <C.BoxRight>
                   <C.ExpData>{x.data}</C.ExpData>
                   <C.ExpDescricao expandido={expandido === key}>
                     <C.InfoTitulo>{x.nome}</C.InfoTitulo>
@@ -157,7 +135,6 @@ export const SinglePage = () => {
                 </C.BoxRight>
               ))
             }
-
           </C.RightExperiencia>
         </C.ContainerExperiencia>
       </C.SessaoExperiencia>

@@ -4,6 +4,7 @@ const TextoAnimado = () => {
     return (
         <C.BoxDigitando>
             <div>Ola Mundo,</div>
+            <br />
             <C.TxtDigitando></C.TxtDigitando>
         </C.BoxDigitando>
     );
