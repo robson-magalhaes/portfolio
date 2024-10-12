@@ -179,9 +179,12 @@ export const InfoTech = styled.section`
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: #1D1E20;
+    background-color: #000000;
     height: auto;
     gap: 30px;
+    mix-blend-mode: screen;
+
+
     & div{
         justify-content: center;
     }
@@ -372,7 +375,7 @@ export const SessaoProjetos = styled.section`
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
-
+    mix-blend-mode: screen;
     &::-webkit-background-attachment{
         background-attachment: fixed;
     }

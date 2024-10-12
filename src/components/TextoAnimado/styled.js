@@ -48,7 +48,8 @@ export const BoxDigitando = styled.div`
   justify-content: start;
   padding: 50px 0 50px 20%;
   flex-wrap: wrap;
-  background-color: #1D1E20;
+  background-color: #000000;
+  mix-blend-mode: screen;
   
   & div {
     height: auto;
@@ -98,7 +99,7 @@ export const TxtDigitando = styled.span`
     right: -10px;
     animation: ${cursorAnimation} .8s infinite, ${digitandoAnimation} 15s steps(30) infinite;
     width: 100%;
-    background-color: #1D1E20;
+    background-color: #000000;
     &::-webkit-backdrop-filter{
             backdrop-filter: blur(100px);
         }
