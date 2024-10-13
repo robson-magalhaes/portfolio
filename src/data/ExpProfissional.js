@@ -27,6 +27,15 @@ export const projetos = [
         page: '',
         skills: ['C#', 'ASP.NET','Bootstrap']
 
+    },
+    {
+        nome: 'Ferramenta para live',
+        img: `${imgDefault}`,
+        descricao: 'Website simples desenvolvido enquanto estudava laravel em padrão MVC. Esse sistema foi criado para facilitar o atendimento e anotações de pedidos durante a venda de polpas em live.',
+        urlGithub: 'https://github.com/robson-magalhaes/Venda_Polpas_Live',
+        page: '',
+        skills: ['PHP', 'Laravel','HTML5', 'CSS3', 'MVC']
+
     }
 ];
 
