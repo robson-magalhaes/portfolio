@@ -5,7 +5,6 @@ import imgDefault from '../assets/image/bgScript.webp';
 export const projetos = [
     {
         nome: 'Criador de Encarte',
-        url: '',
         img: `${bgEncarte}`,
         descricao: 'Desenvolvimento de uma aplicação web que permite aos usuários criar encartes digitais personalizados para promover produtos, serviços ou eventos. A aplicação oferece uma interface intuitiva e fácil de usar. Os usuários podem personalizar o layout e o design do encarte sem a necessidade de habilidades técnicas avançadas.',
         urlGithub: 'https://github.com/robson-magalhaes/CriarEncarte',
@@ -13,34 +12,20 @@ export const projetos = [
         skills: ['JavaScript', 'Html', 'CSS', 'Bootstrap']
     },
     {
-        nome: 'Jogo Da Memoria',
-        url: '',
-        img: `${imgDefault}`,
-        descricao: 'Ferramenta para controle de vendas para live.',
-        urlGithub: '',
-        page: '',
-        skills: ['ReactJs','JavaScript','styled-components']
-    },
-    {
         nome: 'Calculadora IMC',
-        url: '',
         img: `${bgCalcIMC}`,
-        nome: 'Calculadora IMC',
         descricao: 'Desenvolvi essa aplicação de calculadora de IMC utilizando a biblioteca React. A calculadora permite que os usuários insiram seu peso e altura, e é calculado automaticamente o IMC com base nesses valores. O projeto foi desenvolvido como parte de um curso de React e demonstra minhas habilidades em desenvolvimento front-end utilizando esta tecnologia.',
         urlGithub: 'https://github.com/robson-magalhaes/react-calculadora-imc',
         page: 'https://calculadora-imc1.netlify.app/',
         skills: ['ReactJs', 'NextJs', 'TypeScript', 'module.css']
     },
     {
-        nome: 'Venda de polpas',
-        url: '',
+        nome: 'Site para lanchonete',
         img: `${imgDefault}`,
-
-        nome: 'Venda de polpas',
-        descricao: 'Ferramenta para controle de vendas para live.',
-        urlGithub: 'https://github.com/robson-magalhaes/Venda_Polpas_Live',
+        descricao: 'Website para venda de lanches',
+        urlGithub: 'https://github.com/robson-magalhaes/SalesWeb_Csharp',
         page: '',
-        skills: ['PHP', 'Laravel', 'HTML5', 'CSS3']
+        skills: ['C#', 'ASP.NET','Bootstrap']
 
     }
 ];
