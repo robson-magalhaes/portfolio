@@ -79,7 +79,7 @@ export const SessaoHabilidades = styled.section`
 `;
 export const VideoArea = styled.video`
     background-color: #000;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     padding: 110px 0 0 0;
@@ -89,8 +89,10 @@ export const VideoArea = styled.video`
     object-position: bottom;
     
     @media (max-width:670px){
-        object-position: -130px 50px;
+        object-position: -350px 50px;
         min-height: 700px !important;
+        min-height: 1200px !important;
+        margin-top: -100px;
         object-fit: cover;
     }
 `;
@@ -100,7 +102,6 @@ export const InfoArea = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: absolute;
     height: auto;
     font-size: 2rem;
     color:#FFFFFF;
