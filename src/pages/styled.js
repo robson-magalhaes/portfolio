@@ -117,7 +117,7 @@ export const Corpo = styled.div`
 
 export const HabilitTech = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 50px 80px;
     height: auto;
     margin: auto;

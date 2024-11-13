@@ -30,7 +30,8 @@ export const Skills = [
     { nome: 'Git', image: `${iconGit}` },
     { nome: 'Linux', image: `${iconLinux}` },
     { nome: 'Windows', image: `${iconWindows}` },
-    { nome: 'Wordpress', image: `${iconWordpress}` }
+    { nome: 'Wordpress', image: `${iconWordpress}` },
+    { nome: 'C#', image: `${iconCsharp}` }
 ];
 
 export const allSkills = [
