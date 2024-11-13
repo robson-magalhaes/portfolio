@@ -66,6 +66,7 @@ export const InfoTitulo = styled.h1`
 
 export const SessaoHabilidades = styled.section`
     height:auto;
+    padding: 100px 0;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
@@ -103,6 +104,7 @@ export const InfoArea = styled.div`
     justify-content: center;
     flex-direction: column;
     height: auto;
+    padding: 50px;
     font-size: 2rem;
     color:#FFFFFF;
     gap: 40px;

@@ -70,14 +70,14 @@ export const SinglePage = () => {
 
   return (
     <C.Container>
-      <MouseLuz/>
+      <MouseLuz />
       <C.AreaHeader id="home">
         <NavMenu />
         <Perfil />
       </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
-          <C.VideoArea type='video/mp4' src={bgPlaneta} altura={550} autoPlay loop muted playsinline controls={false} />
+        <C.VideoArea type='video/mp4' src={bgPlaneta} altura={650} autoPlay loop muted playsinline controls={false} />
         <C.InfoArea>
           <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
           <C.Corpo>
@@ -96,6 +96,9 @@ export const SinglePage = () => {
           </C.Corpo>
         </C.InfoArea>
 
+      </C.SessaoHabilidades>
+      <C.SessaoHabilidades>
+
         <C.InfoTech>
           <C.Titulo>Competências e Especialidades</C.Titulo>
           <C.ExpSkill className='sessaoScroll'>
@@ -107,7 +110,6 @@ export const SinglePage = () => {
           </C.ExpSkill>
         </C.InfoTech>
       </C.SessaoHabilidades>
-
       <C.SessaoExperiencia id='expProfissional'>
         <C.Titulo subTxt={'XP'}>Experiência Profissional</C.Titulo>
         <C.ContainerExperiencia>
