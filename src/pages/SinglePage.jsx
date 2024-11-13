@@ -147,9 +147,10 @@ export const SinglePage = () => {
       </C.SessaoProjetos>
 
       <C.FooterContainer id="contato">
+        <h4>ENTRE EM CONTATO</h4>
         <C.Contato>
           <p><i className="fa-solid fa-phone"></i> (28) 9 9996-1628</p>
-          <p><i className="fa-regular fa-envelope"></i> dev.robsonom@hotmail.com</p>
+          <p><i className="fa-regular fa-envelope"></i><Link className="btnMail" to="mailto:dev.robsonom@hotmail.com">dev.robsonom@hotmail.com</Link></p>
           <C.RedeSociais>
             <Link to='https://api.whatsapp.com/send?phone=5528999961628' target="_blank">
               <C.ImgIcon src={iconWhatss} alt='whatsApp' />
@@ -162,6 +163,10 @@ export const SinglePage = () => {
             </Link>
           </C.RedeSociais>
         </C.Contato>
+        <div>
+          <p></p>
+          © 2024. RobynTec. Todos os Direitos Reservados
+        </div>
       </C.FooterContainer>
     </C.Container>
   );

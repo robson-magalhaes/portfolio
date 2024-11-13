@@ -391,12 +391,19 @@ export const SessaoProjetos = styled.section`
 
 
 export const FooterContainer = styled.footer`
-    padding: 10px 100px;
+    padding: 20px 100px;
     background: linear-gradient(17deg, #3088cf 0, #32333f 100%);
-    height: 200px;
+    height: auto;
     width: 100%;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    & h4{
+        font-size: 1.3rem;
+        text-align: start;
+        width: 100%;
+        padding-bottom: 10px;
+    }
 `
 
 export const Contato = styled.div`
@@ -406,13 +413,35 @@ export const Contato = styled.div`
     flex-direction: column;
     gap: 20px;
     width: 100%;
-
-    & p {
+    .btnMail{
+        width: 100%;
+        height: 100%;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 2px 2px 3px 1px #000;
+        transition: all ease-in-out 0.2s;
+        &:hover{
+            padding: 12px;
+            box-shadow: 2px 2px 10px 3px #000;
+        }
+    }
+    & p, a {
         font-size: 1rem;
         color: #FFFFFF;
+        text-decoration: none;
     }
     & i{
         margin-right: 20px;
+    }
+    
+    &::after{
+        content: "";
+        background-color: white;
+        height: 1px;
+        width: 100%;
+        margin-bottom: 10px;
     }
 `
 export const RedeSociais = styled.div`

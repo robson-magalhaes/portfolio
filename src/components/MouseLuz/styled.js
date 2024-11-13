@@ -9,7 +9,7 @@ export const Luz = styled.div`
     pointer-events: none;
     box-shadow:
     0 0 200px 100px rgba(255, 255, 255, 1),
-    0 0 200px 130px rgba(255, 255, 255, 1);
+    0 0 200px 50px rgba(255, 255, 255, 1);
 
     @media(max-width: 780px){
         display: none;
