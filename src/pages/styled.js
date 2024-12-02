@@ -370,7 +370,7 @@ export const ExpSkill = styled.div`
 
 export const SessaoProjetos = styled.section`
     padding: 70px 0;
-    height: auto;
+    height: auto !important;
     box-shadow: 0px 100px 70px 120px black inset;
     background: url(${aurora});
     background-repeat: no-repeat;

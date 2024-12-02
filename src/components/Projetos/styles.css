@@ -85,4 +85,11 @@
             translate: none;
         }
     }
+    .swiper-button-prev {
+        margin-left: 0;
+    }
+    
+    .swiper-button-next {
+        margin-right: 0;
+    }
 }

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const LeftContainer = styled.a`
     flex:1;
     width: 100%;
-    height: 440px;
+    height: auto;
     background: ${(props) => (props.urlimage ? `url(${props.urlimage})` : 'blue')};
     background-size: 100% 100%;
     background-repeat: space;
@@ -18,6 +18,10 @@ export const RightContainer = styled.div`
     text-align: start;
     height: 500px;
     max-height: 360px;
+    
+    @media(max-width:1067px){
+        max-height: 260px;
+    }
     @media(max-width:767px){
         max-height: none;
         flex: 1;
@@ -43,17 +47,20 @@ export const Descricao = styled.div`
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    overflow-y:scroll;
+
+    &::-webkit-scrollbar{
+        overflow-y: hidden;
+    }
     & p {
         height: 100%;
     }
+    
     @media(max-width:767px){
         width: 90%;
         height: 300px;
         max-height: 250px;
         overflow-y: scroll;
-        &::-webkit-scrollbar{
-            overflow-y: hidden;
-        }
         background-color: #13131470;
     }
 `
@@ -126,6 +133,7 @@ export const Balao = styled.div`
     transform: translateX(-55px) translateY(-25px);
     opacity: 0;
     background-color: white;
+    color: black;
     @media(max-width:767px){
         display: none;
     }
