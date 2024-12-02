@@ -1,10 +1,21 @@
-import bgEncarte from '../assets/image/projeto/Criador-de-encarte.webp';
+import bgEncarte from '../assets/image/projeto/Criador-de-encarte.jpg';
 import bgCalcIMC from '../assets/image/projeto/imgCalc.webp';
 import imgDefault from '../assets/image/bgScript.webp';
+import bgSorteios from '../assets/image/projeto/sorteios.jpg';
+
 
 export const projetos = [
     {
-        nome: 'Criador de Encarte',
+        nome: 'SORTEIO DE PRÊMIOS',
+        url: 'https://sorteios-robyntec.vercel.app',
+        img: `${bgSorteios}`,
+        descricao: `Desenvolvi um sistema de sorteios inovador e dinâmico, onde os usuários podem adquirir cotas através de pagamento via PIX. O sistema, após confirmar o pagamento, sorteia automaticamente as cotas e exibe o resultado instantaneamente para o comprador, informando se a cota foi premiada.\n Podendo ser utilizado em Lives, Promoções de e-commerce, Eventos beneficentes ou arrecadação de fundos, Loterias digitais instantâneas`,
+        urlGithub: '',
+        page: 'https://sorteios-robyntec.vercel.app',
+        skills: ['React com Vite', 'Node.js', 'PostgreSQL', 'Bootstrap', "styled-components", "Api Pix", "e-commerce"]
+    },
+    {
+        nome: 'CRIADOR DE ENCARTE',
         url: '',
         img: `${bgEncarte}`,
         descricao: 'Desenvolvimento de uma aplicação web que permite aos usuários criar encartes digitais personalizados para promover produtos, serviços ou eventos. A aplicação oferece uma interface intuitiva e fácil de usar. Os usuários podem personalizar o layout e o design do encarte sem a necessidade de habilidades técnicas avançadas.',
@@ -13,30 +24,18 @@ export const projetos = [
         skills: ['JavaScript', 'Html', 'CSS', 'Bootstrap']
     },
     {
-        nome: 'Jogo Da Memoria',
-        url: '',
-        img: `${imgDefault}`,
-        descricao: 'Ferramenta para controle de vendas para live.',
-        urlGithub: '',
-        page: '',
-        skills: ['ReactJs','JavaScript','styled-components']
-    },
-    {
-        nome: 'Calculadora IMC',
+        nome: 'CALCULADORA IMC',
         url: '',
         img: `${bgCalcIMC}`,
-        nome: 'Calculadora IMC',
         descricao: 'Desenvolvi essa aplicação de calculadora de IMC utilizando a biblioteca React. A calculadora permite que os usuários insiram seu peso e altura, e é calculado automaticamente o IMC com base nesses valores. O projeto foi desenvolvido como parte de um curso de React e demonstra minhas habilidades em desenvolvimento front-end utilizando esta tecnologia.',
         urlGithub: 'https://github.com/robson-magalhaes/react-calculadora-imc',
         page: 'https://calculadora-imc1.netlify.app/',
         skills: ['ReactJs', 'NextJs', 'TypeScript', 'module.css']
     },
     {
-        nome: 'Venda de polpas',
+        nome: 'VENDA DE POLPAS',
         url: '',
         img: `${imgDefault}`,
-
-        nome: 'Venda de polpas',
         descricao: 'Ferramenta para controle de vendas para live.',
         urlGithub: 'https://github.com/robson-magalhaes/Venda_Polpas_Live',
         page: '',

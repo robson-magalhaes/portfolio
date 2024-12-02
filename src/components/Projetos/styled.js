@@ -2,11 +2,12 @@ import styled from 'styled-components';
 
 export const LeftContainer = styled.a`
     flex:1;
-    height: 340px;
+    width: 100%;
+    height: 440px;
     background: ${(props) => (props.urlimage ? `url(${props.urlimage})` : 'blue')};
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: space;
-    background-position: right;
+    background-position: center;
     box-shadow: 0px 0px 15px #1E1E20 inset, 5px 5px 10px #000000;
     border-radius: 7px;
 `
@@ -72,24 +73,7 @@ export const LinkIcons = styled.div`
                 opacity: 1;
             }
         }
-        
-    /* @media(max-width:767px){
-        position: absolute;
-        display: flex;
-        justify-content: start;
-        flex-direction: column;
-        height: 100px;
-        width: auto;
-        left: 30px;
-        top: 50px;
-        gap: 10px;
-
-        & a img{
-            transform: none;
-            opacity: 1;
-            width: 40px;
-        }
-    } */
+    
     @media(max-width:767px){
         position: absolute;
         display: flex;

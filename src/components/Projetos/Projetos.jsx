@@ -44,7 +44,15 @@ export const Projetos = () => {
                                 {x.nome}
                             </P.InfoTitulo>
                             <C.Descricao>
-                                <p>{x.descricao}</p>
+                                <p>
+                                    {x.descricao.split('\n').map((x) => (
+                                        <>
+                                            {x}
+                                            <br />
+                                            <br />
+                                        </>
+                                    ))}
+                                </p>
                                 <C.LinkIcons>
                                     {
                                         x.urlGithub &&
