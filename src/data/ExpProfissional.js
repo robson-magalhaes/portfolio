@@ -76,7 +76,7 @@ export const expProjetos = [
         data: 'out/2023',
         nome: 'CRM',
         cargo: 'Desenvolvedor',
-        descricao: 'Desenvolvi esta aplicação CRM que permite gerenciar a produção, transações de vendas e entregas, além de analisar as interações com os clientes. O administrador pode facilmente adicionar entregadores, produtores e produtos, organizados por categorias, e muito mais. Além disso, o sistema oferece widgets e ferramentas para uma análise mais aprofundada da produção da empresa. Utilizei PHP com estrutura MVC usando CodeIgniter 4, jQuery para integração de datatables e Bootstrap para aprimorar a interface visual. Este sistema foi criado para facilitar o controle de vendas e entregas, fornecendo widgets, transações e análises com fluxos de venda e entrega integrados.',
+        descricao: 'Desenvolvi esta aplicação CRM que permite gerenciar a produção, transações de vendas e entregas, além de analisar as interações com os clientes. O administrador pode facilmente adicionar entregadores, produtores e produtos, organizados por categorias, e muito mais. Além disso, o sistema oferece widgets e ferramentas para uma análise mais aprofundada da produção da empresa. Utilizei PHP com arquitetura MVC usando CodeIgniter 4, jQuery para integração de datatables e Bootstrap para aprimorar a interface visual. Este sistema foi criado para facilitar o controle de vendas e entregas, fornecendo widgets, transações e análises com fluxos de venda e entrega integrados.',
         skills: [
             'PHP', 'JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'jQuery', 'MVC', 'Laravel', 'CodeIginiter4', 'Programação Orientada a Objetos'
         ]
