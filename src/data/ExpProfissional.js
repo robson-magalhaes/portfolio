@@ -9,10 +9,10 @@ export const projetos = [
         nome: 'SORTEIO DE PRÊMIOS',
         url: 'https://sorteios-robyntec.vercel.app',
         img: `${bgSorteios}`,
-        descricao: `Desenvolvi um sistema de sorteios inovador e dinâmico, onde os usuários podem adquirir cotas através de pagamento via PIX. O sistema, após confirmar o pagamento, sorteia automaticamente as cotas e exibe o resultado instantaneamente para o comprador, informando se a cota foi premiada.\n Podendo ser utilizado em Lives, Promoções de e-commerce, Eventos beneficentes ou arrecadação de fundos, Loterias digitais instantâneas`,
+        descricao: `Desenvolvi uma plataforma de sorteios online inovadora, com funcionalidades automatizadas e integradas, baseada no modelo SaaS (Software as a Service). O sistema permite que os usuários adquiram cotas de sorteios por meio de pagamentos via PIX. Após a confirmação do pagamento, as cotas são sorteadas automaticamente, e o resultado é exibido em tempo real para o comprador, informando se a cota foi premiada. \nA plataforma também oferece um painel administrativo completo, onde os usuários podem gerenciar seus sorteios, visualizar transações e realizar saques automáticos diretamente para suas contas bancárias, tudo de forma segura e eficiente. Essa solução, baseada na nuvem, proporciona uma experiência ágil, transparente e escalável, atendendo às necessidades de empresas e usuários de forma prática e eficiente.`,
         urlGithub: '',
         page: 'https://sorteios-robyntec.vercel.app',
-        skills: ['React com Vite', 'Node.js', 'PostgreSQL', 'Bootstrap', "styled-components", "Api Pix", "e-commerce"]
+        skills: ["SaaS", 'React com Vite', 'Node.js', 'PostgreSQL', 'Bootstrap', "styled-components", "Api Pix", "e-commerce"]
     },
     {
         nome: 'CRIADOR DE ENCARTE',

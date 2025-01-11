@@ -35,5 +35,5 @@ export const Skills = [
 ];
 
 export const allSkills = [
-    'HTML5', 'CSS3', 'JavaScript', 'ES6+', 'jQuery', 'ReactJS', 'NodeJs', 'TypeScript', 'PHP', 'Laravel', 'CodeIginiter 4', 'Arquitetura MVC', 'NextJs', 'C#', '.NET 7 Core', 'ASP.NET core', '.NET framework', 'ORM', 'Bootstrap', 'Tailwind', 'styled-components', 'Git - GiHub', 'SQL', 'Databases', 'MySQL', 'SQL Server', 'PostgreSQL', 'API', 'API Rest', 'Docker', 'SOLID', 'Wordpress', 'Metodologia Ágil SCRUM', 'Engenharia de Software', 'Responsividade Web Mobile', 'Programação Orientada a Objetos', 'Linux', 'Windows'
+    'HTML5', 'CSS3', 'JavaScript', 'ES6+', 'jQuery', 'ReactJS', 'NodeJs', 'TypeScript', 'PHP', 'Laravel', 'CodeIginiter 4', 'SQL', 'Databases', 'MySQL', 'SQL Server', 'PostgreSQL', 'API', 'API Rest', 'Arquitetura MVC','SOLID', 'NextJs', 'C#', '.NET 7 Core', 'ASP.NET core', '.NET framework', 'ORM', 'Bootstrap', 'Tailwind', 'styled-components', 'Git ','GiHub','SaaS', 'Docker', 'Wordpress', 'Metodologia Ágil SCRUM', 'Engenharia de Software', 'Responsividade Web Mobile', 'Programação Orientada a Objetos', 'Linux', 'Windows'
 ];
