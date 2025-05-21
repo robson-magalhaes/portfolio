@@ -33,6 +33,8 @@ export const RightContainer = styled.div`
   @media (max-width: 767px) {
     margin: 0;
     padding:0;
+    gap: 10px 0 ;
+    margin-bottom: 30px;
     max-height: none;
     flex: 1;
     display: flex;
@@ -40,7 +42,6 @@ export const RightContainer = styled.div`
     align-items: center;
     height: 150%;
     width: 100%;
-    
     & div{
         margin: 0;
         padding: 0;
@@ -76,7 +77,8 @@ export const Descricao = styled.div`
     height: 300px;
     max-height: 250px;
     overflow-y: scroll;
-    background-color: #13131470;
+    background-color:  #32333f70;
+    box-shadow: inset 0px -10px 10px 4px #00000080;
   }
 `;
 
