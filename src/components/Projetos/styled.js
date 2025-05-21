@@ -104,20 +104,22 @@ export const LinkIcons = styled.div`
   @media (max-width: 767px) {
     position: absolute;
     display: flex;
-    align-items: end;
-    justify-content: end;
-    flex-direction: row;
-    height: 100px;
-    right: 35px;
-    bottom: 10px;
-    width: 90px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    right: -38px;
+    bottom: 75px;
+    width: 100px;
+    height: 50px;
+    gap: 20px 0;
     
     & a img {
       transform: none;
       opacity: 1;
-      width: 30px;
+      width: 35px;
       height: auto;
       margin: 0;
+      padding: 0;
     }
   }
 `;
@@ -138,6 +140,11 @@ export const IconProjeto = styled.img`
     transform: translateX(-367px) scale(1.2);
   }
   @media (max-width: 767px) {
+    position: initial;
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    height: 100px;
     &:hover {
       transform: none;
     }
