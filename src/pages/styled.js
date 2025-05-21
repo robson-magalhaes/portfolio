@@ -3,10 +3,14 @@ import aurora from '../assets/image/aurora.webp';
 import * as keyframes from '../helpers/animationScreen';
 
 export const Container = styled.div`
-    width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     height: auto;
     background: linear-gradient(17deg , #00000099 80%, #32333f 100%);
-    
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
     }
@@ -20,6 +24,7 @@ export const Container = styled.div`
     @media (max-width:667px){
         padding: 0;
         margin: 0;
+        gap:100px 0;
     }
 `;
 
@@ -49,6 +54,7 @@ export const Titulo = styled.div.withConfig({
     -ms-background-clip:text;
     margin: 20px 0;
     width: auto;
+    z-index: 1;
 
     &::after{
         display: flex;
@@ -67,32 +73,48 @@ export const InfoTitulo = styled.h1`
 `
 
 export const SessaoHabilidades = styled.section`
-    height:auto;
-    padding: 100px 0;
+    width: 100%;
+    height: auto;
+    padding: 0 0 100px 0 !important;
+    margin: 0;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    position: relative;
+`;
 
-    @media(max-width: 768px) {
-        height: auto;
-        gap: 250px;
-        margin: 100px 0;
+export const InfoArea = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 60px;
+    font-size: 2rem;
+    color:#FFFFFF;
+    width: 100%;
+    height: 70vh;
+    z-index: 1;
+    background-color: #000;
+    position: relative;
+    padding: 100px 0;
+    @media (max-width:670px){
+        height: 100vh;
     }
 `;
+
 export const VideoArea = styled.video.withConfig({
   shouldForwardProp: (prop) => prop !== 'altura'
 })`
-    background-color: #000;
+    display: flex;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    padding: 110px 0 0 0;
-    max-height: ${(props) => (props.altura = props.altura)}px;
-    min-height: ${(props) => (props.altura = props.altura)}px;
+    width:100%;
+    height:100%;
+    top: 0;
     object-fit: 100% 100%;
-    object-position: bottom;
-    
+    object-position: center;
+
     @media (max-width:670px){
         object-position: -350px 50px;
         min-height: 700px !important;
@@ -101,24 +123,9 @@ export const VideoArea = styled.video.withConfig({
         object-fit: cover;
     }
 `;
-
-export const InfoArea = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: auto;
-    padding: 50px;
-    font-size: 2rem;
-    color:#FFFFFF;
-    gap: 40px;
-    width: 100%;
-    z-index: 1;
-`;
 export const Corpo = styled.div`
-    height: auto;
+    height: 100%;
     width: 100%;
-    padding: 10px;
     display: flex;
 `;
 
@@ -129,9 +136,10 @@ export const HabilitTech = styled.div`
     height: auto;
     margin: auto;
     perspective: 700px;
-    
+    padding-bottom: 30px;
     @media (max-width:670px){
-        grid-template-columns: repeat(2, 100px);
+    gap: 20px 40px;
+        grid-template-columns: repeat(3, 100px);
     }
 `;
 export const FlipCard = styled.div`

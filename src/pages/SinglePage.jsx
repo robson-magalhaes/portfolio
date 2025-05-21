@@ -77,8 +77,10 @@ export const SinglePage = () => {
       </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
-        <C.VideoArea type='video/mp4' src={bgPlaneta} altura={650} autoPlay loop muted playsInline controls={false} />
+        {/* <C.VideoContainer>
+        </C.VideoContainer> */}
         <C.InfoArea>
+          <C.VideoArea type='video/mp4' src={bgPlaneta} altura={850} autoPlay loop muted playsInline controls={false} />
           <C.Titulo subTxt={'Skills'}>Minhas Habilidades</C.Titulo>
           <C.Corpo>
             <C.HabilitTech className='sessaoScroll'>
