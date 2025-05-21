@@ -15,7 +15,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './styles.css';
 
-
 export const Projetos = () => {
 
     return (
