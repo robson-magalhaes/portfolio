@@ -73,12 +73,13 @@ export const Descricao = styled.div`
     padding: 20px 0 20px 20px;
   }
   @media (max-width: 767px) {
-    width: 90%;
-    height: 300px;
-    max-height: 250px;
+    width: 100%;
+    height: 400px;
+    max-height: 300px;
     overflow-y: scroll;
     background-color:  #32333f70;
-    box-shadow: inset 0px -10px 10px 4px #00000080;
+    border: solid 1px #000000;
+    box-shadow: inset -5px -15px 7px 5px #00000080;
   }
 `;
 
