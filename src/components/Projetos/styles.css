@@ -1,0 +1,95 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    padding: 50px 100px;
+}
+
+.swiper-slide{
+    padding: 50px;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 7px;
+    cursor: grab;
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+.swiper-slide-active div:last-child p{
+    animation: screenRight 1.5s;
+}
+
+.swiper-slide-active h1 {
+    animation: screenRight 1s;
+}
+
+.swiper-slide-active p:first-child {
+    animation: screenRight 2s;
+    text-shadow: 2px 2px 2px black;
+}
+
+.swiper-pagination-bullet {
+    background-color: white;
+}
+
+.swiper-button-prev {
+    margin-left: 50px;
+    transform: translateX(-10px);
+    z-index: 99;
+}
+
+.swiper-button-next {
+    margin-right: 50px;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-slide:hover {
+    & img{
+        translate: 360px;
+        opacity: 1;
+    }
+}
+
+@keyframes screenRight{
+    from{
+        opacity: 0;
+        translate: 150px;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media(max-width:767px){
+    .swiper{
+        padding: 0;
+    }
+    .swiper-slide {
+        flex-direction: column-reverse;
+        height: 650px;
+        padding-top: 0;
+    }
+    .swiper-slide:hover {
+        & img{
+            translate: none;
+        }
+    }
+    .swiper-button-prev {
+        margin-left: 0;
+    }
+    
+    .swiper-button-next {
+        margin-right: 0;
+    }
+}
