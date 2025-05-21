@@ -7,11 +7,13 @@ export const LeftContainer = styled.a.withConfig({
     width: 100%;
     height: auto;
     background: ${(props) => (props.urlimage ? `url(${props.urlimage})` : 'blue')};
-    background-size: 100% 100%;
+    background-size: contain;
     background-repeat: space;
     background-position: center;
     box-shadow: 0px 0px 15px #1E1E20 inset, 5px 5px 10px #000000;
     border-radius: 7px;
+    backdrop-filter: blur(15px);
+    z-index: -1;
 `
 
 export const RightContainer = styled.div`
@@ -37,10 +39,9 @@ export const RightContainer = styled.div`
 export const Descricao = styled.div`
     text-align: start;
     border-radius: 7px;
-    margin: 10px 0;
+    margin: 10px 20px;
     margin-left: -80px;
-    padding: 7px 10px 13px 15px;
-    padding-bottom: 13px;
+    padding-bottom: 20px;
     height: 80%;
     max-height: 500px;
     background-color: #131314;
@@ -48,6 +49,7 @@ export const Descricao = styled.div`
     color: #FFFFFF;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: space-between;
     overflow-y:scroll;
 
@@ -55,7 +57,9 @@ export const Descricao = styled.div`
         overflow-y: hidden;
     }
     & p {
+        width: 100%;
         height: 100%;
+        padding: 20px 0 20px 20px;
     }
     
     @media(max-width:767px){
@@ -67,7 +71,7 @@ export const Descricao = styled.div`
     }
 `
 
-export const LinkIcons = styled.div`
+export const LinkIcons = styled.span`
     display: flex;
     align-items: end;
     justify-content: end;
@@ -79,7 +83,7 @@ export const LinkIcons = styled.div`
         width: auto;
     }
     & a:hover{
-            div{
+            span{
                 opacity: 1;
             }
         }
@@ -124,7 +128,7 @@ export const IconProjeto = styled.img`
     }
 `;
 
-export const Balao = styled.div`
+export const Balao = styled.span`
     position: absolute;
     z-index: 1;
     border: solid 1px #FFFFFF50;

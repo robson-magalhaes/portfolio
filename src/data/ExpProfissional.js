@@ -9,7 +9,7 @@ export const projetos = [
         nome: 'SORTEIO DE PRÊMIOS',
         url: 'https://sorteios-robyntec.vercel.app',
         img: `${bgSorteios}`,
-        descricao: `Desenvolvi uma plataforma de sorteios online inovadora, com funcionalidades automatizadas e integradas, baseada no modelo SaaS (Software as a Service). O sistema permite que os usuários adquiram cotas de sorteios por meio de pagamentos via PIX. Após a confirmação do pagamento, as cotas são sorteadas automaticamente, e o resultado é exibido em tempo real para o comprador, informando se a cota foi premiada. \nA plataforma também oferece um painel administrativo completo, onde os usuários podem gerenciar seus sorteios, visualizar transações e realizar saques automáticos diretamente para suas contas bancárias, tudo de forma segura e eficiente. Essa solução, baseada na nuvem, proporciona uma experiência ágil, transparente e escalável, atendendo às necessidades de empresas e usuários de forma prática e eficiente.`,
+        descricao: `Desenvolvi uma plataforma de sorteios online inovadora, com funcionalidades automatizadas e integradas, baseada no modelo SaaS (Software as a Service). O sistema permite que os usuários adquiram cotas de sorteios por meio de pagamentos via PIX. Após a confirmação do pagamento, as cotas são sorteadas automaticamente, e o resultado é exibido em tempo real para o comprador, informando se a cota foi premiada. A plataforma também oferece um painel administrativo completo, onde os usuários podem gerenciar seus sorteios, visualizar transações e realizar saques automáticos diretamente para suas contas bancárias, tudo de forma segura e eficiente. Essa solução, baseada na nuvem, proporciona uma experiência ágil, transparente e escalável, atendendo às necessidades de empresas e usuários de forma prática e eficiente.`,
         urlGithub: '',
         page: 'https://sorteios-robyntec.vercel.app',
         skills: ["SaaS", 'React com Vite', 'Node.js', 'PostgreSQL', 'Bootstrap', "styled-components", "Api Pix", "e-commerce"]
@@ -17,12 +17,7 @@ export const projetos = [
     {
         nome: 'ERP PARA GESTÃO DE FROTAS',
         img: `${imgDefault}`,
-        descricao: `
-            Sistema ERP desenvolvido para a Atum do Brasil, com módulos de:
-            - Controle de veículos (cadastro, manutenção, histórico)
-            - Gestão de custos (combustível, peças, serviços)
-            - Relatórios personalizados (Google Charts ou similar)
-            Integração com sistemas legados da empresa.
+        descricao: `Sistema ERP desenvolvido para a Atum do Brasil, com módulos de: Controle de veículos (cadastro, manutenção, histórico), Gestão de custos (combustível, peças, serviços), Relatórios personalizados (Google Charts ou similar) e Integração com sistemas legados da empresa.
         `,
         skills: ['React.js', 'Node.js', 'Bootstrap', 'ERP', 'styled-components'] 
     },
