@@ -23,7 +23,7 @@ export const ModalContainer = styled.div`
     width: 100vw;
     height: 100vh;
     z-index: 99;
-    background-color: #000;
+    background-color: #00000030;
     mix-blend-mode: color-dodge;
     pointer-events: none;
 `;

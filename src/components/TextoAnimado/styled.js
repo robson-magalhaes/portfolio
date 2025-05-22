@@ -49,7 +49,7 @@ export const BoxDigitando = styled.div`
   padding: 50px 0 50px 20%;
   flex-wrap: wrap;
   background-color: #000000;
-  mix-blend-mode: screen;
+  /* mix-blend-mode: screen; */
   
   & div {
     height: auto;

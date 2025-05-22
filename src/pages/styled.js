@@ -6,7 +6,7 @@ export const Container = styled.div`
     width: 100vw;
     max-width: 100vw;
     height: auto;
-    background: linear-gradient(17deg , #00000099 80%, #32333f 100%);
+    background: linear-gradient(17deg , #000000 80%, #32333f 100%);
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -199,7 +199,7 @@ export const InfoTech = styled.section`
     background-color: #000000;
     height: auto;
     gap: 30px;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
 
 
     & div{
@@ -395,7 +395,7 @@ export const SessaoProjetos = styled.section`
     background-attachment: fixed;
     -webkit-background-attachment: fixed;
     -webkit-background-size: cover;
-    mix-blend-mode: screen;
+    /* mix-blend-mode: screen; */
     display: flex;
     flex-direction: column;
     gap: 40px 0;
