@@ -5,7 +5,7 @@ export const Perfil = () => {
     return (
         <C.HeaderPerfil>
             <C.BoxImg>
-                <C.ImgPerfil src={imgPerfil} alt='Foto de perfil - Robson Oliveira Magalhães' />
+                <C.ImgPerfil src={imgPerfil} alt='Foto de perfil - Desenvolvedor Full Stack' loading='eager'/>
             </C.BoxImg>
             <C.PerfilApresentacao>
                 <C.PerfilTitulo>

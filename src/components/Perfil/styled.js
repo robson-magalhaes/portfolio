@@ -29,9 +29,11 @@ export const PerfilDescricao = styled.p`
     align-self: center;
     width: 80%;
     height: 100%;
+    font-display: swap;
 `
 
 export const PerfilTitulo = styled.div`
+    font-display: swap;
     height: auto;
     font-weight: bold;
     color: transparent;
@@ -43,17 +45,20 @@ export const PerfilTitulo = styled.div`
     & h1{
         font-size: 6rem;
         line-height: 60px;
+    font-display: swap;
     }
     
     & h2{
         margin-left: 10px;
         font-size: 3rem;
+    font-display: swap;
     }
     & h5{
         text-align: center;
         margin-top: 10px;
         font-size: 1.7rem;
         font-weight: normal;
+    font-display: swap;
     }
 `;
 
