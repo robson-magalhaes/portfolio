@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import aurora from '../assets/image/aurora.webp';
-import * as keyframes from '../helpers/animationScreen';
+import aurora from './assets/image/aurora.webp';
+import * as keyframes from './helpers/animationScreen';
 
 export const Container = styled.div`
     width: 100vw;
@@ -28,19 +28,7 @@ export const Container = styled.div`
     }
 `;
 
-export const AreaHeader = styled.header`
-    padding: 50px 100px;
-    height: auto;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px 0;
 
-    @media (max-width: 1180px){
-        padding: 20px 0 80px 0;
-        margin: 0;
-    }
-`;
 
 export const Titulo = styled.div.withConfig({
   shouldForwardProp: (prop) => prop !== 'subTxt'

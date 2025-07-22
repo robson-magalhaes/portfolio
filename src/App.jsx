@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import * as C from './pages/styled';
+import * as C from './styled';
 import { Link } from 'react-router-dom';
 
 //Components
@@ -19,7 +19,6 @@ import { expProjetos } from './data/ExpProfissional';
 
 
 import TextoAnimado from './components/TextoAnimado';
-import NavMenu from './components/NavMenu';
 import { Perfil } from './components/Perfil';
 import MouseLuz from './components/MouseLuz';
 
@@ -71,10 +70,7 @@ export default function App() {
   return (
     <C.Container>
       <MouseLuz />
-      <C.AreaHeader id="home">
-        <NavMenu />
         <Perfil />
-      </C.AreaHeader >
       <TextoAnimado />
       <C.SessaoHabilidades id="sessaoHab">
         {/* <C.VideoContainer>

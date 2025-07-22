@@ -1,5 +1,5 @@
 import * as C from "./styled";
-import * as P from "../../pages/styled";
+import * as P from "../../styled";
 import { Link } from "react-router-dom";
 
 import { projetos } from "../../data/ExpProfissional";
