@@ -179,6 +179,7 @@ export const ImgItemTech = styled.img`
 `;
 
 export const InfoTech = styled.section`
+    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
