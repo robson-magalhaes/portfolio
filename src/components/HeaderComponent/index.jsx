@@ -2,7 +2,7 @@ import imgPerfil from "../../assets/image/eu.webp";
 import * as C from "./styled";
 import NavMenu from "../NavMenu";
 
-export const Perfil = () => {
+export const HeaderComponent = () => {
   return (
     <C.SessionHeader id="home">
       <NavMenu />
@@ -35,4 +35,3 @@ export const Perfil = () => {
     </C.SessionHeader>
   );
 };
-export default Perfil;

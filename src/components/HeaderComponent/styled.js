@@ -5,38 +5,30 @@ export const SessionHeader = styled.header`
   height: 100vh;
   width: 100%;
   max-width: 100vw;
-  padding: 20px;
-  padding-bottom: 100px;
 `;
 
 export const AreaHeader = styled.div`
-  padding: 50px 100px;
   height: 100%;
   width: 100%;
-  display: flex;
-  gap: 50px;
+  flex: 1;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* justify-content: space-between;
-  align-items: center; */
-
-  @media (max-width: 1180px) {
-    padding: 20px 0 80px 0;
-    margin: 0;
-  }
+  gap: 0 50px;
+  padding-bottom: 150px;
 `;
 
 export const PerfilApresentacao = styled.div`
-  padding: 20px;
-  width: 100%;
+  flex: 0.75;
   height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+
   @media (max-width: 768px) {
     padding-top: 130px;
     display: flex;
@@ -78,18 +70,16 @@ export const PerfilTitulo = styled.div`
   }
 `;
 export const PerfilDescricao = styled.p`
-  margin-top: 30px;
-  padding-left: 50px;
   animation: ${keyframes.screenToTop} 2s;
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--cor-quarta);
   align-self: center;
-  width: 70%;
+  width: 100%;
   height: auto;
   text-align: end;
+  margin-top: 40px;
 
   @media (max-width: 768px) {
-    font-size: 1.3rem;
     padding: 0;
     width: 100%;
     text-align: start;

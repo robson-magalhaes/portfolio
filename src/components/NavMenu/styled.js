@@ -23,7 +23,7 @@ export const NavSessao = styled.div`
     background-color: transparent;
     height:auto;
     margin: 15px 0;
-
+    padding-top: 25px;
     @media (max-width:780px){
         justify-content: end;
     }
