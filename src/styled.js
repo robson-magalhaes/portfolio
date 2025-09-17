@@ -278,7 +278,7 @@ export const LeftExperiencia = styled.div`
     & img{
         opacity: 0.5;
         transition: all ease-in-out 900ms;
-        max-height: 550px;
+        max-height: 850px;
         height: 100%;
         flex:1;
         box-shadow: -2px 0px 0px 2px #777 inset;
