@@ -28,7 +28,8 @@ export const RightContainer = styled.div`
   max-height: 360px;
 
   @media (max-width: 1067px) {
-    max-height: 260px;
+    max-height: 460px;
+    height: 100%;
   }
   @media (max-width: 767px) {
     margin: 0;
@@ -75,7 +76,7 @@ export const Descricao = styled.div`
   @media (max-width: 767px) {
     width: 100%;
     height: 400px;
-    max-height: 300px;
+    max-height: 400px;
     overflow-y: scroll;
     background-color:  #32333f70;
     border: solid 1px #000000;
@@ -123,7 +124,15 @@ export const LinkIcons = styled.div`
     }
   }
 `;
+export const ExpSkill = styled.div`
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 
+    @media (max-width: 767px) {
+      padding: 20px 50px !important;
+  }
+`;
 export const IconProjeto = styled.img`
   float: right;
   height: 40px;

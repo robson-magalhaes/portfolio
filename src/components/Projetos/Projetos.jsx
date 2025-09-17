@@ -61,11 +61,11 @@ export const Projetos = () => {
                 )}
               </C.LinkIcons>
             </C.Descricao>
-            <P.ExpSkill>
+            <C.ExpSkill>
               {x.skills.map((x, key) => (
                 <P.ItemT key={key}>{x}</P.ItemT>
               ))}
-            </P.ExpSkill>
+            </C.ExpSkill>
           </C.RightContainer>
         </SwiperSlide>
       ))}
