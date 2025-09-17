@@ -20,6 +20,7 @@ import { expProjetos } from "./data/ExpProfissional";
 import TextoAnimado from "./components/TextoAnimado";
 import { HeaderComponent } from "./components/HeaderComponent";
 import MouseLuz from "./components/MouseLuz";
+import { GridBackground } from "./components/GridBackground";
 
 export default function App() {
   const [expandido, setExpandido] = useState(null);
@@ -72,6 +73,7 @@ export default function App() {
 
   return (
     <C.Container>
+      <GridBackground/>
       <MouseLuz />
       <HeaderComponent />
       <TextoAnimado />

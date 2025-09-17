@@ -5,11 +5,12 @@ import * as keyframes from './helpers/animationScreen';
 export const Container = styled.div`
     width: 100vw;
     max-width: 100vw;
-    height: auto;
+    height: 100%;
     background: linear-gradient(17deg , #000000 80%, #32333f 100%);
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     & .sessaoBottomFromTop{
         animation: ${keyframes.screenToBottom} 2s forwards;
@@ -185,7 +186,6 @@ export const InfoTech = styled.section`
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: #000000;
     height: auto;
     gap: 30px;
     /* mix-blend-mode: screen; */
@@ -222,11 +222,11 @@ export const SessaoExperiencia = styled.section`
     padding: 50px 100px;
     background: linear-gradient(27deg , #000000 0%, #111111 60%, #32333f 100%);
     box-shadow: 100px 0px 100px 100px black inset;
-    height: 110vh;
+    
     overflow-y: hidden;
-    height: auto;
-    height: calc(height + 200px);
-
+    height: 110vh;
+    padding-bottom: 150px;
+    
     @media (max-width: 1200px){
        padding-left: 0 !important;
        padding-right: 20px;
@@ -263,6 +263,7 @@ export const LeftExperiencia = styled.div`
     background-size: cover;
     background-position:center;
     
+    filter: drop-shadow(10px 15px 10px #000000);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,8 +297,8 @@ export const BoxRight = styled.div`
     border: solid 1px transparent;
     border-radius: 10px;
     transition: all ease 0.4s;
-    background-color: #00000050;
-    box-shadow: 4px 3px 5px #000000, 1px 1px 10px #22222290 inset;
+    background-color: #080808;
+    box-shadow: 4px 7px 10px #000000, 1px 2px 5px #C5C5C550 inset;
     transition: all ease-in-out 0.5s;
 `
 
@@ -310,9 +311,10 @@ export const RightExperiencia = styled.div`
         display: none;
     }
     transition: all ease-in-out 1s;
-    box-shadow: 50px 0px 55px #000000 inset;
+    box-shadow: 50px 0px 55px #000000 inset, 10px 10px 10px #000000;
     border-radius: 0px 10px 10px 0px;
-
+    
+    background-color: #1f1f1f;
     @media (max-width: 750px){
         margin: 20px 0;
     }
