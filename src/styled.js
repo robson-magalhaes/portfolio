@@ -224,7 +224,7 @@ export const SessaoExperiencia = styled.section`
     box-shadow: 100px 0px 100px 100px black inset;
     
     overflow-y: hidden;
-    height: 110vh;
+    height: 150vh;
     padding-bottom: 150px;
     
     @media (max-width: 1200px){
@@ -304,7 +304,7 @@ export const BoxRight = styled.div`
 
 export const RightExperiencia = styled.div`
     flex:1 270px;
-    height:550px;
+    height:850px;
     overflow-y: scroll;
 
     &::-webkit-scrollbar { 
