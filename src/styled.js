@@ -372,6 +372,7 @@ export const ExpData = styled.p`
   word-wrap: break-word;
   height: 100%;
   flex: 1;
+  color: white;
 `;
 
 export const ExpDescricao = styled.div.withConfig({

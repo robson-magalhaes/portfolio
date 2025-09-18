@@ -3,7 +3,9 @@ import "./style.css";
 
 const gridMove = keyframes`
     0% { transform: translate(0, 0); }
-    50% { transform: translate(50px, 50px); }
+    25% { transform: translate(50px, 50px); }
+    50% { transform: translate(30px, 30px); }
+    75% { transform: translate(50px, 50px); }
     100% { transform: translate(0,0); }
 `;
 
@@ -16,7 +18,7 @@ export const Grid = styled.div`
   background-image: linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
   background-size: 50px 50px;
-  animation: ${gridMove} 10s linear infinite;
+  animation: ${gridMove} 20s linear infinite;
   z-index: 0;
 `;
 export const Particles = styled.div`
