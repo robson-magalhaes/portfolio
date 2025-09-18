@@ -48,9 +48,11 @@ export const BoxDigitando = styled.div`
   justify-content: start;
   padding: 50px 0 50px 20%;
   flex-wrap: wrap;
-  background-color: #000000;
   /* mix-blend-mode: screen; */
-  
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
   & div {
     height: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;

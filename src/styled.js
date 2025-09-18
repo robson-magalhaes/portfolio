@@ -85,9 +85,10 @@ export const InfoArea = styled.div`
     width: 100%;
     height: 70vh;
     z-index: 1;
-    background-color: #000;
+    //background-color: #000;
     position: relative;
     padding: 100px 0;
+    
     @media (max-width:670px){
         height: 100vh;
     }
@@ -121,14 +122,16 @@ export const Corpo = styled.div`
 export const HabilitTech = styled.div`
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 50px 80px;
+    /* gap: 50px 80px; */
+    gap: 80px 100px;
     height: auto;
     margin: auto;
     perspective: 700px;
     padding-bottom: 30px;
     @media (max-width:670px){
-    gap: 20px 40px;
+        gap: 20px 40px;
         grid-template-columns: repeat(3, 100px);
+        
     }
 `;
 export const FlipCard = styled.div`
@@ -173,10 +176,15 @@ export const ItemTech = styled.div.withConfig({
     ` : '')}
 `;
 export const ImgItemTech = styled.img`
-    width: 60px;
-    height: 60px;
-    max-width: 60px;
-    max-height: 60px;
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    @media (max-width:670px){
+    max-width: 75px;
+    max-height: 75px;
+        
+    }
 `;
 
 export const InfoTech = styled.section`
@@ -210,7 +218,7 @@ export const ItemT = styled.h6`
     color: #FFFFFF;
     font-size: 0.9rem;
     @media (max-width: 750px){
-        font-size: 0.7rem;
+        font-size: 1.1rem;
     }
 `
 
@@ -234,6 +242,7 @@ export const SessaoExperiencia = styled.section`
     @media (max-width: 800px){
         padding: 0 !important;
         background: linear-gradient(27deg , #000000 0%, #32333f 60%);
+        height: 90vh;
     }
 `
 

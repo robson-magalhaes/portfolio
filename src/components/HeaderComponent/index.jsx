@@ -1,12 +1,14 @@
 import imgPerfil from "../../assets/image/eu.webp";
 import * as C from "./styled";
 import NavMenu from "../NavMenu";
+import TextoAnimado from "../TextoAnimado";
 
 export const HeaderComponent = () => {
   return (
     <C.SessionHeader id="home">
       <NavMenu />
       <C.AreaHeader>
+      <TextoAnimado/>
         <C.BoxImg>
           <C.ImgPerfil
             src={imgPerfil}

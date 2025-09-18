@@ -5,6 +5,12 @@ export const SessionHeader = styled.header`
   height: 100vh;
   width: 100%;
   max-width: 100vw;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    height: 130vh;
+    padding: 15px;
+  }
 `;
 
 export const AreaHeader = styled.div`
@@ -28,13 +34,10 @@ export const PerfilApresentacao = styled.div`
   align-items: center;
   justify-content: center;
 
-
   @media (max-width: 768px) {
     padding-top: 130px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     align-items: center;
+    justify-content: start;
   }
 `;
 
