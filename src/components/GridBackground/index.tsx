@@ -5,7 +5,7 @@ export const GridBackground = () => {
     const [particles, setParticles] = useState<JSX.Element[]>([]);
 
     function createParticles() {
-        const particleCount = 150;
+        const particleCount = 350;
         const newParticles: JSX.Element[] = [];
 
         for (let i = 0; i < particleCount; i++) {

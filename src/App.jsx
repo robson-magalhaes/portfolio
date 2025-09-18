@@ -1,16 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import * as C from "./styled";
-import { Link } from "react-router-dom";
 
-//Components
+//Componentes
+import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 import Projetos from "./components/Projetos/Projetos";
 
 //Imagens
 // import bgPlaneta from "./assets/video/planetaTerra.mp4";
 // import bgPlaneta from "./assets/video/planetaTerra.gif";
-import iconWhatss from "./assets/image/icons/whatsapp.webp";
-import iconLinkedin from "./assets/image/icons/linkedin.webp";
-import iconGithubs from "./assets/image/icons/github.webp";
+
 import iconDropdown from "./assets/image/icons/down.webp";
 import moldura from "./assets/image/moldura.webp";
 
@@ -18,7 +17,8 @@ import moldura from "./assets/image/moldura.webp";
 import { Skills, allSkills } from "./data/Skills";
 import { expProjetos } from "./data/ExpProfissional";
 
-import { HeaderComponent } from "./components/HeaderComponent";
+
+//Elementos
 import MouseLuz from "./components/MouseLuz";
 import { GridBackground } from "./components/GridBackground";
 
@@ -76,12 +76,11 @@ export default function App() {
       <GridBackground />
       <MouseLuz />
       <div>
-        <HeaderComponent />
+        <Header />
         <C.SessaoHabilidades id="sessaoHab">
           {/* <C.VideoContainer>
         </C.VideoContainer> */}
           <C.InfoArea>
-            {/* <img src={bgPlaneta} alt="" width={1000} height={1000} style={{position:"fixed", top:0, left:0}}/> */}
             {/* <C.VideoArea
               type="video/mp4"
               src={bgPlaneta}
@@ -172,40 +171,7 @@ export default function App() {
           <Projetos />
         </C.SessaoProjetos>
 
-        <C.FooterContainer id="contato">
-          <h4>ENTRE EM CONTATO</h4>
-          <C.Contato>
-            <p>
-              <i className="fa-solid fa-phone"></i> (28) 9 9996-1628
-            </p>
-            <p>
-              <i className="fa-regular fa-envelope"></i>
-              <Link className="btnMail" to="mailto:dev.robsonom@hotmail.com">
-                dev.robsonom@hotmail.com
-              </Link>
-            </p>
-            <C.RedeSociais>
-              <Link
-                to="https://api.whatsapp.com/send?phone=5528999961628"
-                target="_blank"
-              >
-                <C.ImgIcon src={iconWhatss} alt="whatsApp" loading="lazy" />
-              </Link>
-              <Link to="https://github.com/robson-magalhaes" target="_blank">
-                <C.ImgIcon src={iconGithubs} alt="GitHub" loading="lazy" />
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/robson-o-magalhaes/"
-                target="_blank"
-              >
-                <C.ImgIcon src={iconLinkedin} alt="Linkedin" loading="lazy" />
-              </Link>
-            </C.RedeSociais>
-          </C.Contato>
-          <div>
-            <p></p>© 2024. RobynTec. Todos os Direitos Reservados
-          </div>
-        </C.FooterContainer>
+        <Footer/>
       </div>
     </C.Container>
   );
