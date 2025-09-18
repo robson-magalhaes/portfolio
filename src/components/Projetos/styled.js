@@ -9,7 +9,7 @@ export const LeftContainer = styled.a.withConfig({
   background: ${(props) =>
     props.urlimage ? `url(${props.urlimage})` : "blue"};
   background-size: contain;
-  background-repeat: space;
+  background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0px 0px 15px #1e1e20 inset, 5px 5px 10px #000000;
   border-radius: 7px;

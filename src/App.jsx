@@ -118,7 +118,7 @@ export default function App() {
             <C.Titulo>Competências e Especialidades</C.Titulo>
             <C.ExpSkill className="sessaoScroll">
               {allSkills.map((x, key) => (
-                <C.ItemT key={key}>{x}</C.ItemT>
+                <C.ItemCE key={key}>{x}</C.ItemCE>
               ))}
             </C.ExpSkill>
           </C.InfoTech>

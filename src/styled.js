@@ -221,7 +221,7 @@ export const InfoTech = styled.section`
     margin-bottom: 40px;
   }
 `;
-export const ItemT = styled.h6`
+export const ItemCE = styled.h6`
   padding: 5px 10px;
   height: auto;
   width: auto;
@@ -234,6 +234,22 @@ export const ItemT = styled.h6`
   background-color: #00000080;
   @media (max-width: 750px) {
     font-size: 1.1rem;
+  }
+`;
+export const ItemT = styled.h6`
+  padding: 5px 10px;
+  height: auto;
+  width: auto;
+  border: solid 1px #ffffff50;
+  border-radius: 50px;
+  -webkit-border: solid 1px #ffffff50;
+  -webkit-border-radius: 50px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  background-color: #00000080;
+
+  @media (max-width: 750px) {
+    font-size: 0.6rem;
   }
 `;
 
@@ -400,7 +416,6 @@ export const ExpSkill = styled.div`
 
   align-items: start;
   justify-content: start;
-  height: 100%;
 `;
 
 export const SessaoProjetos = styled.section`
