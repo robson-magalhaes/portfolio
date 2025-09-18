@@ -124,14 +124,13 @@ export const Corpo = styled.div`
 export const HabilitTech = styled.div`
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* gap: 50px 80px; */
   gap: 80px 100px;
   height: auto;
   margin: auto;
   perspective: 700px;
   padding-bottom: 30px;
   @media (max-width: 670px) {
-    gap: 20px 40px;
+    gap: 20px 5px;
     grid-template-columns: repeat(3, 100px);
   }
 `;
@@ -185,8 +184,8 @@ export const ImgItemTech = styled.img`
   max-width: 100px;
   max-height: 100px;
   @media (max-width: 670px) {
-    max-width: 75px;
-    max-height: 75px;
+    max-width: 60px;
+    max-height: 60px;
   }
 `;
 

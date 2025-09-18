@@ -8,8 +8,9 @@ export const SessionHeader = styled.header`
   position: relative;
   
   @media (max-width: 768px) {
-    height: 130vh;
+    height: auto;
     padding: 15px;
+    padding-bottom: 50px;
   }
 `;
 
