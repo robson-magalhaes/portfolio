@@ -15,6 +15,7 @@ import "swiper/css/navigation";
 import "./styles.css";
 
 export const Projetos = () => {
+  
   return (
     <Swiper
       slidesPerView={1}
