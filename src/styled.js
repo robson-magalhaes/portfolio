@@ -86,14 +86,12 @@ export const InfoArea = styled.div`
   font-size: 2rem;
   color: #ffffff;
   width: 100%;
-  height: 70vh;
+  height: auto;
+  //min-height: 70vh;
   z-index: 1;
   position: relative;
   padding: 100px 0;
   border-radius: 100% !important;
-  @media (max-width: 670px) {
-    height: 100vh;
-  }
 `;
 
 export const VideoArea = styled.video.withConfig({
@@ -130,7 +128,7 @@ export const HabilitTech = styled.div`
   perspective: 700px;
   padding-bottom: 30px;
   @media (max-width: 670px) {
-    gap: 20px 5px;
+    gap: 20px 10px;
     grid-template-columns: repeat(3, 100px);
   }
 `;
@@ -196,12 +194,11 @@ export const InfoTech = styled.section`
   align-items: center;
   justify-content: start;
   overflow: hidden;
-  height: auto;
   gap: 30px;
   /* mix-blend-mode: screen; */
   position: relative;
-  height: 800px !important;
-
+  height: auto;
+  min-height: 800px;
   &::before {
     content: "";
     position: absolute;
@@ -211,8 +208,8 @@ export const InfoTech = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    width: 700px;
-    height: 700px;
+    width: 600px;
+    height: 600px;
     border-radius: 100%;
     box-shadow: 1px 1px 10px 5px #11516b90 inset, 1px 1px 50px 2px #11516b90;
   }
@@ -403,6 +400,7 @@ export const ExpSkill = styled.div`
 
   align-items: start;
   justify-content: start;
+  height: 100%;
 `;
 
 export const SessaoProjetos = styled.section`
