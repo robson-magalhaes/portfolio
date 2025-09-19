@@ -434,7 +434,7 @@ export const SessaoProjetos = styled.section`
   display: flex;
   flex-direction: column;
   gap: 40px 0;
-  margin-bottom: 300px;
+  
   &::-webkit-background-attachment {
     background-attachment: fixed;
   }

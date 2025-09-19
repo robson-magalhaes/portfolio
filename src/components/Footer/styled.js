@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.footer`
-  position: absolute;
-  padding: 20px 100px;
+  position: relative;
+  z-index: 1;
   background: linear-gradient(17deg, black 0%, #32333f 100%);
   box-shadow: -2px -2px 5px #00000050 inset, 2px 2px 3px 0px #000000;
   height: auto;
@@ -10,8 +10,7 @@ export const FooterContainer = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
-  bottom: 0;
-  left: 0;
+  
   & h4 {
     font-size: 1.3rem;
     text-align: start;
@@ -53,12 +52,24 @@ export const ContatoContainer = styled.div`
   & i {
     margin-right: 20px;
   }
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+    & button{
+      width: 100%;
+      color: white;
+    }
+  }
 `;
 export const Contato = styled.div`
   display: flex;
   gap: 20px;
   flex-direction: column;
   margin-right: 20px;
+  @media (max-width: 750px) {
+    width: 100%;
+    padding-bottom: 10px;
+  }
 `;
 export const RedeSociais = styled.div`
   flex: 1;
