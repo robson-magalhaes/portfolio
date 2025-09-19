@@ -1,7 +1,7 @@
-import bgEncarte from '../assets/image/projeto/Criador-de-encarte.jpg';
+import bgEncarte from '../assets/image/projeto/Criador-de-encarte.webp';
 import bgCalcIMC from '../assets/image/projeto/imgCalc.webp';
 import imgDefault from '../assets/image/bgScript.webp';
-import bgSorteios from '../assets/image/projeto/sorteios.jpg';
+import bgSorteios from '../assets/image/projeto/sorteios.webp';
 
 
 export const projetos = [

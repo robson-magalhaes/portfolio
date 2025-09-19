@@ -7,10 +7,9 @@ import iconX from '../../assets/image/icons/x.webp';
 import { HashLink as Link } from 'react-router-hash-link';
 import * as C from './styled';
 import { useState, useEffect, useRef } from 'react';
-import meuCurriculo from '/curriculo.pdf';
+import { DownloadCV } from '../DownloadCV';
 
 const NavMenu = () => {
-  const [loading, setLoading] = useState(false);
   const [estaVisivel, setVisivel] = useState(false);
 
   const menuRef = useRef(null);
@@ -37,19 +36,6 @@ const NavMenu = () => {
     setVisivel(false);
   };
 
-  function handleClickDownload() {
-    setLoading(true);
-    var link = document.createElement('a');
-    link.href = meuCurriculo;
-    link.download = "Curriculo Desenvolvedor Full Stack - Robson Oliveira.pdf";
-    document.body.appendChild(link);
-    link.click();
-
-    setTimeout(() => {
-      document.body.removeChild(link);
-      setLoading(false);
-    }, 1000);
-  }
 
   return (
     <>
@@ -126,16 +112,9 @@ const NavMenu = () => {
               <C.ImgSocial src={iconLinkedin} alt='Linkedin' />
             </Link>
           </C.IconSocial>
-          <C.BotaoCurriculo onClick={handleClickDownload}>
-            Download CV
-          </C.BotaoCurriculo>
+          <DownloadCV/>
         </C.BoxSegundo>
       </C.NavSessao>
-      {loading && (
-        <C.Carregando>
-          <div className='p-8 rounded-full border-8 border-l-blue-700 animate-spin'></div>
-        </C.Carregando>
-      )}
     </>
   );
 };

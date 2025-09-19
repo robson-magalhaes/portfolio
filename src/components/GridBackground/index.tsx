@@ -43,8 +43,8 @@ export const GridBackground = () => {
 
 
             <C.Particles>
-                {particles.map((particle) => (
-                    <>{particle}</>
+                {particles.map((particle, index) => (
+                    <span key={index}>{particle}</span>
                 ))}
             </C.Particles>
         </>
