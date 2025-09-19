@@ -3,10 +3,8 @@ import "./style.css";
 
 const gridMove = keyframes`
     0% { transform: translate(0, 0); }
-    25% { transform: translate(50px, 50px); }
     50% { transform: translate(30px, 30px); }
-    75% { transform: translate(50px, 50px); }
-    100% { transform: translate(0,0); }
+    100% { transform: translate(0px, 0px); }
 `;
 
 export const Grid = styled.div`
